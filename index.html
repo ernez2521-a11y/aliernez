@@ -18,6 +18,9 @@ box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
 }
 
+html {
+scroll-behavior: smooth;
+}
 
 body{
 background:#f5f5f5;
@@ -31,7 +34,7 @@ header{
 
 background:#0b0b0b;
 color:white;
-padding:35px 8%;
+padding:25px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -39,6 +42,17 @@ flex-wrap:wrap;
 
 }
 
+.logo-wrap {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.logo-svg {
+width: 45px;
+height: 45px;
+flex-shrink: 0;
+}
 
 .logo{
 
@@ -57,7 +71,7 @@ color:#e00000;
 
 header p{
 
-margin-top:10px;
+margin-top:5px;
 color:#ccc;
 
 }
@@ -172,14 +186,26 @@ flex-wrap:wrap;
 .card{
 
 background:white;
-padding:30px;
+padding:0;
 border-radius:12px;
 flex:1;
 min-width:250px;
 box-shadow:0 5px 15px #ddd;
+overflow: hidden;
+display: flex;
+flex-direction: column;
 
 }
 
+.card img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+}
+
+.card-body {
+padding: 25px;
+}
 
 .card h3{
 
@@ -282,6 +308,12 @@ font-size:32px;
 font-size:25px;
 }
 
+.logo-wrap {
+flex-direction: column;
+align-items: flex-start;
+gap: 5px;
+}
+
 }
 
 </style>
@@ -295,16 +327,21 @@ font-size:25px;
 
 <header>
 
-<div>
+<div class="logo-wrap">
+<!-- DİŞLİ VE DİREKSİYON MOTİFLİ DİNAMİK OTOMOTİV LOGOSU -->
+<svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M50 10C27.9 10 10 27.9 10 50C10 72.1 27.9 90 50 90C72.1 90 90 72.1 90 50C90 27.9 72.1 10 50 10ZM50 82C32.3 82 18 67.7 18 50C18 32.3 32.3 18 50 18C67.7 18 82 32.3 82 50C82 67.7 67.7 82 50 82Z" fill="#e00000"/>
+  <circle cx="50" cy="50" r="12" fill="#e00000"/>
+  <path d="M50 22V38M50 62V78M22 50H38M62 50H78" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+</svg>
 
+<div>
 <div class="logo">
 ALİ ERNEZ <span>OTOMOTİV</span>
 </div>
-
 <p>Avrupa Araç Grupları Yedek Parça Tedariki</p>
-
 </div>
-
+</div>
 
 </header>
 
@@ -312,17 +349,17 @@ ALİ ERNEZ <span>OTOMOTİV</span>
 
 <nav>
 
-<a href="#">Ana Sayfa</a>
-<a href="#">Ürünler</a>
-<a href="#">Hakkımızda</a>
-<a href="#">İletişim</a>
+<a href="#ana-sayfa">Ana Sayfa</a>
+<a href="#urunler">Ürünler</a>
+<a href="#hakkimizda">Hakkımızda</a>
+<a href="#iletisim">İletişim</a>
 
 </nav>
 
 
 
 
-<section class="hero">
+<section class="hero" id="ana-sayfa">
 
 
 <h1>
@@ -336,7 +373,7 @@ araç grupları için kaliteli ve güvenilir parçalar
 </p>
 
 
-<a class="button" href="#">
+<a class="button" href="https://wa.me/?text=Merhaba,%20yedek%20par%C3%A7a%20teklifi%20almak%20istiyorum." target="_blank">
 Teklif Alın
 </a>
 
@@ -347,7 +384,7 @@ Teklif Alın
 
 
 
-<div class="container">
+<div class="container" id="urunler">
 
 
 <h2 class="title">
@@ -360,49 +397,49 @@ Teklif Alın
 
 
 <div class="card">
-
+<img src="https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&w=600&q=80" alt="Motor Parçaları">
+<div class="card-body">
 <h3>Motor</h3>
-
 <p>
 Motor parçaları, mekanik ekipmanlar ve komple çözümler.
 </p>
-
+</div>
 </div>
 
 
 
 <div class="card">
-
+<img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80" alt="Şanzıman Parçaları">
+<div class="card-body">
 <h3>Şanzıman</h3>
-
 <p>
 Manuel ve otomatik şanzıman parçaları.
 </p>
-
+</div>
 </div>
 
 
 
 <div class="card">
-
+<img src="https://images.unsplash.com/photo-1558441719-6705166e2106?auto=format&fit=crop&w=600&q=80" alt="Elektrik Parçaları">
+<div class="card-body">
 <h3>Elektrik</h3>
-
 <p>
 Sensör, elektronik ve elektrik parçaları.
 </p>
-
+</div>
 </div>
 
 
 
 <div class="card">
-
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Kaporta Parçaları">
+<div class="card-body">
 <h3>Kaporta</h3>
-
 <p>
 Dış aksam ve tamamlayıcı parçalar.
 </p>
-
+</div>
 </div>
 
 
@@ -415,7 +452,7 @@ Dış aksam ve tamamlayıcı parçalar.
 
 
 
-<section class="import">
+<section class="import" id="hakkimizda">
 
 
 <h2>
@@ -460,7 +497,7 @@ Fransa ve Avrupa kaynaklı otomotiv yedek parça tedarik çözümleri.
 
 
 
-<section class="contact">
+<section class="contact" id="iletisim">
 
 
 <h2>
@@ -473,7 +510,7 @@ Yedek parça fiyat ve stok bilgisi için bize ulaşın.
 </p>
 
 
-<a class="whatsapp" href="#">
+<a class="whatsapp" href="https://wa.me/?text=Merhaba,%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank">
 WhatsApp İletişim
 </a>
 
