@@ -1,11 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <title>Ali Ernez</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Ernez Otomotiv</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        section {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #b00000;
+        }
+
+        .urunler {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .kart {
+            background: #eee;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .iletisim {
+            font-size: 18px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Ali Ernez</h1>
-    <p>Web sitem yapım aşamasındadır.</p>
+
+<header>
+    <h1>Ali Ernez Otomotiv</h1>
+    <p>Otomotiv Yedek Parça Çözümleri</p>
+</header>
+
+<section>
+    <h2>Hakkımızda</h2>
+    <p>
+        Peugeot, Citroën, Opel ve Chevrolet grubu araçlar için
+        kaliteli yedek parça çözümleri sunuyoruz.
+    </p>
+</section>
+
+<section>
+    <h2>Ürün Gruplarımız</h2>
+
+    <div class="urunler">
+        <div class="kart">
+            <h3>Motor Parçaları</h3>
+            <p>Motor ve mekanik yedek parçalar.</p>
+        </div>
+
+        <div class="kart">
+            <h3>Şanzıman</h3>
+            <p>Manuel ve otomatik şanzıman çözümleri.</p>
+        </div>
+
+        <div class="kart">
+            <h3>Elektrik & Elektronik</h3>
+            <p>Araç elektrik parçaları ve ekipmanları.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>İletişim</h2>
+    <p class="iletisim">
+        Telefon: Yakında eklenecek<br>
+        E-posta: Yakında eklenecek
+    </p>
+</section>
+
+<footer>
+    © 2026 Ali Ernez Otomotiv
+</footer>
+
 </body>
 </html>
