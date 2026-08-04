@@ -489,40 +489,7 @@ WhatsApp İletişim
 </footer>
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Unsplash üzerindeki otomotiv odaklı telifsiz görsel bağlantıları
-  const categoryImages = {
-    "Motor": "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&w=600&q=80",
-    "Şanzıman": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80",
-    "Elektrik": "https://images.unsplash.com/photo-1558441719-6705166e2106?auto=format&fit=crop&w=600&q=80",
-    "Kaporta": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80"
-  };
 
-  // Kartları bul ve otomatik görsel injection yap
-  const productCards = document.querySelectorAll("div h3");
-
-  productCards.forEach((heading) => {
-    const title = heading.textContent.trim();
-    const imageUrl = categoryImages[title];
-
-    if (imageUrl) {
-      const card = heading.parentElement; // Kart ana elementi
-      
-      // Oluşturulacak görsel elementi
-      const img = document.createElement("img");
-      img.src = imageUrl;
-      img.alt = `${title} Parçaları`;
-      img.style.width = "100%";
-      img.style.height = "180px";
-      img.style.objectFit = "cover";
-      img.style.borderRadius = "8px 8px 0 0";
-      img.style.marginBottom = "12px";
-
-      // Görseli başlığın hemen üstüne ekle
-      card.insertBefore(img, heading);
-    }
-  });
-});
 </body>
 
 </html>
