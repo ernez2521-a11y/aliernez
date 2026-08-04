@@ -1,135 +1,291 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ali Ernez Otomotiv | Yedek Parça</title>
+<title>Ali Ernez Otomotiv | Avrupa Yedek Parça</title>
+
+<meta name="description" content="Ali Ernez Otomotiv Peugeot, Citroen, Opel ve Chevrolet yedek parça çözümleri.">
 
 <style>
 
 *{
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
+
 
 body{
-    margin:0;
-    background:#f4f4f4;
-    color:#333;
+background:#f5f5f5;
+color:#222;
 }
+
+
+/* ÜST ALAN */
 
 header{
-    background:#111;
-    color:white;
-    padding:40px 20px;
-    text-align:center;
+
+background:#0b0b0b;
+color:white;
+padding:35px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+
 }
 
-header h1{
-    font-size:42px;
-    margin:0;
+
+.logo{
+
+font-size:32px;
+font-weight:bold;
+
 }
+
+
+.logo span{
+
+color:#e00000;
+
+}
+
 
 header p{
-    font-size:20px;
+
+margin-top:10px;
+color:#ccc;
+
 }
 
-.menu{
-    background:#b40000;
-    padding:15px;
-    text-align:center;
+
+
+/* MENÜ */
+
+nav{
+
+background:#d00000;
+padding:15px;
+text-align:center;
+
 }
 
-.menu a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
-    font-weight:bold;
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+
 }
 
+
+
+/* ANA GÖRSEL */
 
 .hero{
-    background:white;
-    padding:50px 20px;
-    text-align:center;
+
+background:white;
+padding:70px 10%;
+text-align:center;
+
 }
 
-.hero h2{
-    font-size:35px;
+
+.hero h1{
+
+font-size:45px;
+
 }
+
 
 .hero span{
-    color:#b40000;
+
+color:#d00000;
+
 }
 
+
+.hero p{
+
+font-size:20px;
+margin-top:20px;
+
+}
+
+
+
+/* BUTON */
+
+.button{
+
+display:inline-block;
+margin-top:30px;
+background:#d00000;
+color:white;
+padding:15px 35px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+
+/* BÖLÜMLER */
 
 .container{
-    max-width:1100px;
-    margin:auto;
-    padding:20px;
+
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+
 }
 
 
+.title{
+
+text-align:center;
+margin-bottom:30px;
+font-size:32px;
+
+}
+
+
+
+/* KARTLAR */
+
 .cards{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+
 }
 
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    flex:1;
-    min-width:250px;
-    box-shadow:0 3px 10px #ccc;
+
+background:white;
+padding:30px;
+border-radius:12px;
+flex:1;
+min-width:250px;
+box-shadow:0 5px 15px #ddd;
+
 }
 
 
 .card h3{
-    color:#b40000;
+
+color:#d00000;
+margin-bottom:15px;
+
 }
 
 
-.about{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    margin-top:30px;
+
+/* MARKALAR */
+
+.brands{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
 }
 
+
+.brand{
+
+background:#111;
+color:white;
+padding:20px 35px;
+border-radius:8px;
+font-weight:bold;
+
+}
+
+
+
+/* İTHALAT */
+
+.import{
+
+background:#111;
+color:white;
+padding:50px;
+text-align:center;
+
+}
+
+
+.import h2{
+
+font-size:35px;
+
+}
+
+
+
+/* İLETİŞİM */
 
 .contact{
-    background:#111;
-    color:white;
-    padding:30px;
-    text-align:center;
-    margin-top:30px;
+
+background:#d00000;
+color:white;
+padding:40px;
+text-align:center;
+
 }
 
 
 .whatsapp{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    padding:15px 25px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
+
+background:#25D366;
+padding:15px 30px;
+display:inline-block;
+margin-top:20px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+
 }
+
 
 
 footer{
-    background:#000;
-    color:white;
-    text-align:center;
-    padding:15px;
+
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+
 }
 
 
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:32px;
+}
+
+.logo{
+font-size:25px;
+}
+
+}
+
 </style>
+
 
 </head>
 
@@ -139,56 +295,65 @@ footer{
 
 <header>
 
-<h1>ALİ ERNEZ OTOMOTİV</h1>
+<div>
 
-<p>Profesyonel Yedek Parça Çözümleri</p>
+<div class="logo">
+ALİ ERNEZ <span>OTOMOTİV</span>
+</div>
+
+<p>Avrupa Araç Grupları Yedek Parça Tedariki</p>
+
+</div>
+
 
 </header>
 
 
-<div class="menu">
+
+<nav>
 
 <a href="#">Ana Sayfa</a>
 <a href="#">Ürünler</a>
 <a href="#">Hakkımızda</a>
 <a href="#">İletişim</a>
 
-</div>
+</nav>
+
 
 
 
 <section class="hero">
 
-<h2>
-Peugeot • Citroën • Opel • Chevrolet
-</h2>
+
+<h1>
+Profesyonel <span>Yedek Parça</span> Çözümleri
+</h1>
+
 
 <p>
-Kaliteli ve güvenilir otomotiv yedek parçaları
+Peugeot • Citroën • Opel • Chevrolet
+araç grupları için kaliteli ve güvenilir parçalar
 </p>
 
+
+<a class="button" href="#">
+Teklif Alın
+</a>
+
+
 </section>
+
+
 
 
 
 <div class="container">
 
 
-<div class="about">
+<h2 class="title">
+Ürün Gruplarımız
+</h2>
 
-<h2>Hakkımızda</h2>
-
-<p>
-Ali Ernez Otomotiv olarak Avrupa araç grupları için
-yedek parça tedariki ve satış hizmetleri sunuyoruz.
-Müşterilerimize hızlı, güvenilir ve kaliteli çözümler sağlıyoruz.
-</p>
-
-</div>
-
-
-
-<h2>Ürün Gruplarımız</h2>
 
 
 <div class="cards">
@@ -196,10 +361,10 @@ Müşterilerimize hızlı, güvenilir ve kaliteli çözümler sağlıyoruz.
 
 <div class="card">
 
-<h3>Motor Parçaları</h3>
+<h3>Motor</h3>
 
 <p>
-Motor ekipmanları, mekanik parçalar ve komple çözümler.
+Motor parçaları, mekanik ekipmanlar ve komple çözümler.
 </p>
 
 </div>
@@ -220,10 +385,10 @@ Manuel ve otomatik şanzıman parçaları.
 
 <div class="card">
 
-<h3>Elektrik Sistemleri</h3>
+<h3>Elektrik</h3>
 
 <p>
-Sensör, elektronik ve araç elektrik parçaları.
+Sensör, elektronik ve elektrik parçaları.
 </p>
 
 </div>
@@ -232,10 +397,10 @@ Sensör, elektronik ve araç elektrik parçaları.
 
 <div class="card">
 
-<h3>Kaporta & Aksesuar</h3>
+<h3>Kaporta</h3>
 
 <p>
-Araç dış parçaları ve tamamlayıcı ürünler.
+Dış aksam ve tamamlayıcı parçalar.
 </p>
 
 </div>
@@ -244,30 +409,85 @@ Araç dış parçaları ve tamamlayıcı ürünler.
 </div>
 
 
+</div>
+
+
+
+
+
+<section class="import">
+
+
+<h2>
+Avrupa'dan Güvenilir Tedarik
+</h2>
+
+
+<p>
+Fransa ve Avrupa kaynaklı otomotiv yedek parça tedarik çözümleri.
+</p>
+
+
+</section>
+
+
+
+
+
+<div class="container">
+
+
+<h2 class="title">
+Çalıştığımız Araç Grupları
+</h2>
+
+
+<div class="brands">
+
+
+<div class="brand">PEUGEOT</div>
+<div class="brand">CITROËN</div>
+<div class="brand">OPEL</div>
+<div class="brand">CHEVROLET</div>
+
+
+</div>
+
 
 </div>
 
 
 
-<div class="contact">
 
-<h2>Bize Ulaşın</h2>
 
-<p>Hızlı teklif ve bilgi için WhatsApp üzerinden iletişime geçebilirsiniz.</p>
+<section class="contact">
+
+
+<h2>
+Hızlı İletişim
+</h2>
+
+
+<p>
+Yedek parça fiyat ve stok bilgisi için bize ulaşın.
+</p>
+
 
 <a class="whatsapp" href="#">
 WhatsApp İletişim
 </a>
 
-</div>
+
+</section>
 
 
 
 <footer>
 
-© 2026 Ali Ernez Otomotiv
+© 2026 Ali Ernez Otomotiv - Tüm Hakları Saklıdır
 
 </footer>
+
 
 
 </body>
