@@ -1,121 +1,275 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Ernez Otomotiv</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            background: #111;
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
+<title>Ali Ernez Otomotiv | Yedek Parça</title>
 
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
+<style>
 
-        header p {
-            font-size: 18px;
-        }
+*{
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
-        section {
-            padding: 30px;
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
+body{
+    margin:0;
+    background:#f4f4f4;
+    color:#333;
+}
 
-        h2 {
-            color: #b00000;
-        }
+header{
+    background:#111;
+    color:white;
+    padding:40px 20px;
+    text-align:center;
+}
 
-        .urunler {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+header h1{
+    font-size:42px;
+    margin:0;
+}
 
-        .kart {
-            background: #eee;
-            padding: 20px;
-            border-radius: 8px;
-            flex: 1;
-            min-width: 200px;
-        }
+header p{
+    font-size:20px;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #111;
-            color: white;
-            margin-top: 30px;
-        }
+.menu{
+    background:#b40000;
+    padding:15px;
+    text-align:center;
+}
 
-        .iletisim {
-            font-size: 18px;
-        }
-    </style>
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+
+.hero{
+    background:white;
+    padding:50px 20px;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:35px;
+}
+
+.hero span{
+    color:#b40000;
+}
+
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    flex:1;
+    min-width:250px;
+    box-shadow:0 3px 10px #ccc;
+}
+
+
+.card h3{
+    color:#b40000;
+}
+
+
+.about{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    margin-top:30px;
+}
+
+
+.contact{
+    background:#111;
+    color:white;
+    padding:30px;
+    text-align:center;
+    margin-top:30px;
+}
+
+
+.whatsapp{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    padding:15px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+
+</style>
+
 </head>
+
 
 <body>
 
+
 <header>
-    <h1>Ali Ernez Otomotiv</h1>
-    <p>Otomotiv Yedek Parça Çözümleri</p>
+
+<h1>ALİ ERNEZ OTOMOTİV</h1>
+
+<p>Profesyonel Yedek Parça Çözümleri</p>
+
 </header>
 
-<section>
-    <h2>Hakkımızda</h2>
-    <p>
-        Peugeot, Citroën, Opel ve Chevrolet grubu araçlar için
-        kaliteli yedek parça çözümleri sunuyoruz.
-    </p>
+
+<div class="menu">
+
+<a href="#">Ana Sayfa</a>
+<a href="#">Ürünler</a>
+<a href="#">Hakkımızda</a>
+<a href="#">İletişim</a>
+
+</div>
+
+
+
+<section class="hero">
+
+<h2>
+Peugeot • Citroën • Opel • Chevrolet
+</h2>
+
+<p>
+Kaliteli ve güvenilir otomotiv yedek parçaları
+</p>
+
 </section>
 
-<section>
-    <h2>Ürün Gruplarımız</h2>
 
-    <div class="urunler">
-        <div class="kart">
-            <h3>Motor Parçaları</h3>
-            <p>Motor ve mekanik yedek parçalar.</p>
-        </div>
 
-        <div class="kart">
-            <h3>Şanzıman</h3>
-            <p>Manuel ve otomatik şanzıman çözümleri.</p>
-        </div>
+<div class="container">
 
-        <div class="kart">
-            <h3>Elektrik & Elektronik</h3>
-            <p>Araç elektrik parçaları ve ekipmanları.</p>
-        </div>
-    </div>
-</section>
 
-<section>
-    <h2>İletişim</h2>
-    <p class="iletisim">
-        Telefon: Yakında eklenecek<br>
-        E-posta: Yakında eklenecek
-    </p>
-</section>
+<div class="about">
+
+<h2>Hakkımızda</h2>
+
+<p>
+Ali Ernez Otomotiv olarak Avrupa araç grupları için
+yedek parça tedariki ve satış hizmetleri sunuyoruz.
+Müşterilerimize hızlı, güvenilir ve kaliteli çözümler sağlıyoruz.
+</p>
+
+</div>
+
+
+
+<h2>Ürün Gruplarımız</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Motor Parçaları</h3>
+
+<p>
+Motor ekipmanları, mekanik parçalar ve komple çözümler.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Şanzıman</h3>
+
+<p>
+Manuel ve otomatik şanzıman parçaları.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Elektrik Sistemleri</h3>
+
+<p>
+Sensör, elektronik ve araç elektrik parçaları.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Kaporta & Aksesuar</h3>
+
+<p>
+Araç dış parçaları ve tamamlayıcı ürünler.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="contact">
+
+<h2>Bize Ulaşın</h2>
+
+<p>Hızlı teklif ve bilgi için WhatsApp üzerinden iletişime geçebilirsiniz.</p>
+
+<a class="whatsapp" href="#">
+WhatsApp İletişim
+</a>
+
+</div>
+
+
 
 <footer>
-    © 2026 Ali Ernez Otomotiv
+
+© 2026 Ali Ernez Otomotiv
+
 </footer>
 
+
 </body>
+
 </html>
