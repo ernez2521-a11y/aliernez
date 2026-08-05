@@ -22,19 +22,18 @@
 
     <style>
         :root {
-            /* ÖZAŞ OTOMOTİV ESİNLENMELİ FERAH VE AYDINLIK KURUMSAL RENK PALETİ */
-            --bg-body: #F4F7FB;             /* Çok Açık Kurumsal Gri / Mavi Arka Plan */
-            --bg-card: #FFFFFF;             /* Saf Beyaz Kartlar */
-            --bg-card-hover: #F8FAFC;       
-            --primary-accent: #0056B3;      /* Güçlü Kurumsal Mavi (Özaş Tarzı) */
-            --primary-dark: #003F82;        
-            --amber-accent: #FF9900;        
+            --bg-body: #F4F7FB;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #F8FAFC;
+            --primary-accent: #0056B3;
+            --primary-dark: #003F82;
+            --amber-accent: #FF9900;
             
-            --text-heading: #1E293B;        /* Koyu Lacivert/Gri Başlıklar */
-            --text-body: #475569;           /* Okunaklı Gri Metin */
-            --text-muted: #64748B;          /* İkincil Gri Metin */
+            --text-heading: #1E293B;
+            --text-body: #475569;
+            --text-muted: #64748B;
 
-            --border-light: #E2E8F0;        /* Aydınlık Çerçeve Rengi */
+            --border-light: #E2E8F0;
             --border-accent: rgba(0, 86, 179, 0.3);
             
             --shadow-subtle: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
@@ -69,7 +68,6 @@
         }
         .header-flex { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
         
-        /* EXECUTIVE LOGO DESIGN */
         .brand-logo { text-decoration: none; display: flex; align-items: center; gap: 12px; }
         .logo-icon { 
             width: 42px; height: 42px; 
@@ -133,7 +131,6 @@
 
         /* GRIDS & CARDS */
         .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 
         .card { 
@@ -150,7 +147,7 @@
             transform: translateY(-3px); 
         }
         
-        /* GERÇEKÇİ OTO YEDEK PARÇA GÖRSEL KUTULARI */
+        /* OTO YEDEK PARÇA GÖRSEL KUTULARI */
         .part-visual-card {
             background: var(--bg-card);
             border: 1px solid var(--border-light);
@@ -187,26 +184,43 @@
         .part-content h3 { color: var(--text-heading); font-size: 16px; font-weight: 700; margin-bottom: 6px; }
         .part-content p { color: var(--text-body); font-size: 13px; line-height: 1.5; }
 
-        /* BRAND PILLS */
-        .brand-pill { 
-            background: var(--bg-card); 
-            border: 1px solid var(--border-light); 
-            border-radius: 10px; 
-            padding: 20px; 
-            text-align: center; 
-            font-weight: 800; 
-            color: var(--text-heading); 
-            font-size: 17px; 
-            letter-spacing: 1px;
+        /* ARAÇ MARKA ROZETLERİ (LOGOLU GÖRSEL ALAN) */
+        .brand-logo-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
             box-shadow: var(--shadow-subtle);
-            transition: all 0.3s ease; 
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
         }
-        .brand-pill:hover { 
-            border-color: var(--primary-accent); 
-            color: var(--primary-accent); 
+        .brand-logo-card:hover {
+            border-color: var(--primary-accent);
+            transform: translateY(-3px);
+        }
+        .brand-logo-img {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .brand-logo-img img {
+            max-height: 45px;
+            max-width: 100px;
+            object-fit: contain;
+        }
+        .brand-logo-card span {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--text-heading);
+            letter-spacing: 1px;
         }
 
-        /* TEDARİKÇİ LİSTESİ (50 ADET İÇİN KOMPAKT GRID) */
+        /* TEDARİKÇİ LİSTESİ (50 ADET) */
         .supplier-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -230,7 +244,7 @@
             transform: translateY(-2px);
         }
 
-        /* TEMSİLCİ KARTLARI */
+        /* TEMSİLCİ KARTLARI (Emre Bildik Altına WhatsApp İkonu Eklendi) */
         .rep-card { 
             background: var(--bg-card); 
             border: 1px solid var(--border-light); 
@@ -306,7 +320,7 @@
         }
         @media (max-width: 768px) {
             .supplier-grid { grid-template-columns: repeat(2, 1fr); }
-            .grid-4, .grid-3 { grid-template-columns: 1fr; }
+            .grid-4 { grid-template-columns: 1fr; }
             .grid-2 { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
             .header-flex { flex-direction: column; gap: 14px; text-align: center; }
@@ -377,7 +391,7 @@
         </div>
     </section>
 
-    <!-- ÜRÜN GRUPLARI (Gerçekçi Oto Yedek Parça Görselleri) -->
+    <!-- ÜRÜN GRUPLARI (Gerçek Oto Yedek Parça Görselleri) -->
     <section class="section" id="urunler">
         <div class="container">
             <div class="section-header">
@@ -388,7 +402,7 @@
                 <!-- Motor Parçaları -->
                 <div class="part-visual-card">
                     <div class="part-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80" alt="Motor Parçaları">
+                        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=600&q=80" alt="Motor Parçaları">
                     </div>
                     <div class="part-content">
                         <h3>Motor Parçaları</h3>
@@ -398,7 +412,7 @@
                 <!-- Elektrik ve Elektronik -->
                 <div class="part-visual-card">
                     <div class="part-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=600&q=80" alt="Elektrik ve Elektronik">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80" alt="Elektrik ve Elektronik">
                     </div>
                     <div class="part-content">
                         <h3>Elektrik & Elektronik</h3>
@@ -408,7 +422,7 @@
                 <!-- Filtre Sistemleri -->
                 <div class="part-visual-card">
                     <div class="part-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80" alt="Filtre Sistemleri">
+                        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&q=80" alt="Filtre Sistemleri">
                     </div>
                     <div class="part-content">
                         <h3>Filtre Sistemleri</h3>
@@ -418,7 +432,7 @@
                 <!-- Fren ve Yürüyen Aksam -->
                 <div class="part-visual-card">
                     <div class="part-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="Fren ve Yürüyen Aksam">
+                        <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80" alt="Fren ve Yürüyen Aksam">
                     </div>
                     <div class="part-content">
                         <h3>Fren & Yürüyen Aksam</h3>
@@ -429,7 +443,7 @@
         </div>
     </section>
 
-    <!-- ARAÇ MARKALARI -->
+    <!-- ARAÇ MARKALARI (Logolu / Görsel Rozetli Alan) -->
     <section class="section" id="markalar">
         <div class="container">
             <div class="section-header">
@@ -437,15 +451,35 @@
                 <p class="section-subtitle">Geniş parça stoğu sunduğumuz öncelikli araç markaları</p>
             </div>
             <div class="grid-4">
-                <div class="brand-pill">OPEL</div>
-                <div class="brand-pill">CHEVROLET</div>
-                <div class="brand-pill">PEUGEOT</div>
-                <div class="brand-pill">CITROËN</div>
+                <div class="brand-logo-card">
+                    <div class="brand-logo-img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Opel-Logo_2020.svg" alt="Opel Logo">
+                    </div>
+                    <span>OPEL</span>
+                </div>
+                <div class="brand-logo-card">
+                    <div class="brand-logo-img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Chevrolet_logo_%282013%29.svg" alt="Chevrolet Logo">
+                    </div>
+                    <span>CHEVROLET</span>
+                </div>
+                <div class="brand-logo-card">
+                    <div class="brand-logo-img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Peugeot_Logo_2021.svg" alt="Peugeot Logo">
+                    </div>
+                    <span>PEUGEOT</span>
+                </div>
+                <div class="brand-logo-card">
+                    <div class="brand-logo-img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Citroen_Logo_2022.svg" alt="Citroën Logo">
+                    </div>
+                    <span>CITROËN</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- TEDARİKÇİLERİMİZ (Yaklaşık 50 Tedarikçi) -->
+    <!-- TEDARİKÇİLERİMİZ (50 Adet Tedarikçi) -->
     <section class="section" id="tedarikciler">
         <div class="container">
             <div class="section-header">
