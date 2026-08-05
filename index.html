@@ -56,7 +56,45 @@
         .suppliers-header { background: var(--ozas-dark-blue); color: #fff; padding: 40px 0; text-align: center; }
         .suppliers-header h1 { font-size: 32px; font-weight: 800; text-transform: uppercase; }
         
-        .brands-section { background: var(--ozas-gray); padding: 40px 15px; border-top: 1px solid var(--ozas-border); }
+        .brands-section { background: var(--ozas-gray); padding: 60px 0; border-top: 1px solid var(--ozas-border); }
+        
+        .brands-grid { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            display: grid; 
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 20px; 
+            padding: 0 15px; 
+        }
+        
+        .brand-card { 
+            background: #ffffff; 
+            border: 1px solid var(--ozas-border); 
+            border-radius: 6px; 
+            height: 110px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 15px; 
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+            cursor: pointer;
+        }
+        
+        /* MAUS ÜSTÜNE GELİNCE BERİ GELME (ÖNE ÇIKMA) EFEKTİ */
+        .brand-card:hover { 
+            border-color: var(--ozas-red); 
+            transform: translateY(-8px) scale(1.03); 
+            box-shadow: 0 12px 20px rgba(0,0,0,0.12); 
+            z-index: 2;
+        }
+        
+        .brand-card img { 
+            max-width: 90%; 
+            max-height: 65px; 
+            object-fit: contain; 
+            transition: transform 0.3s ease;
+        }
 
         .content-container { max-width: 1200px; margin: 0 auto; padding: 60px 15px; }
 
@@ -69,10 +107,8 @@
         .footer-col ul li a { color: #ccc; text-decoration: none; cursor: pointer; }
         .footer-bottom { text-align: center; padding-top: 20px; color: #888; font-size: 12px; }
 
-        @media (max-width: 768px) {
-            .footer-container { grid-template-columns: repeat(1, 1fr); }
-            .hero-container h1 { font-size: 28px; }
-        }
+        @media (max-width: 992px) { .brands-grid { grid-template-columns: repeat(4, 1fr); } }
+        @media (max-width: 576px) { .brands-grid { grid-template-columns: repeat(2, 1fr); } }
     </style>
 </head>
 <body>
@@ -133,8 +169,47 @@
             <h1>Anlaşmalı Tedarikçilerimiz</h1>
         </div>
         <section class="brands-section">
-            <div style="max-width: 1200px; margin: 0 auto; background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid var(--ozas-border);">
-                <img src="markalarr.jpg" alt="Anlaşmalı Tedarikçilerimiz" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+            <div class="brands-grid">
+                <div class="brand-card"><img src="behr-ozas.png" alt="Behr"></div>
+                <div class="brand-card"><img src="beru-ozas.png" alt="Beru"></div>
+                <div class="brand-card"><img src="bosch-ozas.png" alt="Bosch"></div>
+                <div class="brand-card"><img src="champion-ozas.png" alt="Champion"></div>
+                <div class="brand-card"><img src="contitech-ozas.png" alt="ContiTech"></div>
+                <div class="brand-card"><img src="corteco-ozas.png" alt="Corteco"></div>
+                <div class="brand-card"><img src="delphi-ozas.png" alt="Delphi"></div>
+                <div class="brand-card"><img src="denso-ozas.png" alt="Denso"></div>
+                <div class="brand-card"><img src="cifam-ozas.png" alt="Cifam"></div>
+                <div class="brand-card"><img src="ferodo-ozas.png" alt="Ferodo"></div>
+                <div class="brand-card"><img src="gates-ozas.png" alt="Gates"></div>
+                <div class="brand-card"><img src="glyco-ozas.png" alt="Glyco"></div>
+                <div class="brand-card"><img src="goetze-ozas.png" alt="Goetze"></div>
+                <div class="brand-card"><img src="graf-ozas.png" alt="Graf"></div>
+                <div class="brand-card"><img src="gunes-ozas.png" alt="Güneş"></div>
+                <div class="brand-card"><img src="hella-ozas.png" alt="Hella"></div>
+                <div class="brand-card"><img src="ibras-ozas.png" alt="İbraş"></div>
+                <div class="brand-card"><img src="kale-ozas.png" alt="Kale"></div>
+                <div class="brand-card"><img src="kapimsan-ozas.jpg" alt="Kapımsan"></div>
+                <div class="brand-card"><img src="kolbenschmidt-ozas.jpg" alt="Kolbenschmidt"></div>
+                <div class="brand-card"><img src="magneti-marelli-ozas.png" alt="Magneti Marelli"></div>
+                <div class="brand-card"><img src="mahle-ozas.jpg" alt="Mahle"></div>
+                <div class="brand-card"><img src="mando-plus-ozas.jpg" alt="Mando"></div>
+                <div class="brand-card"><img src="mann-filter-ozas.png" alt="Mann Filter"></div>
+                <div class="brand-card"><img src="mapa-ozas.jpg" alt="Mapa"></div>
+                <div class="brand-card"><img src="maysan-mando-ozas.jpg" alt="Maysan Mando"></div>
+                <div class="brand-card"><img src="monroe-ozas.png" alt="Monroe"></div>
+                <div class="brand-card"><img src="ngk-ozas.png" alt="NGK"></div>
+                <div class="brand-card"><img src="nura-ozas.jpg" alt="Nüral"></div>
+                <div class="brand-card"><img src="pierburg-ozas.jpg" alt="Pierburg"></div>
+                <div class="brand-card"><img src="sachs-ozas.png" alt="Sachs"></div>
+                <div class="brand-card"><img src="schaeffler-ozas.jpg" alt="Schaeffler"></div>
+                <div class="brand-card"><img src="sismak-ozas.png" alt="Sışmak"></div>
+                <div class="brand-card"><img src="skf-ozas.png" alt="SKF"></div>
+                <div class="brand-card"><img src="supsan-ozas.png" alt="Supsan"></div>
+                <div class="brand-card"><img src="topran-ozas.png" alt="Topran"></div>
+                <div class="brand-card"><img src="trw-ozas.png" alt="TRW"></div>
+                <div class="brand-card"><img src="ufi-filters-ozas.png" alt="UFI Filters"></div>
+                <div class="brand-card"><img src="ulo-ozas.png" alt="ULO"></div>
+                <div class="brand-card"><img src="victor-reinz-ozas.png" alt="Victor Reinz"></div>
             </div>
         </section>
     </div>
@@ -202,6 +277,20 @@
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // Görsel uzantı kontrolü (.png yoksa .jpg dener)
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll('.brand-card img');
+            images.forEach(img => {
+                img.onerror = function () {
+                    if (this.src.endsWith('.png')) {
+                        this.src = this.src.replace('.png', '.jpg');
+                    } else if (this.src.endsWith('.jpg')) {
+                        this.src = this.src.replace('.jpg', '.png');
+                    }
+                };
+            });
+        });
     </script>
 </body>
 </html>
