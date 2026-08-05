@@ -1,373 +1,487 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JPN Otomotiv - Bağımsız Yedek Parça Distribütörü</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', Arial, sans-serif; }
-        body { background-color: #ffffff; color: #333; line-height: 1.6; }
-        
-        :root {
-            --ozas-red: #d32f2f;
-            --ozas-dark-blue: #0f2a4a;
-            --ozas-gray: #f8f9fa;
-            --ozas-border: #e9ecef;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* TOP BAR */
-        .top-header { background: var(--ozas-dark-blue); color: #fff; font-size: 12px; padding: 6px 0; border-bottom: 2px solid var(--ozas-red); }
-        .top-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 15px; }
-        .top-info span { margin-right: 20px; }
-        .top-links a { color: #fff; text-decoration: none; margin-left: 15px; }
+<title>JPN Otomotiv | Opel Chevrolet Peugeot Citroën Yedek Parça</title>
 
-        /* MAIN HEADER */
-        header { background: #fff; padding: 20px 0; }
-        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
-        .text-logo { font-size: 28px; font-weight: 900; color: var(--ozas-dark-blue); text-decoration: none; cursor: pointer; letter-spacing: 1px; }
-        .text-logo span { color: var(--ozas-red); }
-        .b2b-btn { background: var(--ozas-red); color: #fff; padding: 10px 22px; text-decoration: none; font-weight: bold; border-radius: 3px; text-transform: uppercase; font-size: 13px; }
+<meta name="description" content="JPN Otomotiv, Opel, Chevrolet, Peugeot ve Citroën yedek parça tedariğinde kaliteli ürün ve hızlı hizmet sunar. Diyarbakır merkezli otomotiv yedek parça firması.">
+<meta name="keywords" content="Opel yedek parça, Chevrolet yedek parça, Peugeot yedek parça, Citroen yedek parça, otomotiv yedek parça, Diyarbakır yedek parça">
+<meta name="author" content="JPN Otomotiv">
 
-        /* SABİT MENÜ */
-        nav { 
-            background: #fff; 
-            border-bottom: 2px solid var(--ozas-red); 
-            border-top: 1px solid #eee; 
-            position: sticky;
-            top: 0;
-            z-index: 9999;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-        }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; list-style: none; padding: 0 15px; }
-        .nav-container li a { display: block; padding: 15px 20px; color: var(--ozas-dark-blue); font-weight: 700; text-decoration: none; font-size: 14px; text-transform: uppercase; transition: all 0.2s ease; cursor: pointer; }
-        .nav-container li a:hover, .nav-container li a.active { border-bottom: 3px solid var(--ozas-red); color: var(--ozas-red); }
+<!-- SEO & GEO METATAGS -->
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="TR-21">
+<meta name="geo.placename" content="Diyarbakır">
+<meta name="business:contact_data:phone_number" content="+905319182817">
 
-        /* SAYFA İÇERİK ALANLARI */
-        .page-section { display: none; }
-        .page-section.active { display: block; }
+<!-- OPEN GRAPH (SOSYAL MEDYA) -->
+<meta property="og:title" content="JPN Otomotiv - Kaliteli Yedek Parça">
+<meta property="og:description" content="Opel, Chevrolet, Peugeot ve Citroën yedek parçalarında güvenilir çözüm ortağınız.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="jpn-logo.png">
 
-        /* HERO TEXT BANNER (GÖRSELSİZ) */
-        .hero-banner-text {
-            background: linear-gradient(135deg, var(--ozas-dark-blue) 0%, #1a4270 100%);
-            color: #fff;
-            padding: 60px 20px;
-            text-align: center;
-            border-bottom: 4px solid var(--ozas-red);
-        }
-        .hero-banner-text h1 { font-size: 36px; font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-        .hero-banner-text p { font-size: 18px; color: #e0e0e0; max-width: 800px; margin: 0 auto; }
+<style>
 
-        /* TEDARİKÇİLERİMİZ SEKSİYONU */
-        .suppliers-header { background: var(--ozas-dark-blue); color: #fff; padding: 40px 0; text-align: center; }
-        .suppliers-header h1 { font-size: 32px; font-weight: 800; text-transform: uppercase; }
-        
-        .brands-section { background: var(--ozas-gray); padding: 60px 0; border-top: 1px solid var(--ozas-border); }
-        
-        .brands-grid { 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            display: grid; 
-            grid-template-columns: repeat(6, 1fr); 
-            gap: 20px; 
-            padding: 0 15px; 
-        }
-        
-        .brand-card { 
-            background: #ffffff; 
-            border: 1px solid var(--ozas-border); 
-            border-radius: 6px; 
-            height: 110px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            padding: 15px; 
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.04);
-            cursor: pointer;
-        }
-        
-        .brand-card:hover { 
-            border-color: var(--ozas-red); 
-            transform: translateY(-8px) scale(1.04); 
-            box-shadow: 0 12px 20px rgba(0,0,0,0.12); 
-            z-index: 2;
-        }
-        
-        .brand-card img { 
-            max-width: 90%; 
-            max-height: 65px; 
-            object-fit: contain; 
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
 
-        .content-container { max-width: 1200px; margin: 0 auto; padding: 50px 15px; }
+body{
+background:#fff;
+color:#333;
+}
 
-        /* KURUMSAL & TEMSİLCİLER STİLLERİ */
-        .about-box { background: #f8f9fa; border-left: 4px solid var(--ozas-red); padding: 25px; margin-bottom: 30px; border-radius: 0 6px 6px 0; }
-        .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px; }
-        .mv-card { background: #fff; border: 1px solid var(--ozas-border); padding: 25px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
-        .mv-card h3 { color: var(--ozas-dark-blue); margin-bottom: 10px; border-bottom: 2px solid var(--ozas-red); display: inline-block; padding-bottom: 5px; }
+/* RENKLER */
+:root{
+--lacivert:#0b1f3a;
+--kirmizi:#d71920;
+--gri:#f5f5f5;
+}
 
-        .reps-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-top: 20px; }
-        .rep-card { background: #fff; border: 1px solid var(--ozas-border); border-top: 4px solid var(--ozas-red); padding: 25px; border-radius: 6px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-        .rep-card h3 { color: var(--ozas-dark-blue); font-size: 20px; margin-bottom: 5px; }
-        .rep-card p { color: #666; font-weight: 600; }
+/* ÜST BİLGİ */
+.top-header{
+background:var(--lacivert);
+color:white;
+font-size:13px;
+padding:8px 0;
+}
 
-        /* FOOTER */
-        footer { background: var(--ozas-dark-blue); color: #fff; padding: 50px 0 20px; font-size: 13px; }
-        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding: 0 15px 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .footer-col h4 { font-size: 16px; margin-bottom: 20px; color: #fff; text-transform: uppercase; border-left: 3px solid var(--ozas-red); padding-left: 10px; }
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 10px; }
-        .footer-col ul li a { color: #ccc; text-decoration: none; cursor: pointer; }
-        .footer-bottom { text-align: center; padding-top: 20px; color: #888; font-size: 12px; }
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
 
-        @media (max-width: 992px) { .brands-grid { grid-template-columns: repeat(4, 1fr); } .mv-grid, .reps-grid { grid-template-columns: 1fr; } }
-        @media (max-width: 576px) { .brands-grid { grid-template-columns: repeat(2, 1fr); } }
-    </style>
+.top-flex{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* LOGO VE HEADER ALANI */
+header{
+padding:15px 0;
+background:white;
+}
+
+.header-flex{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo img{
+height:70px;
+object-fit:contain;
+display:block;
+}
+
+.bayi-btn{
+background:var(--kirmizi);
+color:white;
+padding:12px 25px;
+text-decoration:none;
+font-weight:bold;
+border-radius:5px;
+}
+
+/* MENÜ */
+nav{
+background:white;
+border-top:1px solid #ddd;
+border-bottom:3px solid var(--kirmizi);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.menu{
+display:flex;
+list-style:none;
+}
+
+.menu li a{
+display:block;
+padding:16px 22px;
+text-decoration:none;
+color:var(--lacivert);
+font-weight:bold;
+font-size:14px;
+transition: background 0.2s ease;
+}
+
+.menu li a:hover{
+background:var(--kirmizi);
+color:white;
+}
+
+/* ANA GÖRSEL (HERO BANNER) */
+.hero{
+height:430px;
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.55)
+),
+url("otomotiv-banner.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+/* BÖLÜMLER */
+.section{
+padding:60px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:30px;
+color:var(--lacivert);
+margin-bottom:35px;
+}
+
+/* KARTLAR */
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+border:1px solid #ddd;
+padding:25px;
+text-align:center;
+border-radius:8px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px #ddd;
+}
+
+.card h3{
+color:var(--kirmizi);
+margin-bottom:10px;
+}
+
+/* MARKALAR */
+.brands{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.brand{
+background:#f7f7f7;
+padding:25px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+color:var(--lacivert);
+border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+background:var(--lacivert);
+color:white;
+padding:40px 0;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+footer h3{
+border-left:4px solid var(--kirmizi);
+padding-left:10px;
+margin-bottom:15px;
+}
+
+.footer-menu p a{
+color:#fff;
+text-decoration:none;
+}
+
+.copyright{
+text-align:center;
+margin-top:30px;
+color:#ccc;
+border-top: 1px solid rgba(255,255,255,0.1);
+padding-top: 20px;
+}
+
+/* MOBİL UYUMLULUK */
+@media(max-width:900px){
+.cards,
+.brands,
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.menu{
+flex-direction:column;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.top-flex, .header-flex{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+}
+
+</style>
 </head>
+
 <body>
 
-    <!-- TOP HEADER -->
-    <div class="top-header">
-        <div class="top-container">
-            <div class="top-info">
-                <span>📍 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 KAYAPINAR/ DİYARBAKIR</span>
-                <span>📞 +90 531 918 28 17</span>
-            </div>
-            <div class="top-links">
-                <a href="#b2b">B2B Portal</a>
-                <a href="#ik">Kariyer</a>
-                <a href="#iletisim" onclick="switchTab('iletisim')">İletişim</a>
-            </div>
-        </div>
-    </div>
+<!-- ÜST BİLGİ -->
+<div class="top-header">
+<div class="container top-flex">
+<div>
+📍 3. Sanayi Sitesi 2. Sk. No:T3 Blok No/9 Kayapınar / Diyarbakır
+</div>
+<div>
+📞 +90 531 918 28 17
+</div>
+</div>
+</div>
 
-    <!-- MAIN HEADER -->
-    <header>
-        <div class="header-container">
-            <div class="text-logo" onclick="switchTab('home')">JPN <span>OTOMOTİV</span></div>
-            <a href="#b2b" class="b2b-btn">B2B Bayi Girişi</a>
-        </div>
-    </header>
+<!-- HEADER (LOGO GÖRSELİ İLE GÜNCELLENDİ) -->
+<header>
+<div class="container header-flex">
+<div class="logo"><img src="jpn-logo.png" alt="JPN Otomotiv Logo" style="height:70px;"></div>
+<a class="bayi-btn" href="#">
+B2B Bayi Girişi
+</a>
+</div>
+</header>
 
-    <!-- SABİT MENÜ -->
-    <nav>
-        <ul class="nav-container">
-            <li><a id="nav-home" class="active" onclick="switchTab('home')">Ana Sayfa</a></li>
-            <li><a id="nav-kurumsal" onclick="switchTab('kurumsal')">Kurumsal</a></li>
-            <li><a id="nav-tedarikciler" onclick="switchTab('tedarikciler')">Tedarikçilerimiz</a></li>
-            <li><a id="nav-temsilciler" onclick="switchTab('temsilciler')">Temsilcilerimiz</a></li>
-            <li><a id="nav-iletisim" onclick="switchTab('iletisim')">İletişim</a></li>
-        </ul>
-    </nav>
+<!-- MENÜ -->
+<nav>
+<div class="container">
+<ul class="menu">
+<li><a href="#">Ana Sayfa</a></li>
+<li><a href="#kurumsal">Kurumsal</a></li>
+<li><a href="#urunler">Ürünler</a></li>
+<li><a href="#tedarik">Tedarikçilerimiz</a></li>
+<li><a href="#iletisim">İletişim</a></li>
+</ul>
+</div>
+</nav>
 
-    <!-- SAYFA 1: ANA SAYFA -->
-    <div id="page-home" class="page-section active">
-        <div class="hero-banner-text">
-            <h1>Kaliteli Parça, Güvenli Yolculuk</h1>
-            <p>Binek ve hafif ticari araç grubunda Türkiye geneline yaygın dağıtım ağı ve zengin stok çeşidi ile hizmetinizdeyiz.</p>
-        </div>
-        <div class="content-container">
-            <h2>Hoş Geldiniz</h2>
-            <p>JPN Otomotiv; Opel, Chevrolet, Peugeot ve Citroën başta olmak üzere binek ve hafif ticari araç gruplarında zengin ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdedir.</p>
-        </div>
-    </div>
+<!-- ANA BANNER (otomotiv-banner.jpg GÖRSELİ İLE) -->
+<section class="hero">
+<div>
+<h1>
+Otomotiv Yedek Parçada Güvenilir Çözüm
+</h1>
+<p>
+Opel • Chevrolet • Peugeot • Citroën
+yedek parçalarında güçlü stok ve hızlı hizmet
+</p>
+</div>
+</section>
 
-    <!-- SAYFA 2: KURUMSAL -->
-    <div id="page-kurumsal" class="page-section">
-        <div class="suppliers-header">
-            <h1>Kurumsal</h1>
-        </div>
-        <div class="content-container">
-            <div class="about-box">
-                <h2 style="color: var(--ozas-dark-blue); margin-bottom: 10px;">Hakkımızda</h2>
-                <p>JPN Otomotiv, otomotiv yedek parça sektöründe binek ve hafif ticari araç grupları için zengin ürün çeşidi, güçlü stok yapısı ve kaliteli hizmet anlayışıyla faaliyet göstermektedir. Kuruluşumuzdan bu yana, dünya çapında rüştünü ispatlamış lider yedek parça üreticilerinin ürünlerini en hızlı ve en güvenilir şekilde müşterilerimize ulaştırmayı ilke edindik.</p>
-                <p style="margin-top: 10px;">Diyarbakır merkezli operasyonumuz ve geniş dağıtım ağımız sayesinde, bölgesel ihtiyaçlara anında yanıt veriyor; doğru ürün, doğru zamanlama ve rekabetçi fiyat politikasıyla sektördeki güvenilir iş ortağınız olmaya devam ediyoruz.</p>
-            </div>
+<!-- HOŞGELDİNİZ -->
+<section class="section">
+<div class="container">
+<h2 class="section-title">
+JPN OTOMOTİV
+</h2>
+<p style="text-align:center;font-size:18px;line-height:1.8;">
+JPN Otomotiv; Opel, Chevrolet, Peugeot ve Citroën başta olmak üzere
+binek ve hafif ticari araç gruplarında kaliteli yedek parça tedariği
+sağlayan güvenilir bir otomotiv firmasıdır.
+</p>
+</div>
+</section>
 
-            <div class="mv-grid">
-                <div class="mv-card">
-                    <h3>Misyonumuz</h3>
-                    <p>Dünya markalarının orijinal ve yüksek kaliteli yedek parçalarını, gelişmiş lojistik ağımız ve uzman kadromuzla müşterilerimize kesintisiz, hızlı ve güvenilir bir şekilde sunmak.</p>
-                </div>
-                <div class="mv-card">
-                    <h3>Vizyonumuz</h3>
-                    <p>Yedek parça dağıtımında yenilikçi çözümler, güçlü stok kapasitesi ve koşulsuz müşteri memnuniyeti ile bölgenin ve sektörün öncü, en çok tercih edilen distribütör firması olmak.</p>
-                </div>
-            </div>
+<!-- ÜRÜN GRUPLARI -->
+<section class="section" id="urunler" style="background:#f5f5f5;">
+<div class="container">
+<h2 class="section-title">
+Ürün Gruplarımız
+</h2>
+<div class="cards">
+<div class="card">
+<h3>Motor Parçaları</h3>
+<p>Motor parçaları, contalar, piston, segman ve mekanik ürünler.</p>
+</div>
+<div class="card">
+<h3>Filtre Grubu</h3>
+<p>Yağ, hava, polen ve yakıt filtreleri.</p>
+</div>
+<div class="card">
+<h3>Debriyaj & Şanzıman</h3>
+<p>Baskı balata, volan ve aktarma parçaları.</p>
+</div>
+<div class="card">
+<h3>Fren & Süspansiyon</h3>
+<p>Disk, balata, amortisör ve yürüyen aksam ürünleri.</p>
+</div>
+</div>
+</div>
+</section>
 
-            <div class="about-box" style="border-left-color: var(--ozas-dark-blue);">
-                <h3 style="color: var(--ozas-dark-blue); margin-bottom: 10px;">Değerlerimiz</h3>
-                <ul style="margin-left: 20px;">
-                    <li><strong>Güvenilirlik & Kalite:</strong> Yalnızca uluslararası standartlara uygun, kalitesi kanıtlanmış ürünleri sunarız.</li>
-                    <li><strong>Müşteri Odaklılık:</strong> Bayilerimizin ve iş ortaklarımızın ihtiyaçlarını dinler, hızlı ve etkili çözümler üretiriz.</li>
-                    <li><strong>Sürekli Gelişim:</strong> Sektördeki yenilikleri ve araç teknolojilerini yakından takip ederek stok ve hizmet yapımızı sürekli güncelleriz.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<!-- ARAÇ MARKALARI -->
+<section class="section">
+<div class="container">
+<h2 class="section-title">
+Hizmet Verdiğimiz Araç Grupları
+</h2>
+<div class="brands">
+<div class="brand">OPEL</div>
+<div class="brand">CHEVROLET</div>
+<div class="brand">PEUGEOT</div>
+<div class="brand">CITROËN</div>
+</div>
+</div>
+</section>
 
-    <!-- SAYFA 3: TEDARİKÇİLERİMİZ -->
-    <div id="page-tedarikciler" class="page-section">
-        <div class="suppliers-header">
-            <h1>Anlaşmalı Tedarikçilerimiz</h1>
-        </div>
-        <section class="brands-section">
-            <div class="brands-grid">
-                <div class="brand-card"><img src="behr-ozas.png" alt="Behr"></div>
-                <div class="brand-card"><img src="beru-ozas.png" alt="Beru"></div>
-                <div class="brand-card"><img src="bosch-ozas.png" alt="Bosch"></div>
-                <div class="brand-card"><img src="champion-ozas.png" alt="Champion"></div>
-                <div class="brand-card"><img src="contitech-ozas.png" alt="ContiTech"></div>
-                <div class="brand-card"><img src="corteco-ozas.png" alt="Corteco"></div>
-                <div class="brand-card"><img src="delphi-ozas.png" alt="Delphi"></div>
-                <div class="brand-card"><img src="denso-ozas.png" alt="Denso"></div>
-                <div class="brand-card"><img src="cifam-ozas.png" alt="Cifam"></div>
-                <div class="brand-card"><img src="ferodo-ozas.png" alt="Ferodo"></div>
-                <div class="brand-card"><img src="gates-ozas.png" alt="Gates"></div>
-                <div class="brand-card"><img src="glyco-ozas.png" alt="Glyco"></div>
-                <div class="brand-card"><img src="goetze-ozas.png" alt="Goetze"></div>
-                <div class="brand-card"><img src="graf-ozas.png" alt="Graf"></div>
-                <div class="brand-card"><img src="gunes-ozas.png" alt="Güneş"></div>
-                <div class="brand-card"><img src="hella-ozas.png" alt="Hella"></div>
-                <div class="brand-card"><img src="ibras-ozas.png" alt="İbraş"></div>
-                <div class="brand-card"><img src="kale-ozas.png" alt="Kale"></div>
-                <div class="brand-card"><img src="kapimsan-ozas.jpg" alt="Kapımsan"></div>
-                <div class="brand-card"><img src="kolbenschmidt-ozas.jpg" alt="Kolbenschmidt"></div>
-                <div class="brand-card"><img src="magneti-marelli-ozas.png" alt="Magneti Marelli"></div>
-                <div class="brand-card"><img src="mahle-ozas.jpg" alt="Mahle"></div>
-                <div class="brand-card"><img src="mando-plus-ozas.jpg" alt="Mando"></div>
-                <div class="brand-card"><img src="mann-filter-ozas.png" alt="Mann Filter"></div>
-                <div class="brand-card"><img src="mapa-ozas.jpg" alt="Mapa"></div>
-                <div class="brand-card"><img src="maysan-mando-ozas.jpg" alt="Maysan Mando"></div>
-                <div class="brand-card"><img src="monroe-ozas.png" alt="Monroe"></div>
-                <div class="brand-card"><img src="ngk-ozas.png" alt="NGK"></div>
-                <div class="brand-card"><img src="nura-ozas.jpg" alt="Nüral"></div>
-                <div class="brand-card"><img src="pierburg-ozas.jpg" alt="Pierburg"></div>
-                <div class="brand-card"><img src="sachs-ozas.png" alt="Sachs"></div>
-                <div class="brand-card"><img src="schaeffler-ozas.jpg" alt="Schaeffler"></div>
-                <div class="brand-card"><img src="sismak-ozas.png" alt="Sışmak"></div>
-                <div class="brand-card"><img src="skf-ozas.png" alt="SKF"></div>
-                <div class="brand-card"><img src="supsan-ozas.png" alt="Supsan"></div>
-                <div class="brand-card"><img src="topran-ozas.png" alt="Topran"></div>
-                <div class="brand-card"><img src="trw-ozas.png" alt="TRW"></div>
-                <div class="brand-card"><img src="ufi-filters-ozas.png" alt="UFI Filters"></div>
-                <div class="brand-card"><img src="ulo-ozas.png" alt="ULO"></div>
-                <div class="brand-card"><img src="victor-reinz-ozas.png" alt="Victor Reinz"></div>
-            </div>
-        </section>
-    </div>
+<!-- TEDARİKÇİLER -->
+<section class="section" id="tedarik" style="background:#f5f5f5;">
+<div class="container">
+<h2 class="section-title">
+Anlaşmalı Tedarikçilerimiz
+</h2>
+<div class="brands">
+<div class="brand">BOSCH</div>
+<div class="brand">MAHLE</div>
+<div class="brand">MANN FILTER</div>
+<div class="brand">SKF</div>
+<div class="brand">SACHS</div>
+<div class="brand">FEBI</div>
+<div class="brand">GATES</div>
+<div class="brand">DELPHI</div>
+</div>
+</div>
+</section>
 
-    <!-- SAYFA 4: TEMSİLCİLERİMİZ -->
-    <div id="page-temsilciler" class="page-section">
-        <div class="suppliers-header">
-            <h1>Temsilcilerimiz</h1>
-        </div>
-        <div class="content-container">
-            <p style="text-align: center; margin-bottom: 20px;">Sipariş ve destek talepleriniz için bölge temsilcilerimizle iletişime geçebilirsiniz.</p>
-            <div class="reps-grid">
-                <div class="rep-card">
-                    <h3>Kenan ELBEY</h3>
-                    <p>Müşteri Temsilcisi</p>
-                </div>
-                <div class="rep-card">
-                    <h3>Emre BİLDİK</h3>
-                    <p>Müşteri Temsilcisi</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- KURUMSAL -->
+<section class="section" id="kurumsal">
+<div class="container">
+<h2 class="section-title">
+Kurumsal
+</h2>
+<p style="font-size:17px;line-height:1.9;">
+JPN Otomotiv, otomotiv yedek parça sektöründe kaliteli ürün,
+hızlı tedarik ve müşteri memnuniyeti odaklı hizmet anlayışıyla
+faaliyet göstermektedir.
+<br><br>
+Opel, Chevrolet, Peugeot ve Citroën araç gruplarında ihtiyaç duyulan
+yedek parçaları güvenilir tedarikçilerden sağlayarak müşterilerine
+ulaştırmaktadır.
+</p>
+<br>
+<div class="cards">
+<div class="card">
+<h3>Misyonumuz</h3>
+<p>Kaliteli yedek parçaları uygun fiyat ve hızlı teslimat avantajıyla müşterilerimize sunmak.</p>
+</div>
+<div class="card">
+<h3>Vizyonumuz</h3>
+<p>Türkiye'nin güvenilir otomotiv yedek parça çözüm ortaklarından biri olmak.</p>
+</div>
+<div class="card">
+<h3>Kalite</h3>
+<p>Dünya standartlarında üretim yapan markalarla çalışarak güvenilir ürünler sunmak.</p>
+</div>
+<div class="card">
+<h3>Hızlı Hizmet</h3>
+<p>Geniş ürün ağı ve güçlü stok yapısıyla hızlı çözümler üretmek.</p>
+</div>
+</div>
+</div>
+</section>
 
-    <!-- SAYFA 5: İLETİŞİM -->
-    <div id="page-iletisim" class="page-section">
-        <div class="suppliers-header">
-            <h1>İletişim</h1>
-        </div>
-        <div class="content-container">
-            <div class="about-box">
-                <h3 style="color: var(--ozas-dark-blue); margin-bottom: 15px;">İletişim Bilgileri</h3>
-                <p><strong>Adres:</strong> 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 KAYAPINAR/ DİYARBAKIR</p>
-                <p style="margin-top: 10px;"><strong>Telefon:</strong> +90 531 918 28 17</p>
-                <p style="margin-top: 10px;"><strong>E-Posta:</strong> otomotivjpn@gmail.com</p>
-            </div>
-        </div>
-    </div>
+<!-- İLETİŞİM -->
+<section class="section" id="iletisim" style="background:#f5f5f5;">
+<div class="container">
+<h2 class="section-title">
+İletişim
+</h2>
+<div class="card" style="max-width:600px; margin:auto;">
+<h3>JPN OTOMOTİV</h3>
+<p>
+📍 3. Sanayi Sitesi 2. Sk. No:T3 Blok No/9
+<br>
+Kayapınar / Diyarbakır
+</p>
+<br>
+<p>
+📞 Telefon:
+<br>
+<strong>+90 531 918 28 17</strong>
+</p>
+<br>
+<p>
+✉ E-Posta:
+<br>
+<strong>otomotivjpn@gmail.com</strong>
+</p>
+</div>
+</div>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-col">
-                <div class="text-logo" style="color: #fff; margin-bottom: 15px;" onclick="switchTab('home')">JPN <span style="color: var(--ozas-red);">OTOMOTİV</span></div>
-                <p>Otomotiv yedek parça sektöründe koşulsuz müşteri memnuniyeti ve kalite odaklı hizmet ilkesi.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Hızlı Menü</h4>
-                <ul>
-                    <li><a onclick="switchTab('kurumsal')">Kurumsal</a></li>
-                    <li><a onclick="switchTab('tedarikciler')">Tedarikçilerimiz</a></li>
-                    <li><a onclick="switchTab('temsilciler')">Temsilcilerimiz</a></li>
-                    <li><a onclick="switchTab('iletisim')">İletişim</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Yazılım & Destek</h4>
-                <ul>
-                    <li><a href="#b2b">B2B Sipariş Sistemi</a></li>
-                    <li><a href="#">Müşteri Hizmetleri</a></li>
-                    <li><a href="#">Uzak Yardım</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>İletişim</h4>
-                <p><strong>Adres:</strong> 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 KAYAPINAR/ DİYARBAKIR</p>
-                <p style="margin-top: 5px;"><strong>Tel:</strong> +90 531 918 28 17</p>
-                <p style="margin-top: 5px;"><strong>E-Posta:</strong> otomotivjpn@gmail.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            Copyright © 2026 JPN Otomotiv. Tüm Hakları Saklıdır.
-        </div>
-    </footer>
+<!-- FOOTER -->
+<footer>
+<div class="container footer-grid">
+<div>
+<h3>JPN OTOMOTİV</h3>
+<p>
+Opel, Chevrolet, Peugeot ve Citroën
+yedek parçalarında güvenilir çözüm ortağınız.
+</p>
+</div>
 
-    <script>
-        function switchTab(tabId) {
-            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
-            document.querySelectorAll('.nav-container li a').forEach(a => a.classList.remove('active'));
-            
-            const targetPage = document.getElementById('page-' + tabId);
-            const targetNav = document.getElementById('nav-' + tabId);
-            
-            if(targetPage) targetPage.classList.add('active');
-            if(targetNav) targetNav.classList.add('active');
-            
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+<div class="footer-menu">
+<h3>Hızlı Menü</h3>
+<p><a href="#">Ana Sayfa</a></p>
+<p><a href="#kurumsal">Kurumsal</a></p>
+<p><a href="#urunler">Ürünler</a></p>
+<p><a href="#iletisim">İletişim</a></p>
+</div>
 
-        /* Tedarikçi Görselleri İçin Akıllı Otomatik Düzeltici */
-        document.addEventListener("DOMContentLoaded", function () {
-            const allImages = document.querySelectorAll('img');
-            allImages.forEach(img => {
-                img.onerror = function () {
-                    let src = this.getAttribute('src');
-                    if (!this.dataset.tried) {
-                        this.dataset.tried = "1";
-                        if (src.includes('-ozas')) {
-                            this.src = src.replace('-ozas', '');
-                        } else {
-                            let parts = src.split('.');
-                            this.src = parts[0] + '-ozas.' + parts[1];
-                        }
-                    } else if (this.dataset.tried === "1") {
-                        this.dataset.tried = "2";
-                        if (src.endsWith('.png')) {
-                            this.src = src.replace('.png', '.jpg');
-                        } else if (src.endsWith('.jpg')) {
-                            this.src = src.replace('.jpg', '.png');
-                        }
-                    }
-                };
-            });
-        });
-    </script>
+<div>
+<h3>İletişim</h3>
+<p>Diyarbakır</p>
+<p>+90 531 918 28 17</p>
+<p>otomotivjpn@gmail.com</p>
+</div>
+</div>
+
+<div class="copyright">
+© 2026 JPN OTOMOTİV | Tüm Hakları Saklıdır.
+</div>
+</footer>
+
 </body>
 </html>
