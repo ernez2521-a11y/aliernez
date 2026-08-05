@@ -185,24 +185,6 @@
             transform: translateY(-2px);
         }
 
-        .supplier-pill { 
-            background: rgba(19, 24, 34, 0.5); 
-            border: 1px solid var(--border-light); 
-            border-radius: 10px; 
-            padding: 20px; 
-            text-align: center; 
-            font-weight: 700; 
-            color: var(--text-body); 
-            font-size: 15px; 
-            letter-spacing: 1px; 
-            transition: all 0.2s ease; 
-        }
-        .supplier-pill:hover { 
-            border-color: var(--border-accent); 
-            color: var(--text-heading); 
-            background: var(--bg-card); 
-        }
-
         /* TEMSİLCİ KARTLARI */
         .rep-card { 
             background: var(--bg-card); 
@@ -283,7 +265,7 @@
             .grid-4 { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
         }
-
+    
         /* WHATSAPP FLOAT BUTTON */
         .whatsapp-float {
             position: fixed;
@@ -327,6 +309,7 @@
             color: #FFFFFF;
         }
 </style>
+
 </head>
 <body>
 
@@ -435,14 +418,38 @@
                 <p class="section-subtitle">Birlikte çalıştığımız dünya lideri OEM ve eşdeğer parça üreticileri</p>
             </div>
             <div class="grid-4">
-                <div class="supplier-pill">BOSCH</div>
-                <div class="supplier-pill">MAHLE</div>
-                <div class="supplier-pill">MANN FILTER</div>
-                <div class="supplier-pill">SKF</div>
-                <div class="supplier-pill">SACHS</div>
-                <div class="supplier-pill">FEBI BILSTEIN</div>
-                <div class="supplier-pill">GATES</div>
-                <div class="supplier-pill">DELPHI</div>
+                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
+                    <div style="font-size: 28px; font-weight: 800; color: #FF4400; letter-spacing: 1px; margin-bottom: 8px;">BOSCH</div>
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Orijinal Ekipman</div>
+                </div>
+                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
+                    <div style="font-size: 28px; font-weight: 800; color: #004B87; letter-spacing: 1px; margin-bottom: 8px;">MAHLE</div>
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Motor Sistemleri</div>
+                </div>
+                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
+                    <div style="font-size: 24px; font-weight: 800; color: #00A651; letter-spacing: 1px; margin-bottom: 8px;">MANN+HUMMEL</div>
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Filtrasyon Teknolojisi</div>
+                </div>
+                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
+                    <div style="font-size: 28px; font-weight: 800; color: #CC0000; letter-spacing: 1px; margin-bottom: 8px;">SKF</div>
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Rulman & Aktarma</div>
+                </div>
+                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
+                    <div style="font-size: 28px; font-weight: 800; color: #003366; letter-spacing: 1px; margin-bottom: 8px;">SACHS</div>
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Debriyaj Sistemleri</div>
+                </div>
+                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
+                    <div style="font-size: 22px; font-weight: 800; color: #FFCC00; letter-spacing: 1px; margin-bottom: 8px; text-shadow: 0 1px 2px rgba(0,0,0,0.5);">FEBI</div>
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Yürüyen Aksam</div>
+                </div>
+                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
+                    <div style="font-size: 28px; font-weight: 800; color: #0066CC; letter-spacing: 1px; margin-bottom: 8px;">GATES</div>
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Kayış & Hortum</div>
+                </div>
+                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
+                    <div style="font-size: 26px; font-weight: 800; color: #00A3E0; letter-spacing: 1px; margin-bottom: 8px;">DELPHI</div>
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Elektronik & Yakıt</div>
+                </div>
             </div>
         </div>
     </section>
