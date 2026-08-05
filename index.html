@@ -28,7 +28,7 @@
         .logo span { color: var(--ozas-red); }
         .b2b-btn { background: var(--ozas-red); color: #fff; padding: 10px 22px; text-decoration: none; font-weight: bold; border-radius: 3px; text-transform: uppercase; font-size: 13px; }
 
-        /* KAYDIRINCA SABİT KALAN MENÜ */
+        /* SABİT MENÜ */
         nav { 
             background: #fff; 
             border-bottom: 2px solid var(--ozas-red); 
@@ -39,19 +39,24 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.06);
         }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; list-style: none; padding: 0 15px; }
-        .nav-container li a { display: block; padding: 15px 20px; color: var(--ozas-dark-blue); font-weight: 700; text-decoration: none; font-size: 14px; text-transform: uppercase; transition: all 0.2s ease; }
+        .nav-container li a { display: block; padding: 15px 20px; color: var(--ozas-dark-blue); font-weight: 700; text-decoration: none; font-size: 14px; text-transform: uppercase; transition: all 0.2s ease; cursor: pointer; }
         .nav-container li a:hover, .nav-container li a.active { border-bottom: 3px solid var(--ozas-red); color: var(--ozas-red); }
 
-        /* HERO BANNER */
-        .hero-banner { background: linear-gradient(90deg, rgba(15, 42, 74, 0.9), rgba(15, 42, 74, 0.6)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1600&q=80') center/cover; color: #fff; padding: 100px 0; }
+        /* SAYFA İÇERİK ALANLARI */
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+
+        /* HERO BANNER (Sadece Ana Sayfa) */
+        .hero-banner { background: linear-gradient(90deg, rgba(15, 42, 74, 0.9), rgba(15, 42, 74, 0.6)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1600&q=80') center/cover; color: #fff; padding: 120px 0; }
         .hero-container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
         .hero-container h1 { font-size: 42px; font-weight: 800; margin-bottom: 10px; }
         .hero-container p { font-size: 18px; max-width: 600px; margin-bottom: 25px; }
 
-        /* TEDARİKÇİ LOGOLARI SEKSİYONU */
+        /* TEDARİKÇİLERİMİZ SEKSİYONU */
+        .suppliers-header { background: var(--ozas-dark-blue); color: #fff; padding: 40px 0; text-align: center; }
+        .suppliers-header h1 { font-size: 32px; font-weight: 800; text-transform: uppercase; }
+        
         .brands-section { background: var(--ozas-gray); padding: 60px 0; border-top: 1px solid var(--ozas-border); }
-        .brands-title { text-align: center; font-size: 26px; color: var(--ozas-dark-blue); margin-bottom: 35px; text-transform: uppercase; font-weight: 800; position: relative; }
-        .brands-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--ozas-red); margin: 8px auto 0; }
         
         .brands-grid { 
             max-width: 1200px; 
@@ -93,6 +98,9 @@
             filter: grayscale(0%);
         }
 
+        /* GENEL İÇERİK */
+        .content-container { max-width: 1200px; margin: 0 auto; padding: 60px 15px; }
+
         /* FOOTER */
         footer { background: var(--ozas-dark-blue); color: #fff; padding: 50px 0 20px; font-size: 13px; }
         .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding: 0 15px 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
@@ -126,91 +134,115 @@
     <!-- MAIN HEADER -->
     <header>
         <div class="header-container">
-            <a href="#" class="logo">JPN <span>OTOMOTİV</span></a>
+            <a href="javascript:void(0)" onclick="switchTab('home')" class="logo">JPN <span>OTOMOTİV</span></a>
             <a href="#b2b" class="b2b-btn">B2B Bayi Girişi</a>
         </div>
     </header>
 
-    <!-- SABİT BAŞLIK MENÜSÜ -->
+    <!-- SABİT MENÜ -->
     <nav>
         <ul class="nav-container">
-            <li><a href="#" class="active">Ana Sayfa</a></li>
-            <li><a href="#kurumsal">Kurumsal</a></li>
-            <li><a href="#tedarikciler">Tedarikçilerimiz</a></li>
-            <li><a href="#temsilcilikler">Temsilcilikler</a></li>
-            <li><a href="#medya">JPN Medya</a></li>
-            <li><a href="#iletisim">İletişim</a></li>
+            <li><a id="nav-home" class="active" onclick="switchTab('home')">Ana Sayfa</a></li>
+            <li><a id="nav-kurumsal" onclick="switchTab('kurumsal')">Kurumsal</a></li>
+            <li><a id="nav-tedarikciler" onclick="switchTab('tedarikciler')">Tedarikçilerimiz</a></li>
+            <li><a id="nav-temsilcilikler" onclick="switchTab('temsilcilikler')">Temsilcilikler</a></li>
+            <li><a id="nav-medya" onclick="switchTab('medya')">JPN Medya</a></li>
+            <li><a id="nav-iletisim" onclick="switchTab('iletisim')">İletişim</a></li>
         </ul>
     </nav>
 
-    <!-- HERO BANNER -->
-    <section class="hero-banner">
-        <div class="hero-container">
-            <h1>Otomotiv Yedek Parçada<br>Güvenilir Dağıtım Ağı</h1>
-            <p>100.000'i aşkın referans ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdeyiz.</p>
-            <a href="#kurumsal" class="b2b-btn">Kurumsal Yapımız</a>
+    <!-- SAYFA 1: ANA SAYFA -->
+    <div id="page-home" class="page-section active">
+        <section class="hero-banner">
+            <div class="hero-container">
+                <h1>Otomotiv Yedek Parçada<br>Güvenilir Dağıtım Ağı</h1>
+                <p>100.000'i aşkın referans ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdeyiz.</p>
+                <a href="javascript:void(0)" onclick="switchTab('kurumsal')" class="b2b-btn">Kurumsal Yapımız</a>
+            </div>
+        </section>
+        <div class="content-container">
+            <h2>Hoş Geldiniz</h2>
+            <p>JPN Otomotiv, binek ve hafif ticari araç gruplarında dünya markalarının orijinal yedek parçalarını bayi ağına sunmaktadır.</p>
         </div>
-    </section>
+    </div>
 
-    <!-- TEDARİKÇİ LOGOLARI -->
-    <section class="brands-section" id="tedarikciler">
-        <h2 class="brands-title">Tedarikçilerimiz</h2>
-        <div class="brands-grid">
-            <div class="brand-card"><img src="bsg-ozas.png" alt="BSG Auto Parts"></div>
-            <div class="brand-card"><img src="bosch-ozas.png" alt="Bosch"></div>
-            <div class="brand-card"><img src="brembo-ozas.png" alt="Brembo"></div>
-            <div class="brand-card"><img src="caglayan-ozas.png" alt="Çağlayan"></div>
-            <div class="brand-card"><img src="champion-ozas.png" alt="Champion"></div>
-            <div class="brand-card"><img src="cobi-ozas.jpg" alt="Cobi"></div>
-            <div class="brand-card"><img src="contitech-ozas.png" alt="Continental ContiTech"></div>
-            <div class="brand-card"><img src="corteco-ozas.png" alt="Corteco"></div>
-            <div class="brand-card"><img src="dayco-ozas.png" alt="Dayco"></div>
-            <div class="brand-card"><img src="dita-ozas.jpg" alt="Ditaş"></div>
-            <div class="brand-card"><img src="doga-ozas.jpg" alt="Doğa"></div>
-            <div class="brand-card"><img src="denckermann-ozas.png" alt="Denckermann"></div>
-            <div class="brand-card"><img src="elring-ozas.png" alt="Elring"></div>
-            <div class="brand-card"><img src="febi-ozas.jpg" alt="Febi Bilstein"></div>
-            <div class="brand-card"><img src="ferodo-ozas.png" alt="Ferodo"></div>
-            <div class="brand-card"><img src="filtron-ozas.png" alt="Filtron"></div>
-            <div class="brand-card"><img src="gates-ozas.png" alt="Gates"></div>
-            <div class="brand-card"><img src="goetze-ozas.png" alt="Goetze"></div>
-            <div class="brand-card"><img src="hella-ozas.png" alt="Hella"></div>
-            <div class="brand-card"><img src="kale-ozas.png" alt="Kale Oto Radyatör"></div>
-            <div class="brand-card"><img src="kapimsan-ozas.jpg" alt="Kapimsan"></div>
-            <div class="brand-card"><img src="kolbenschmidt-ozas.jpg" alt="Kolbenschmidt"></div>
-            <div class="brand-card"><img src="kyb-ozas.png" alt="KYB"></div>
-            <div class="brand-card"><img src="lemforder-ozas.png" alt="Lemförder"></div>
-            <div class="brand-card"><img src="magneti-marelli-ozas.png" alt="Magneti Marelli"></div>
-            <div class="brand-card"><img src="mahle-ozas.jpg" alt="Mahle"></div>
-            <div class="brand-card"><img src="mando-plus-ozas.jpg" alt="Mando+"></div>
-            <div class="brand-card"><img src="mann-filter-ozas.png" alt="Mann-Filter"></div>
-            <div class="brand-card"><img src="mapa-ozas.jpg" alt="MAPA"></div>
-            <div class="brand-card"><img src="maysan-mando-ozas.jpg" alt="Maysan Mando"></div>
-            <div class="brand-card"><img src="skf-ozas.png" alt="SKF"></div>
-            <div class="brand-card"><img src="monroe-ozas.png" alt="Monroe"></div>
-            <div class="brand-card"><img src="ngk-ozas.png" alt="NGK"></div>
-            <div class="brand-card"><img src="nura-ozas.jpg" alt="Nüral Piston"></div>
-            <div class="brand-card"><img src="pierburg-ozas.jpg" alt="Pierburg"></div>
-            <div class="brand-card"><img src="purflux-filter-ozas.png" alt="Purflux"></div>
-            <div class="brand-card"><img src="rapro-ozas.jpg" alt="Rapro"></div>
-            <div class="brand-card"><img src="sachs-ozas.png" alt="Sachs"></div>
-            <div class="brand-card"><img src="schaeffler-ozas.jpg" alt="Schaeffler Group"></div>
-            <div class="brand-card"><img src="sismak-ozas.png" alt="Sismak"></div>
-            <div class="brand-card"><img src="zskt-ozas.jpg" alt="SKT"></div>
-            <div class="brand-card"><img src="supsan-ozas.png" alt="Supsan"></div>
-            <div class="brand-card"><img src="topran-ozas.png" alt="Topran"></div>
-            <div class="brand-card"><img src="trw-ozas.png" alt="TRW"></div>
-            <div class="brand-card"><img src="ufi-filters-ozas.png" alt="UFI Filters"></div>
-            <div class="brand-card"><img src="ulo-ozas.png" alt="ULO"></div>
-            <div class="brand-card"><img src="zvdo-ozas.png" alt="VDO"></div>
-            <div class="brand-card"><img src="victor-reinz-ozas.png" alt="Victor Reinz"></div>
-            <div class="brand-card"><img src="viewmax-ozas.jpg" alt="View Max"></div>
-            <div class="brand-card"><img src="wahler-ozas.png" alt="Wahler"></div>
+    <!-- SAYFA 2: TEDARİKÇİLERİMİZ -->
+    <div id="page-tedarikciler" class="page-section">
+        <div class="suppliers-header">
+            <h1>Anlaşmalı Tedarikçilerimiz</h1>
         </div>
-    </section>
+        <section class="brands-section">
+            <div class="brands-grid">
+                <div class="brand-card"><img src="bsg-ozas.png" alt="BSG Auto Parts"></div>
+                <div class="brand-card"><img src="bosch-ozas.png" alt="Bosch"></div>
+                <div class="brand-card"><img src="brembo-ozas.png" alt="Brembo"></div>
+                <div class="brand-card"><img src="caglayan-ozas.png" alt="Çağlayan"></div>
+                <div class="brand-card"><img src="champion-ozas.png" alt="Champion"></div>
+                <div class="brand-card"><img src="cobi-ozas.jpg" alt="Cobi"></div>
+                <div class="brand-card"><img src="contitech-ozas.png" alt="Continental ContiTech"></div>
+                <div class="brand-card"><img src="corteco-ozas.png" alt="Corteco"></div>
+                <div class="brand-card"><img src="dayco-ozas.png" alt="Dayco"></div>
+                <div class="brand-card"><img src="dita-ozas.jpg" alt="Ditaş"></div>
+                <div class="brand-card"><img src="doga-ozas.jpg" alt="Doğa"></div>
+                <div class="brand-card"><img src="denckermann-ozas.png" alt="Denckermann"></div>
+                <div class="brand-card"><img src="elring-ozas.png" alt="Elring"></div>
+                <div class="brand-card"><img src="febi-ozas.jpg" alt="Febi Bilstein"></div>
+                <div class="brand-card"><img src="ferodo-ozas.png" alt="Ferodo"></div>
+                <div class="brand-card"><img src="filtron-ozas.png" alt="Filtron"></div>
+                <div class="brand-card"><img src="gates-ozas.png" alt="Gates"></div>
+                <div class="brand-card"><img src="goetze-ozas.png" alt="Goetze"></div>
+                <div class="brand-card"><img src="hella-ozas.png" alt="Hella"></div>
+                <div class="brand-card"><img src="kale-ozas.png" alt="Kale Oto Radyatör"></div>
+                <div class="brand-card"><img src="kapimsan-ozas.jpg" alt="Kapimsan"></div>
+                <div class="brand-card"><img src="kolbenschmidt-ozas.jpg" alt="Kolbenschmidt"></div>
+                <div class="brand-card"><img src="kyb-ozas.png" alt="KYB"></div>
+                <div class="brand-card"><img src="lemforder-ozas.png" alt="Lemförder"></div>
+                <div class="brand-card"><img src="magneti-marelli-ozas.png" alt="Magneti Marelli"></div>
+                <div class="brand-card"><img src="mahle-ozas.jpg" alt="Mahle"></div>
+                <div class="brand-card"><img src="mando-plus-ozas.jpg" alt="Mando+"></div>
+                <div class="brand-card"><img src="mann-filter-ozas.png" alt="Mann-Filter"></div>
+                <div class="brand-card"><img src="mapa-ozas.jpg" alt="MAPA"></div>
+                <div class="brand-card"><img src="maysan-mando-ozas.jpg" alt="Maysan Mando"></div>
+                <div class="brand-card"><img src="skf-ozas.png" alt="SKF"></div>
+                <div class="brand-card"><img src="monroe-ozas.png" alt="Monroe"></div>
+                <div class="brand-card"><img src="ngk-ozas.png" alt="NGK"></div>
+                <div class="brand-card"><img src="nura-ozas.jpg" alt="Nüral Piston"></div>
+                <div class="brand-card"><img src="pierburg-ozas.jpg" alt="Pierburg"></div>
+                <div class="brand-card"><img src="purflux-filter-ozas.png" alt="Purflux"></div>
+                <div class="brand-card"><img src="rapro-ozas.jpg" alt="Rapro"></div>
+                <div class="brand-card"><img src="sachs-ozas.png" alt="Sachs"></div>
+                <div class="brand-card"><img src="schaeffler-ozas.jpg" alt="Schaeffler Group"></div>
+                <div class="brand-card"><img src="sismak-ozas.png" alt="Sismak"></div>
+                <div class="brand-card"><img src="zskt-ozas.jpg" alt="SKT"></div>
+                <div class="brand-card"><img src="supsan-ozas.png" alt="Supsan"></div>
+                <div class="brand-card"><img src="topran-ozas.png" alt="Topran"></div>
+                <div class="brand-card"><img src="trw-ozas.png" alt="TRW"></div>
+                <div class="brand-card"><img src="ufi-filters-ozas.png" alt="UFI Filters"></div>
+                <div class="brand-card"><img src="ulo-ozas.png" alt="ULO"></div>
+                <div class="brand-card"><img src="zvdo-ozas.png" alt="VDO"></div>
+                <div class="brand-card"><img src="victor-reinz-ozas.png" alt="Victor Reinz"></div>
+                <div class="brand-card"><img src="viewmax-ozas.jpg" alt="View Max"></div>
+                <div class="brand-card"><img src="wahler-ozas.png" alt="Wahler"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- DİĞER SEKMELER (ŞABLON) -->
+    <div id="page-kurumsal" class="page-section">
+        <div class="content-container"><h2>Kurumsal</h2><p>Kurumsal bilgiler yer alacak.</p></div>
+    </div>
+    <div id="page-temsilcilikler" class="page-section">
+        <div class="content-container"><h2>Temsilcilikler</h2><p>Temsilcilik bilgileri yer alacak.</p></div>
+    </div>
+    <div id="page-medya" class="page-section">
+        <div class="content-container"><h2>JPN Medya</h2><p>Haberler ve basın bültenleri yer alacak.</p></div>
+    </div>
+    <div id="page-iletisim" class="page-section">
+        <div class="content-container"><h2>İletişim</h2><p>Adres ve iletişim formları yer alacak.</p></div>
+    </div>
 
     <!-- FOOTER -->
-    <footer id="iletisim">
+    <footer>
         <div class="footer-container">
             <div class="footer-col">
                 <h4>JPN Otomotiv</h4>
@@ -219,10 +251,10 @@
             <div class="footer-col">
                 <h4>Hızlı Menü</h4>
                 <ul>
-                    <li><a href="#kurumsal">Kurumsal</a></li>
-                    <li><a href="#tedarikciler">Tedarikçilerimiz</a></li>
-                    <li><a href="#temsilcilikler">Temsilcilikler</a></li>
-                    <li><a href="#medya">JPN Medya</a></li>
+                    <li><a onclick="switchTab('kurumsal')">Kurumsal</a></li>
+                    <li><a onclick="switchTab('tedarikciler')">Tedarikçilerimiz</a></li>
+                    <li><a onclick="switchTab('temsilcilikler')">Temsilcilikler</a></li>
+                    <li><a onclick="switchTab('medya')">JPN Medya</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -246,6 +278,21 @@
     </footer>
 
     <script>
+        // Sayfalar arası geçiş kontrolü
+        function switchTab(tabId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+            document.querySelectorAll('.nav-container li a').forEach(a => a.classList.remove('active'));
+            
+            const targetPage = document.getElementById('page-' + tabId);
+            const targetNav = document.getElementById('nav-' + tabId);
+            
+            if(targetPage) targetPage.classList.add('active');
+            if(targetNav) targetNav.classList.add('active');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Resim uzantısı alternatifi
         document.addEventListener("DOMContentLoaded", function () {
             const images = document.querySelectorAll('.brand-card img');
             images.forEach(img => {
