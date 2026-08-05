@@ -8,7 +8,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', Arial, sans-serif; }
         body { background-color: #ffffff; color: #333; line-height: 1.6; }
         
-        /* ÖZAŞ KIRMIZI & MAVİ RENK PALETİ */
+        /* ÖZAŞ RENK PALETİ */
         :root {
             --ozas-red: #d32f2f;
             --ozas-dark-blue: #0f2a4a;
@@ -30,19 +30,27 @@
         .b2b-btn { background: var(--ozas-red); color: #fff; padding: 10px 22px; text-decoration: none; font-weight: bold; border-radius: 3px; text-transform: uppercase; font-size: 13px; }
         .b2b-btn:hover { background: #b71c1c; }
 
-        /* NAVIGATION MENU (ÖZAŞ BİREBİR HİYERARŞİ) */
-        nav { background: #fff; border-bottom: 1px solid #eee; border-top: 1px solid #eee; }
+        /* KAYDIRINCA ÜSTTE SABİTLENEN MENÜ (STICKY NAV) */
+        nav { 
+            background: #fff; 
+            border-bottom: 2px solid var(--ozas-red); 
+            border-top: 1px solid #eee; 
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; list-style: none; padding: 0 15px; }
-        .nav-container li a { display: block; padding: 15px 20px; color: var(--ozas-dark-blue); font-weight: 700; text-decoration: none; font-size: 14px; text-transform: uppercase; border-bottom: 3px solid transparent; }
-        .nav-container li a:hover, .nav-container li a.active { border-bottom-color: var(--ozas-red); color: var(--ozas-red); }
+        .nav-container li a { display: block; padding: 15px 20px; color: var(--ozas-dark-blue); font-weight: 700; text-decoration: none; font-size: 14px; text-transform: uppercase; border-bottom: 3px solid transparent; transition: all 0.3s ease; }
+        .nav-container li a:hover, .nav-container li a.active { border-bottom-color: var(--ozas-red); color: var(--ozas-red); background: #fafafa; }
 
-        /* HERO SLIDER REPLACEMENT */
+        /* HERO BANNER */
         .hero-banner { background: linear-gradient(90deg, rgba(15, 42, 74, 0.9), rgba(15, 42, 74, 0.6)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1600&q=80') center/cover; color: #fff; padding: 100px 0; text-align: left; }
         .hero-container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
         .hero-container h1 { font-size: 42px; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; }
         .hero-container p { font-size: 18px; max-width: 600px; margin-bottom: 25px; }
 
-        /* İSTATİSTİK BANT (ÖZAŞ RAKAMLARLA YAPISI) */
+        /* İSTATİSTİK BANT */
         .stats-bar { background: var(--ozas-gray); padding: 40px 0; border-bottom: 1px solid #e0e0e0; }
         .stats-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 15px; text-align: center; }
         .stat-item h3 { font-size: 36px; color: var(--ozas-red); font-weight: 800; }
@@ -57,11 +65,31 @@
         .img-col { flex: 1; }
         .img-col img { width: 100%; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
-        /* LOGO GRID (TEDARİKÇİLER/MARKALAR) */
-        .brands-section { background: #fff; padding: 50px 0; border-top: 1px solid #eee; }
-        .brands-title { text-align: center; font-size: 24px; color: var(--ozas-dark-blue); margin-bottom: 30px; text-transform: uppercase; font-weight: 800; }
-        .brands-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; padding: 0 15px; text-align: center; }
-        .brand-box { border: 1px solid #eee; padding: 15px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--ozas-dark-blue); background: var(--ozas-gray); }
+        /* ÖZAŞ BİREBİR TEDARİKÇİLER ALANI (BRAND GRID) */
+        .brands-section { background: var(--ozas-gray); padding: 60px 0; border-top: 1px solid #eee; }
+        .brands-title { text-align: center; font-size: 28px; color: var(--ozas-dark-blue); margin-bottom: 35px; text-transform: uppercase; font-weight: 800; position: relative; }
+        .brands-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--ozas-red); margin: 8px auto 0; }
+        .brands-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; padding: 0 15px; text-align: center; }
+        .brand-box { 
+            border: 1px solid #e0e0e0; 
+            padding: 20px 10px; 
+            border-radius: 4px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-weight: 800; 
+            font-size: 15px;
+            color: var(--ozas-dark-blue); 
+            background: #ffffff; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+        .brand-box:hover {
+            border-color: var(--ozas-red);
+            color: var(--ozas-red);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+        }
 
         /* FOOTER */
         footer { background: var(--ozas-dark-blue); color: #fff; padding: 50px 0 20px; font-size: 13px; }
@@ -86,8 +114,8 @@
     <div class="top-header">
         <div class="top-container">
             <div class="top-info">
-                <span>📍 Otomotiv Sanayi Sitesi No: 124 İstanbul</span>
-                <span>📞 +90 (212) 000 00 00</span>
+                <span>📍 İkitelli OSB Eski Turgut Özal Cad. No:3/2 Başakşehir / İstanbul</span>
+                <span>📞 +90 (212) 549 22 00</span>
             </div>
             <div class="top-links">
                 <a href="#b2b">B2B Portal</a>
@@ -105,7 +133,7 @@
         </div>
     </header>
 
-    <!-- MAIN NAVIGATION -->
+    <!-- KAYDIRILDIĞINDA EN ÜSTTE SABİTLENEN MENÜ -->
     <nav>
         <ul class="nav-container">
             <li><a href="#" class="active">Ana Sayfa</a></li>
@@ -120,9 +148,9 @@
     <!-- HERO BANNER -->
     <section class="hero-banner">
         <div class="hero-container">
-            <h1>Otomotiv Yedek Parçada<br>Güvenilir Çözüm Ortağınız</h1>
+            <h1>Otomotiv Yedek Parçada<br>Güvenilir Dağıtım Ağı</h1>
             <p>100.000'i aşkın referans ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdeyiz.</p>
-            <a href="#kurumsal" class="b2b-btn">Hakkımızda Detaylı Bilgi</a>
+            <a href="#kurumsal" class="b2b-btn">Kurumsal Yapımız</a>
         </div>
     </section>
 
@@ -135,7 +163,7 @@
             </div>
             <div class="stat-item">
                 <h3>150+</h3>
-                <p>Global Marka</p>
+                <p>Global Tedarikçi</p>
             </div>
             <div class="stat-item">
                 <h3>10.000 m²</h3>
@@ -143,7 +171,7 @@
             </div>
             <div class="stat-item">
                 <h3>81 İL</h3>
-                <p>Kesintisiz Dağıtım</p>
+                <p>Dağıtım Ağı</p>
             </div>
         </div>
     </section>
@@ -155,7 +183,7 @@
                 <h2>JPN OTOMOTİV HAKKINDA</h2>
                 <p>JPN Otomotiv, binek ve hafif ticari araç gruplarını kapsayan geniş ürün yelpazesiyle bağımsız otomotiv yedek parça pazarında hizmet veren lider tedarikçilerden biridir.</p>
                 <br>
-                <p>Müşterilerine ve tedarikçilerine çözüm odaklı yaklaşımı, yüksek iş ahlakı prensipleri ve yenilikçi vizyonu ile sektördeki büyümesini istikrarlı şekilde sürdürmektedir. Kalite güvence ve izlenebilirliği uygun fiyat politikasıyla sunmayı ilke edindik.</p>
+                <p>Müşterilerine ve tedarikçilerine çözüm odaklı yaklaşımı, yüksek iş ahlakı prensipleri ve yenilikçi vizyonu ile sektördeki büyümesini istikrarlı şekilde sürdürmektedir. Tüm marka ve modellerin orijinal muadili ile kaliteli yan sanayi yedek parçalarının dağıtımını yapmaktadır.</p>
             </div>
             <div class="img-col">
                 <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="JPN Lojistik Depo">
@@ -163,21 +191,59 @@
         </div>
     </section>
 
-    <!-- TEDARİKÇİLERİMİZ (MARKA LOGO ALANI) -->
+    <!-- ÖZAŞ OTOMOTİV BİREBİR TEDARİKÇİ LİSTESİ -->
     <section class="brands-section" id="tedarikciler">
-        <h2 class="brands-title">Çalıştığımız Markalar & Tedarikçiler</h2>
+        <h2 class="brands-title">Tedarikçilerimiz</h2>
         <div class="brands-grid">
-            <div class="brand-box">OPEL</div>
-            <div class="brand-box">CHEVROLET</div>
-            <div class="brand-box">PEUGEOT</div>
-            <div class="brand-box">CITROEN</div>
-            <div class="brand-box">BOSCH</div>
             <div class="brand-box">VALEO</div>
+            <div class="brand-box">BOSCH</div>
+            <div class="brand-box">SACHS</div>
+            <div class="brand-box">LUK</div>
+            <div class="brand-box">ZF</div>
+            <div class="brand-box">TRW</div>
+            <div class="brand-box">FERODO</div>
+            <div class="brand-box">FEBI BILSTEIN</div>
+            <div class="brand-box">GATES</div>
+            <div class="brand-box">CONTINENTAL</div>
+            <div class="brand-box">DAYCO</div>
+            <div class="brand-box">BREMBO</div>
+            <div class="brand-box">MAHLE</div>
+            <div class="brand-box">MANN FILTER</div>
+            <div class="brand-box">MONROE</div>
+            <div class="brand-box">SKF</div>
+            <div class="brand-box">INA</div>
+            <div class="brand-box">FAG</div>
+            <div class="brand-box">HELLA</div>
+            <div class="brand-box">MAGNETI MARELLI</div>
+            <div class="brand-box">DELPHI</div>
+            <div class="brand-box">MOOG</div>
+            <div class="brand-box">SWAG</div>
+            <div class="brand-box">TEXTAR</div>
+        </div>
+    </section>
+
+    <!-- TEMSİLCİLİKLER SEKSİYONU -->
+    <section class="content-section" id="temsilcilikler" style="background:#fff;">
+        <div class="section-container">
+            <div class="text-col">
+                <h2>TEMSİLCİLİKLERİMİZ</h2>
+                <p>Dünyanın önde gelen otomotiv parça üreticilerinin Türkiye genelindeki yetkili satış ve dağıtım temsilciliğini üstlenmekteyiz. Orijinal kalitede ürün garantisi ile müşterilerimize doğrudan tedarik sağlıyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JPN MEDYA SEKSİYONU -->
+    <section class="content-section" id="medya" style="background:var(--ozas-gray);">
+        <div class="section-container">
+            <div class="text-col">
+                <h2>JPN MEDYA</h2>
+                <p>Sektörel gelişmeler, yeni ürün duyuruları, katıldığımız fuarlar ve kurumsal haberlerimizden en güncel başlıklar.</p>
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer id="iletisim">
         <div class="footer-container">
             <div class="footer-col">
                 <h4>JPN Otomotiv</h4>
@@ -186,24 +252,24 @@
             <div class="footer-col">
                 <h4>Hızlı Menü</h4>
                 <ul>
-                    <li><a href="#">Hakkımızda</a></li>
-                    <li><a href="#">Tedarikçilerimiz</a></li>
-                    <li><a href="#">JPN Medya</a></li>
-                    <li><a href="#">Kariyer</a></li>
+                    <li><a href="#kurumsal">Kurumsal</a></li>
+                    <li><a href="#tedarikciler">Tedarikçilerimiz</a></li>
+                    <li><a href="#temsilcilikler">Temsilcilikler</a></li>
+                    <li><a href="#medya">JPN Medya</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Yazılım & Destek</h4>
                 <ul>
-                    <li><a href="#">B2B Sipariş Sistemi</a></li>
-                    <li><a href="#">Eryaz Software</a></li>
+                    <li><a href="#b2b">B2B Sipariş Sistemi</a></li>
+                    <li><a href="#">Müşteri Hizmetleri</a></li>
                     <li><a href="#">Uzak Yardım</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>İletişim</h4>
-                <p>Adres: Sanayi Bölgesi No:124 İstanbul</p>
-                <p>Tel: +90 (212) 000 00 00</p>
+                <p>Adres: İkitelli OSB Eski Turgut Özal Cad. No:3/2 Başakşehir / İstanbul</p>
+                <p>Tel: +90 (212) 549 22 00</p>
                 <p>E-Posta: info@jpnotomotiv.com</p>
             </div>
         </div>
