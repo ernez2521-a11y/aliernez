@@ -46,7 +46,7 @@
         .page-section { display: none; }
         .page-section.active { display: block; }
 
-        /* HERO BANNER (Sadece Ana Sayfa) */
+        /* HERO BANNER */
         .hero-banner { background: linear-gradient(90deg, rgba(15, 42, 74, 0.9), rgba(15, 42, 74, 0.6)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1600&q=80') center/cover; color: #fff; padding: 120px 0; }
         .hero-container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
         .hero-container h1 { font-size: 42px; font-weight: 800; margin-bottom: 10px; }
@@ -98,7 +98,6 @@
             filter: grayscale(0%);
         }
 
-        /* GENEL İÇERİK */
         .content-container { max-width: 1200px; margin: 0 auto; padding: 60px 15px; }
 
         /* FOOTER */
@@ -107,7 +106,7 @@
         .footer-col h4 { font-size: 16px; margin-bottom: 20px; color: #fff; text-transform: uppercase; border-left: 3px solid var(--ozas-red); padding-left: 10px; }
         .footer-col ul { list-style: none; }
         .footer-col ul li { margin-bottom: 10px; }
-        .footer-col ul li a { color: #ccc; text-decoration: none; }
+        .footer-col ul li a { color: #ccc; text-decoration: none; cursor: pointer; }
         .footer-bottom { text-align: center; padding-top: 20px; color: #888; font-size: 12px; }
 
         @media (max-width: 992px) { .brands-grid { grid-template-columns: repeat(3, 1fr); } }
@@ -173,61 +172,61 @@
         </div>
         <section class="brands-section">
             <div class="brands-grid">
-                <div class="brand-card"><img src="bsg-ozas.png" alt="BSG Auto Parts"></div>
-                <div class="brand-card"><img src="bosch-ozas.png" alt="Bosch"></div>
-                <div class="brand-card"><img src="brembo-ozas.png" alt="Brembo"></div>
-                <div class="brand-card"><img src="caglayan-ozas.png" alt="Çağlayan"></div>
-                <div class="brand-card"><img src="champion-ozas.png" alt="Champion"></div>
-                <div class="brand-card"><img src="cobi-ozas.jpg" alt="Cobi"></div>
-                <div class="brand-card"><img src="contitech-ozas.png" alt="Continental ContiTech"></div>
-                <div class="brand-card"><img src="corteco-ozas.png" alt="Corteco"></div>
-                <div class="brand-card"><img src="dayco-ozas.png" alt="Dayco"></div>
-                <div class="brand-card"><img src="dita-ozas.jpg" alt="Ditaş"></div>
-                <div class="brand-card"><img src="doga-ozas.jpg" alt="Doğa"></div>
-                <div class="brand-card"><img src="denckermann-ozas.png" alt="Denckermann"></div>
-                <div class="brand-card"><img src="elring-ozas.png" alt="Elring"></div>
-                <div class="brand-card"><img src="febi-ozas.jpg" alt="Febi Bilstein"></div>
-                <div class="brand-card"><img src="ferodo-ozas.png" alt="Ferodo"></div>
-                <div class="brand-card"><img src="filtron-ozas.png" alt="Filtron"></div>
-                <div class="brand-card"><img src="gates-ozas.png" alt="Gates"></div>
-                <div class="brand-card"><img src="goetze-ozas.png" alt="Goetze"></div>
-                <div class="brand-card"><img src="hella-ozas.png" alt="Hella"></div>
-                <div class="brand-card"><img src="kale-ozas.png" alt="Kale Oto Radyatör"></div>
-                <div class="brand-card"><img src="kapimsan-ozas.jpg" alt="Kapimsan"></div>
-                <div class="brand-card"><img src="kolbenschmidt-ozas.jpg" alt="Kolbenschmidt"></div>
-                <div class="brand-card"><img src="kyb-ozas.png" alt="KYB"></div>
-                <div class="brand-card"><img src="lemforder-ozas.png" alt="Lemförder"></div>
-                <div class="brand-card"><img src="magneti-marelli-ozas.png" alt="Magneti Marelli"></div>
-                <div class="brand-card"><img src="mahle-ozas.jpg" alt="Mahle"></div>
-                <div class="brand-card"><img src="mando-plus-ozas.jpg" alt="Mando+"></div>
-                <div class="brand-card"><img src="mann-filter-ozas.png" alt="Mann-Filter"></div>
-                <div class="brand-card"><img src="mapa-ozas.jpg" alt="MAPA"></div>
-                <div class="brand-card"><img src="maysan-mando-ozas.jpg" alt="Maysan Mando"></div>
-                <div class="brand-card"><img src="skf-ozas.png" alt="SKF"></div>
-                <div class="brand-card"><img src="monroe-ozas.png" alt="Monroe"></div>
-                <div class="brand-card"><img src="ngk-ozas.png" alt="NGK"></div>
-                <div class="brand-card"><img src="nura-ozas.jpg" alt="Nüral Piston"></div>
-                <div class="brand-card"><img src="pierburg-ozas.jpg" alt="Pierburg"></div>
-                <div class="brand-card"><img src="purflux-filter-ozas.png" alt="Purflux"></div>
-                <div class="brand-card"><img src="rapro-ozas.jpg" alt="Rapro"></div>
-                <div class="brand-card"><img src="sachs-ozas.png" alt="Sachs"></div>
-                <div class="brand-card"><img src="schaeffler-ozas.jpg" alt="Schaeffler Group"></div>
-                <div class="brand-card"><img src="sismak-ozas.png" alt="Sismak"></div>
-                <div class="brand-card"><img src="zskt-ozas.jpg" alt="SKT"></div>
-                <div class="brand-card"><img src="supsan-ozas.png" alt="Supsan"></div>
-                <div class="brand-card"><img src="topran-ozas.png" alt="Topran"></div>
-                <div class="brand-card"><img src="trw-ozas.png" alt="TRW"></div>
-                <div class="brand-card"><img src="ufi-filters-ozas.png" alt="UFI Filters"></div>
-                <div class="brand-card"><img src="ulo-ozas.png" alt="ULO"></div>
-                <div class="brand-card"><img src="zvdo-ozas.png" alt="VDO"></div>
-                <div class="brand-card"><img src="victor-reinz-ozas.png" alt="Victor Reinz"></div>
-                <div class="brand-card"><img src="viewmax-ozas.jpg" alt="View Max"></div>
-                <div class="brand-card"><img src="wahler-ozas.png" alt="Wahler"></div>
+                <div class="brand-card"><img src="bsg-ozas.png" loading="lazy" alt="BSG Auto Parts"></div>
+                <div class="brand-card"><img src="bosch-ozas.png" loading="lazy" alt="Bosch"></div>
+                <div class="brand-card"><img src="brembo-ozas.png" loading="lazy" alt="Brembo"></div>
+                <div class="brand-card"><img src="caglayan-ozas.png" loading="lazy" alt="Çağlayan"></div>
+                <div class="brand-card"><img src="champion-ozas.png" loading="lazy" alt="Champion"></div>
+                <div class="brand-card"><img src="cobi-ozas.jpg" loading="lazy" alt="Cobi"></div>
+                <div class="brand-card"><img src="contitech-ozas.png" loading="lazy" alt="Continental ContiTech"></div>
+                <div class="brand-card"><img src="corteco-ozas.png" loading="lazy" alt="Corteco"></div>
+                <div class="brand-card"><img src="dayco-ozas.png" loading="lazy" alt="Dayco"></div>
+                <div class="brand-card"><img src="dita-ozas.jpg" loading="lazy" alt="Ditaş"></div>
+                <div class="brand-card"><img src="doga-ozas.jpg" loading="lazy" alt="Doğa"></div>
+                <div class="brand-card"><img src="denckermann-ozas.png" loading="lazy" alt="Denckermann"></div>
+                <div class="brand-card"><img src="elring-ozas.png" loading="lazy" alt="Elring"></div>
+                <div class="brand-card"><img src="febi-ozas.jpg" loading="lazy" alt="Febi Bilstein"></div>
+                <div class="brand-card"><img src="ferodo-ozas.png" loading="lazy" alt="Ferodo"></div>
+                <div class="brand-card"><img src="filtron-ozas.png" loading="lazy" alt="Filtron"></div>
+                <div class="brand-card"><img src="gates-ozas.png" loading="lazy" alt="Gates"></div>
+                <div class="brand-card"><img src="goetze-ozas.png" loading="lazy" alt="Goetze"></div>
+                <div class="brand-card"><img src="hella-ozas.png" loading="lazy" alt="Hella"></div>
+                <div class="brand-card"><img src="kale-ozas.png" loading="lazy" alt="Kale Oto Radyatör"></div>
+                <div class="brand-card"><img src="kapimsan-ozas.jpg" loading="lazy" alt="Kapimsan"></div>
+                <div class="brand-card"><img src="kolbenschmidt-ozas.jpg" loading="lazy" alt="Kolbenschmidt"></div>
+                <div class="brand-card"><img src="kyb-ozas.png" loading="lazy" alt="KYB"></div>
+                <div class="brand-card"><img src="lemforder-ozas.png" loading="lazy" alt="Lemförder"></div>
+                <div class="brand-card"><img src="magneti-marelli-ozas.png" loading="lazy" alt="Magneti Marelli"></div>
+                <div class="brand-card"><img src="mahle-ozas.jpg" loading="lazy" alt="Mahle"></div>
+                <div class="brand-card"><img src="mando-plus-ozas.jpg" loading="lazy" alt="Mando+"></div>
+                <div class="brand-card"><img src="mann-filter-ozas.png" loading="lazy" alt="Mann-Filter"></div>
+                <div class="brand-card"><img src="mapa-ozas.jpg" loading="lazy" alt="MAPA"></div>
+                <div class="brand-card"><img src="maysan-mando-ozas.jpg" loading="lazy" alt="Maysan Mando"></div>
+                <div class="brand-card"><img src="skf-ozas.png" loading="lazy" alt="SKF"></div>
+                <div class="brand-card"><img src="monroe-ozas.png" loading="lazy" alt="Monroe"></div>
+                <div class="brand-card"><img src="ngk-ozas.png" loading="lazy" alt="NGK"></div>
+                <div class="brand-card"><img src="nura-ozas.jpg" loading="lazy" alt="Nüral Piston"></div>
+                <div class="brand-card"><img src="pierburg-ozas.jpg" loading="lazy" alt="Pierburg"></div>
+                <div class="brand-card"><img src="purflux-filter-ozas.png" loading="lazy" alt="Purflux"></div>
+                <div class="brand-card"><img src="rapro-ozas.jpg" loading="lazy" alt="Rapro"></div>
+                <div class="brand-card"><img src="sachs-ozas.png" loading="lazy" alt="Sachs"></div>
+                <div class="brand-card"><img src="schaeffler-ozas.jpg" loading="lazy" alt="Schaeffler Group"></div>
+                <div class="brand-card"><img src="sismak-ozas.png" loading="lazy" alt="Sismak"></div>
+                <div class="brand-card"><img src="zskt-ozas.jpg" loading="lazy" alt="SKT"></div>
+                <div class="brand-card"><img src="supsan-ozas.png" loading="lazy" alt="Supsan"></div>
+                <div class="brand-card"><img src="topran-ozas.png" loading="lazy" alt="Topran"></div>
+                <div class="brand-card"><img src="trw-ozas.png" loading="lazy" alt="TRW"></div>
+                <div class="brand-card"><img src="ufi-filters-ozas.png" loading="lazy" alt="UFI Filters"></div>
+                <div class="brand-card"><img src="ulo-ozas.png" loading="lazy" alt="ULO"></div>
+                <div class="brand-card"><img src="zvdo-ozas.png" loading="lazy" alt="VDO"></div>
+                <div class="brand-card"><img src="victor-reinz-ozas.png" loading="lazy" alt="Victor Reinz"></div>
+                <div class="brand-card"><img src="viewmax-ozas.jpg" loading="lazy" alt="View Max"></div>
+                <div class="brand-card"><img src="wahler-ozas.png" loading="lazy" alt="Wahler"></div>
             </div>
         </section>
     </div>
 
-    <!-- DİĞER SEKMELER (ŞABLON) -->
+    <!-- DİĞER SEKMELER -->
     <div id="page-kurumsal" class="page-section">
         <div class="content-container"><h2>Kurumsal</h2><p>Kurumsal bilgiler yer alacak.</p></div>
     </div>
@@ -278,7 +277,6 @@
     </footer>
 
     <script>
-        // Sayfalar arası geçiş kontrolü
         function switchTab(tabId) {
             document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
             document.querySelectorAll('.nav-container li a').forEach(a => a.classList.remove('active'));
@@ -292,15 +290,18 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Resim uzantısı alternatifi
+        // Sonsuz döngüyü önleyen güvenli görsel denetleyici
         document.addEventListener("DOMContentLoaded", function () {
             const images = document.querySelectorAll('.brand-card img');
             images.forEach(img => {
                 img.onerror = function () {
-                    if (this.src.endsWith('.png')) {
-                        this.src = this.src.replace('.png', '.jpg');
-                    } else if (this.src.endsWith('.jpg')) {
-                        this.src = this.src.replace('.jpg', '.png');
+                    if (!this.dataset.retried) {
+                        this.dataset.retried = "true";
+                        if (this.src.endsWith('.png')) {
+                            this.src = this.src.replace('.png', '.jpg');
+                        } else if (this.src.endsWith('.jpg')) {
+                            this.src = this.src.replace('.jpg', '.png');
+                        }
                     }
                 };
             });
