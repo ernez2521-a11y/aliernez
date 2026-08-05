@@ -8,12 +8,11 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', Arial, sans-serif; }
         body { background-color: #ffffff; color: #333; line-height: 1.6; }
         
-        /* ÖZAŞ RENK PALETİ */
         :root {
             --ozas-red: #d32f2f;
             --ozas-dark-blue: #0f2a4a;
-            --ozas-gray: #f4f4f4;
-            --ozas-text-gray: #666;
+            --ozas-gray: #f8f9fa;
+            --ozas-border: #e9ecef;
         }
 
         /* TOP BAR */
@@ -23,14 +22,13 @@
         .top-links a { color: #fff; text-decoration: none; margin-left: 15px; }
 
         /* MAIN HEADER */
-        header { background: #fff; padding: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        header { background: #fff; padding: 20px 0; }
         .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
         .logo { font-size: 32px; font-weight: 900; color: var(--ozas-dark-blue); text-decoration: none; letter-spacing: -1px; }
         .logo span { color: var(--ozas-red); }
         .b2b-btn { background: var(--ozas-red); color: #fff; padding: 10px 22px; text-decoration: none; font-weight: bold; border-radius: 3px; text-transform: uppercase; font-size: 13px; }
-        .b2b-btn:hover { background: #b71c1c; }
 
-        /* KAYDIRINCA ÜSTTE SABİTLENEN MENÜ (STICKY NAV) */
+        /* KAYDIRINCA SABİT KALAN MENÜ */
         nav { 
             background: #fff; 
             border-bottom: 2px solid var(--ozas-red); 
@@ -38,60 +36,67 @@
             position: sticky;
             top: 0;
             z-index: 9999;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
         }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; list-style: none; padding: 0 15px; }
-        .nav-container li a { display: block; padding: 15px 20px; color: var(--ozas-dark-blue); font-weight: 700; text-decoration: none; font-size: 14px; text-transform: uppercase; border-bottom: 3px solid transparent; transition: all 0.3s ease; }
-        .nav-container li a:hover, .nav-container li a.active { border-bottom-color: var(--ozas-red); color: var(--ozas-red); background: #fafafa; }
+        .nav-container li a { display: block; padding: 15px 20px; color: var(--ozas-dark-blue); font-weight: 700; text-decoration: none; font-size: 14px; text-transform: uppercase; transition: all 0.2s ease; }
+        .nav-container li a:hover, .nav-container li a.active { border-bottom: 3px solid var(--ozas-red); color: var(--ozas-red); }
 
         /* HERO BANNER */
-        .hero-banner { background: linear-gradient(90deg, rgba(15, 42, 74, 0.9), rgba(15, 42, 74, 0.6)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1600&q=80') center/cover; color: #fff; padding: 100px 0; text-align: left; }
+        .hero-banner { background: linear-gradient(90deg, rgba(15, 42, 74, 0.9), rgba(15, 42, 74, 0.6)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1600&q=80') center/cover; color: #fff; padding: 100px 0; }
         .hero-container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
-        .hero-container h1 { font-size: 42px; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; }
+        .hero-container h1 { font-size: 42px; font-weight: 800; margin-bottom: 10px; }
         .hero-container p { font-size: 18px; max-width: 600px; margin-bottom: 25px; }
 
-        /* İSTATİSTİK BANT */
-        .stats-bar { background: var(--ozas-gray); padding: 40px 0; border-bottom: 1px solid #e0e0e0; }
-        .stats-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 15px; text-align: center; }
-        .stat-item h3 { font-size: 36px; color: var(--ozas-red); font-weight: 800; }
-        .stat-item p { color: var(--ozas-text-gray); font-size: 14px; font-weight: 600; text-transform: uppercase; }
-
-        /* HAKKIMIZDA & MİSYON */
-        .content-section { padding: 60px 0; }
-        .section-container { max-width: 1200px; margin: 0 auto; padding: 0 15px; display: flex; gap: 40px; align-items: center; }
-        .text-col { flex: 1; }
-        .text-col h2 { font-size: 28px; color: var(--ozas-dark-blue); margin-bottom: 15px; text-transform: uppercase; }
-        .text-col h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--ozas-red); margin-top: 8px; }
-        .img-col { flex: 1; }
-        .img-col img { width: 100%; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-
-        /* ÖZAŞ BİREBİR TEDARİKÇİLER ALANI (BRAND GRID) */
-        .brands-section { background: var(--ozas-gray); padding: 60px 0; border-top: 1px solid #eee; }
-        .brands-title { text-align: center; font-size: 28px; color: var(--ozas-dark-blue); margin-bottom: 35px; text-transform: uppercase; font-weight: 800; position: relative; }
+        /* ÖZAŞ BİREBİR TEDARİKÇİ LOGOLARI SEKSİYONU */
+        .brands-section { background: var(--ozas-gray); padding: 60px 0; border-top: 1px solid var(--ozas-border); }
+        .brands-title { text-align: center; font-size: 26px; color: var(--ozas-dark-blue); margin-bottom: 35px; text-transform: uppercase; font-weight: 800; position: relative; }
         .brands-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--ozas-red); margin: 8px auto 0; }
-        .brands-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; padding: 0 15px; text-align: center; }
-        .brand-box { 
-            border: 1px solid #e0e0e0; 
-            padding: 20px 10px; 
-            border-radius: 4px; 
+        
+        .brands-grid { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            display: grid; 
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 20px; 
+            padding: 0 15px; 
+        }
+        
+        .brand-card { 
+            background: #ffffff; 
+            border: 1px solid var(--ozas-border); 
+            border-radius: 6px; 
+            height: 110px; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
-            font-weight: 800; 
-            font-size: 15px;
-            color: var(--ozas-dark-blue); 
-            background: #ffffff; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            padding: 15px; 
             transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
-        .brand-box:hover {
-            border-color: var(--ozas-red);
-            color: var(--ozas-red);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+        
+        .brand-card:hover { 
+            border-color: var(--ozas-red); 
+            transform: translateY(-4px); 
+            box-shadow: 0 8px 15px rgba(0,0,0,0.08); 
+        }
+        
+        .brand-card img { 
+            max-width: 85%; 
+            max-height: 60px; 
+            object-fit: contain; 
+            filter: grayscale(20%);
+            transition: filter 0.3s ease;
         }
 
-        /* FOOTER */
+        .brand-card:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* CONTENT & FOOTER */
+        .content-section { padding: 60px 0; }
+        .section-container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+        
         footer { background: var(--ozas-dark-blue); color: #fff; padding: 50px 0 20px; font-size: 13px; }
         .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding: 0 15px 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .footer-col h4 { font-size: 16px; margin-bottom: 20px; color: #fff; text-transform: uppercase; border-left: 3px solid var(--ozas-red); padding-left: 10px; }
@@ -100,12 +105,8 @@
         .footer-col ul li a { color: #ccc; text-decoration: none; }
         .footer-bottom { text-align: center; padding-top: 20px; color: #888; font-size: 12px; }
 
-        @media (max-width: 768px) {
-            .header-container, .section-container, .stats-container { flex-direction: column; text-align: center; }
-            .nav-container { flex-wrap: wrap; justify-content: center; }
-            .brands-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-container { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 992px) { .brands-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 576px) { .brands-grid { grid-template-columns: repeat(2, 1fr); } }
     </style>
 </head>
 <body>
@@ -133,7 +134,7 @@
         </div>
     </header>
 
-    <!-- KAYDIRILDIĞINDA EN ÜSTTE SABİTLENEN MENÜ -->
+    <!-- SABİT BAŞLIK MENÜSÜ -->
     <nav>
         <ul class="nav-container">
             <li><a href="#" class="active">Ana Sayfa</a></li>
@@ -154,90 +155,63 @@
         </div>
     </section>
 
-    <!-- RAKAMLARLA JPN OTOMOTİV -->
-    <section class="stats-bar">
-        <div class="stats-container">
-            <div class="stat-item">
-                <h3>100.000+</h3>
-                <p>Ürün Referansı</p>
-            </div>
-            <div class="stat-item">
-                <h3>150+</h3>
-                <p>Global Tedarikçi</p>
-            </div>
-            <div class="stat-item">
-                <h3>10.000 m²</h3>
-                <p>Depolama Alanı</p>
-            </div>
-            <div class="stat-item">
-                <h3>81 İL</h3>
-                <p>Dağıtım Ağı</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- KURUMSAL TANITIM -->
-    <section class="content-section" id="kurumsal">
-        <div class="section-container">
-            <div class="text-col">
-                <h2>JPN OTOMOTİV HAKKINDA</h2>
-                <p>JPN Otomotiv, binek ve hafif ticari araç gruplarını kapsayan geniş ürün yelpazesiyle bağımsız otomotiv yedek parça pazarında hizmet veren lider tedarikçilerden biridir.</p>
-                <br>
-                <p>Müşterilerine ve tedarikçilerine çözüm odaklı yaklaşımı, yüksek iş ahlakı prensipleri ve yenilikçi vizyonu ile sektördeki büyümesini istikrarlı şekilde sürdürmektedir. Tüm marka ve modellerin orijinal muadili ile kaliteli yan sanayi yedek parçalarının dağıtımını yapmaktadır.</p>
-            </div>
-            <div class="img-col">
-                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="JPN Lojistik Depo">
-            </div>
-        </div>
-    </section>
-
-    <!-- ÖZAŞ OTOMOTİV BİREBİR TEDARİKÇİ LİSTESİ -->
+    <!-- ÖZAŞ BİREBİR TEDARİKÇİ LOGOLARI -->
     <section class="brands-section" id="tedarikciler">
         <h2 class="brands-title">Tedarikçilerimiz</h2>
         <div class="brands-grid">
-            <div class="brand-box">VALEO</div>
-            <div class="brand-box">BOSCH</div>
-            <div class="brand-box">SACHS</div>
-            <div class="brand-box">LUK</div>
-            <div class="brand-box">ZF</div>
-            <div class="brand-box">TRW</div>
-            <div class="brand-box">FERODO</div>
-            <div class="brand-box">FEBI BILSTEIN</div>
-            <div class="brand-box">GATES</div>
-            <div class="brand-box">CONTINENTAL</div>
-            <div class="brand-box">DAYCO</div>
-            <div class="brand-box">BREMBO</div>
-            <div class="brand-box">MAHLE</div>
-            <div class="brand-box">MANN FILTER</div>
-            <div class="brand-box">MONROE</div>
-            <div class="brand-box">SKF</div>
-            <div class="brand-box">INA</div>
-            <div class="brand-box">FAG</div>
-            <div class="brand-box">HELLA</div>
-            <div class="brand-box">MAGNETI MARELLI</div>
-            <div class="brand-box">DELPHI</div>
-            <div class="brand-box">MOOG</div>
-            <div class="brand-box">SWAG</div>
-            <div class="brand-box">TEXTAR</div>
-        </div>
-    </section>
-
-    <!-- TEMSİLCİLİKLER SEKSİYONU -->
-    <section class="content-section" id="temsilcilikler" style="background:#fff;">
-        <div class="section-container">
-            <div class="text-col">
-                <h2>TEMSİLCİLİKLERİMİZ</h2>
-                <p>Dünyanın önde gelen otomotiv parça üreticilerinin Türkiye genelindeki yetkili satış ve dağıtım temsilciliğini üstlenmekteyiz. Orijinal kalitede ürün garantisi ile müşterilerimize doğrudan tedarik sağlıyoruz.</p>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Valeo_Logo.svg/1200px-Valeo_Logo.svg.png" alt="Valeo">
             </div>
-        </div>
-    </section>
-
-    <!-- JPN MEDYA SEKSİYONU -->
-    <section class="content-section" id="medya" style="background:var(--ozas-gray);">
-        <div class="section-container">
-            <div class="text-col">
-                <h2>JPN MEDYA</h2>
-                <p>Sektörel gelişmeler, yeni ürün duyuruları, katıldığımız fuarlar ve kurumsal haberlerimizden en güncel başlıklar.</p>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bosch-logotype.svg/1200px-Bosch-logotype.svg.png" alt="Bosch">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/ZF_TRW_logo.svg/1200px-ZF_TRW_logo.svg.png" alt="TRW">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/LuK_logo.svg/1200px-LuK_logo.svg.png" alt="LuK">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/ZF_Friedrichshafen_logo.svg/1200px-ZF_Friedrichshafen_logo.svg.png" alt="ZF">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sachs_logo.svg/1200px-Sachs_logo.svg.png" alt="Sachs">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Febi_bilstein_logo.svg/1200px-Febi_bilstein_logo.svg.png" alt="Febi Bilstein">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Gates_Corporation_logo.svg/1200px-Gates_Corporation_logo.svg.png" alt="Gates">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Continental_AG_logo.svg/1200px-Continental_AG_logo.svg.png" alt="Continental">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Dayco_logo.svg/1200px-Dayco_logo.svg.png" alt="Dayco">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Brembo_logo.svg/1200px-Brembo_logo.svg.png" alt="Brembo">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mahle_logo.svg/1200px-Mahle_logo.svg.png" alt="Mahle">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Mann-Filter_logo.svg/1200px-Mann-Filter_logo.svg.png" alt="Mann Filter">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/SKF_logo.svg/1200px-SKF_logo.svg.png" alt="SKF">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Hella_logo.svg/1200px-Hella_logo.svg.png" alt="Hella">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Delphi_Technologies_logo.svg/1200px-Delphi_Technologies_logo.svg.png" alt="Delphi">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Magneti_Marelli_logo.svg/1200px-Magneti_Marelli_logo.svg.png" alt="Magneti Marelli">
+            </div>
+            <div class="brand-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ferodo_logo.svg/1200px-Ferodo_logo.svg.png" alt="Ferodo">
             </div>
         </div>
     </section>
