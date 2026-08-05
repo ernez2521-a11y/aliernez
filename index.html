@@ -81,10 +81,10 @@
             cursor: pointer;
         }
         
-        /* MAUS ÜSTÜNE GELİNCE BERİ GELME (ÖNE ÇIKMA) EFEKTİ */
+        /* FARE İLE ÜSTÜNE GELİNCE BERİ GELME / ÖNE ÇIKMA EFEKTİ */
         .brand-card:hover { 
             border-color: var(--ozas-red); 
-            transform: translateY(-8px) scale(1.03); 
+            transform: translateY(-8px) scale(1.04); 
             box-shadow: 0 12px 20px rgba(0,0,0,0.12); 
             z-index: 2;
         }
@@ -93,7 +93,6 @@
             max-width: 90%; 
             max-height: 65px; 
             object-fit: contain; 
-            transition: transform 0.3s ease;
         }
 
         .content-container { max-width: 1200px; margin: 0 auto; padding: 60px 15px; }
@@ -170,46 +169,69 @@
         </div>
         <section class="brands-section">
             <div class="brands-grid">
-                <div class="brand-card"><img src="behr-ozas.png" alt="Behr"></div>
-                <div class="brand-card"><img src="beru-ozas.png" alt="Beru"></div>
-                <div class="brand-card"><img src="bosch-ozas.png" alt="Bosch"></div>
-                <div class="brand-card"><img src="champion-ozas.png" alt="Champion"></div>
-                <div class="brand-card"><img src="contitech-ozas.png" alt="ContiTech"></div>
-                <div class="brand-card"><img src="corteco-ozas.png" alt="Corteco"></div>
-                <div class="brand-card"><img src="delphi-ozas.png" alt="Delphi"></div>
-                <div class="brand-card"><img src="denso-ozas.png" alt="Denso"></div>
-                <div class="brand-card"><img src="cifam-ozas.png" alt="Cifam"></div>
-                <div class="brand-card"><img src="ferodo-ozas.png" alt="Ferodo"></div>
-                <div class="brand-card"><img src="gates-ozas.png" alt="Gates"></div>
-                <div class="brand-card"><img src="glyco-ozas.png" alt="Glyco"></div>
-                <div class="brand-card"><img src="goetze-ozas.png" alt="Goetze"></div>
-                <div class="brand-card"><img src="graf-ozas.png" alt="Graf"></div>
-                <div class="brand-card"><img src="gunes-ozas.png" alt="Güneş"></div>
-                <div class="brand-card"><img src="hella-ozas.png" alt="Hella"></div>
-                <div class="brand-card"><img src="ibras-ozas.png" alt="İbraş"></div>
-                <div class="brand-card"><img src="kale-ozas.png" alt="Kale"></div>
-                <div class="brand-card"><img src="kapimsan-ozas.jpg" alt="Kapımsan"></div>
-                <div class="brand-card"><img src="kolbenschmidt-ozas.jpg" alt="Kolbenschmidt"></div>
-                <div class="brand-card"><img src="magneti-marelli-ozas.png" alt="Magneti Marelli"></div>
-                <div class="brand-card"><img src="mahle-ozas.jpg" alt="Mahle"></div>
-                <div class="brand-card"><img src="mando-plus-ozas.jpg" alt="Mando"></div>
-                <div class="brand-card"><img src="mann-filter-ozas.png" alt="Mann Filter"></div>
-                <div class="brand-card"><img src="mapa-ozas.jpg" alt="Mapa"></div>
-                <div class="brand-card"><img src="maysan-mando-ozas.jpg" alt="Maysan Mando"></div>
-                <div class="brand-card"><img src="monroe-ozas.png" alt="Monroe"></div>
-                <div class="brand-card"><img src="ngk-ozas.png" alt="NGK"></div>
-                <div class="brand-card"><img src="nura-ozas.jpg" alt="Nüral"></div>
-                <div class="brand-card"><img src="pierburg-ozas.jpg" alt="Pierburg"></div>
-                <div class="brand-card"><img src="sachs-ozas.png" alt="Sachs"></div>
-                <div class="brand-card"><img src="schaeffler-ozas.jpg" alt="Schaeffler"></div>
-                <div class="brand-card"><img src="sismak-ozas.png" alt="Sışmak"></div>
-                <div class="brand-card"><img src="skf-ozas.png" alt="SKF"></div>
-                <div class="brand-card"><img src="supsan-ozas.png" alt="Supsan"></div>
-                <div class="brand-card"><img src="topran-ozas.png" alt="Topran"></div>
-                <div class="brand-card"><img src="trw-ozas.png" alt="TRW"></div>
-                <div class="brand-card"><img src="ufi-filters-ozas.png" alt="UFI Filters"></div>
-                <div class="brand-card"><img src="ulo-ozas.png" alt="ULO"></div>
-                <div class="brand-card"><img src="victor-reinz-ozas.png" alt="Victor Reinz"></div>
+                <!-- 1. Satır -->
+                <div class="brand-card"><img src="behr.png" loading="lazy"></div>
+                <div class="brand-card"><img src="beru.png" loading="lazy"></div>
+                <div class="brand-card"><img src="bosch.png" loading="lazy"></div>
+                <div class="brand-card"><img src="champion.png" loading="lazy"></div>
+                <div class="brand-card"><img src="contitech.png" loading="lazy"></div>
+                <div class="brand-card"><img src="corteco.png" loading="lazy"></div>
+                
+                <!-- 2. Satır -->
+                <div class="brand-card"><img src="delphi.png" loading="lazy"></div>
+                <div class="brand-card"><img src="denso.png" loading="lazy"></div>
+                <div class="brand-card"><img src="difam.png" loading="lazy"></div>
+                <div class="brand-card"><img src="ferodo.png" loading="lazy"></div>
+                <div class="brand-card"><img src="fte-automotive.png" loading="lazy"></div>
+                <div class="brand-card"><img src="garrett.png" loading="lazy"></div>
+                
+                <!-- 3. Satır -->
+                <div class="brand-card"><img src="gates.png" loading="lazy"></div>
+                <div class="brand-card"><img src="glyco.png" loading="lazy"></div>
+                <div class="brand-card"><img src="goetze.png" loading="lazy"></div>
+                <div class="brand-card"><img src="graf.png" loading="lazy"></div>
+                <div class="brand-card"><img src="gunes.png" loading="lazy"></div>
+                <div class="brand-card"><img src="hella.png" loading="lazy"></div>
+                
+                <!-- 4. Satır -->
+                <div class="brand-card"><img src="ibras.png" loading="lazy"></div>
+                <div class="brand-card"><img src="kale-radyator.png" loading="lazy"></div>
+                <div class="brand-card"><img src="kapimsan.png" loading="lazy"></div>
+                <div class="brand-card"><img src="kolbenschmidt.png" loading="lazy"></div>
+                <div class="brand-card"><img src="kyb.png" loading="lazy"></div>
+                <div class="brand-card"><img src="lemforder.png" loading="lazy"></div>
+                
+                <!-- 5. Satır -->
+                <div class="brand-card"><img src="magnet-marelli.png" loading="lazy"></div>
+                <div class="brand-card"><img src="mahle.png" loading="lazy"></div>
+                <div class="brand-card"><img src="mando.png" loading="lazy"></div>
+                <div class="brand-card"><img src="mann.png" loading="lazy"></div>
+                <div class="brand-card"><img src="mapa.png" loading="lazy"></div>
+                <div class="brand-card"><img src="maysan-mando.png" loading="lazy"></div>
+                
+                <!-- 6. Satır -->
+                <div class="brand-card"><img src="monroe.png" loading="lazy"></div>
+                <div class="brand-card"><img src="ngk.png" loading="lazy"></div>
+                <div class="brand-card"><img src="nural.png" loading="lazy"></div>
+                <div class="brand-card"><img src="pierburg.png" loading="lazy"></div>
+                <div class="brand-card"><img src="purflux-filter.png" loading="lazy"></div>
+                <div class="brand-card"><img src="rapro.png" loading="lazy"></div>
+                
+                <!-- 7. Satır -->
+                <div class="brand-card"><img src="sachs.png" loading="lazy"></div>
+                <div class="brand-card"><img src="schaeffler.png" loading="lazy"></div>
+                <div class="brand-card"><img src="sismak.png" loading="lazy"></div>
+                <div class="brand-card"><img src="skf.png" loading="lazy"></div>
+                <div class="brand-card"><img src="supsan.png" loading="lazy"></div>
+                <div class="brand-card"><img src="topran.png" loading="lazy"></div>
+                
+                <!-- 8. Satır -->
+                <div class="brand-card"><img src="trw.png" loading="lazy"></div>
+                <div class="brand-card"><img src="ufi-filters.png" loading="lazy"></div>
+                <div class="brand-card"><img src="ulo.png" loading="lazy"></div>
+                <div class="brand-card"><img src="victor-reinz.png" loading="lazy"></div>
+                <div class="brand-card"><img src="viewmax.png" loading="lazy"></div>
+                <div class="brand-card"><img src="wahler.png" loading="lazy"></div>
             </div>
         </section>
     </div>
@@ -278,15 +300,18 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Görsel uzantı kontrolü (.png yoksa .jpg dener)
+        // Yüklenen dosya .png değil de .jpg/.jpeg ise otomatik bulur
         document.addEventListener("DOMContentLoaded", function () {
             const images = document.querySelectorAll('.brand-card img');
             images.forEach(img => {
                 img.onerror = function () {
-                    if (this.src.endsWith('.png')) {
-                        this.src = this.src.replace('.png', '.jpg');
-                    } else if (this.src.endsWith('.jpg')) {
-                        this.src = this.src.replace('.jpg', '.png');
+                    if (!this.dataset.tried) {
+                        this.dataset.tried = "1";
+                        if (this.src.endsWith('.png')) {
+                            this.src = this.src.replace('.png', '.jpg');
+                        } else if (this.src.endsWith('.jpg')) {
+                            this.src = this.src.replace('.jpg', '.jpeg');
+                        }
                     }
                 };
             });
