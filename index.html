@@ -3,255 +3,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JPN Otomotiv - Bağımsız Yedek Parça Distribütörü</title>
+    <title>Oto Yedek Parça Markaları</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', Arial, sans-serif; }
-        body { background-color: #ffffff; color: #333; line-height: 1.6; }
-        
-        :root {
-            --ozas-red: #d32f2f;
-            --ozas-dark-blue: #0f2a4a;
-            --ozas-gray: #f8f9fa;
-            --ozas-border: #e9ecef;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        /* TOP BAR */
-        .top-header { background: var(--ozas-dark-blue); color: #fff; font-size: 12px; padding: 6px 0; border-bottom: 2px solid var(--ozas-red); }
-        .top-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 15px; }
-        .top-info span { margin-right: 20px; }
-        .top-links a { color: #fff; text-decoration: none; margin-left: 15px; }
-
-        /* MAIN HEADER */
-        header { background: #fff; padding: 20px 0; }
-        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
-        .logo { font-size: 32px; font-weight: 900; color: var(--ozas-dark-blue); text-decoration: none; letter-spacing: -1px; }
-        .logo span { color: var(--ozas-red); }
-        .b2b-btn { background: var(--ozas-red); color: #fff; padding: 10px 22px; text-decoration: none; font-weight: bold; border-radius: 3px; text-transform: uppercase; font-size: 13px; }
-
-        /* KAYDIRINCA SABİT KALAN MENÜ */
-        nav { 
-            background: #fff; 
-            border-bottom: 2px solid var(--ozas-red); 
-            border-top: 1px solid #eee; 
-            position: sticky;
-            top: 0;
-            z-index: 9999;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-        }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; list-style: none; padding: 0 15px; }
-        .nav-container li a { display: block; padding: 15px 20px; color: var(--ozas-dark-blue); font-weight: 700; text-decoration: none; font-size: 14px; text-transform: uppercase; transition: all 0.2s ease; }
-        .nav-container li a:hover, .nav-container li a.active { border-bottom: 3px solid var(--ozas-red); color: var(--ozas-red); }
-
-        /* HERO BANNER */
-        .hero-banner { background: linear-gradient(90deg, rgba(15, 42, 74, 0.9), rgba(15, 42, 74, 0.6)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1600&q=80') center/cover; color: #fff; padding: 100px 0; }
-        .hero-container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
-        .hero-container h1 { font-size: 42px; font-weight: 800; margin-bottom: 10px; }
-        .hero-container p { font-size: 18px; max-width: 600px; margin-bottom: 25px; }
-
-        /* TEDARİKÇİ LOGOLARI */
-        .brands-section { background: var(--ozas-gray); padding: 60px 0; border-top: 1px solid var(--ozas-border); }
-        .brands-title { text-align: center; font-size: 26px; color: var(--ozas-dark-blue); margin-bottom: 35px; text-transform: uppercase; font-weight: 800; position: relative; }
-        .brands-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--ozas-red); margin: 8px auto 0; }
-        
-        .brands-grid { 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            display: grid; 
-            grid-template-columns: repeat(4, 1fr); 
-            gap: 20px; 
-            padding: 0 15px; 
-        }
-        
-        .brand-card { 
-            background: #ffffff; 
-            border: 1px solid var(--ozas-border); 
-            border-radius: 6px; 
-            height: 100px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            padding: 20px; 
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-        
-        .brand-card:hover { 
-            border-color: var(--ozas-red); 
-            transform: translateY(-4px); 
-            box-shadow: 0 8px 15px rgba(0,0,0,0.08); 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            padding: 40px 20px;
         }
 
-        .brand-card svg {
-            max-width: 140px;
-            max-height: 50px;
-            width: 100%;
-            height: auto;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        footer { background: var(--ozas-dark-blue); color: #fff; padding: 50px 0 20px; font-size: 13px; }
-        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding: 0 15px 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .footer-col h4 { font-size: 16px; margin-bottom: 20px; color: #fff; text-transform: uppercase; border-left: 3px solid var(--ozas-red); padding-left: 10px; }
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 10px; }
-        .footer-col ul li a { color: #ccc; text-decoration: none; }
-        .footer-bottom { text-align: center; padding-top: 20px; color: #888; font-size: 12px; }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1e293b;
+            font-size: 2.2rem;
+        }
 
-        @media (max-width: 992px) { .brands-grid { grid-template-columns: repeat(3, 1fr); } }
-        @media (max-width: 576px) { .brands-grid { grid-template-columns: repeat(2, 1fr); } }
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .brand-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .brand-card img {
+            max-width: 100%;
+            max-height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .brand-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #475569;
+            text-align: center;
+        }
+
+        .brand-number {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- TOP HEADER -->
-    <div class="top-header">
-        <div class="top-container">
-            <div class="top-info">
-                <span>📍 İkitelli OSB Eski Turgut Özal Cad. No:3/2 Başakşehir / İstanbul</span>
-                <span>📞 +90 (212) 549 22 00</span>
-            </div>
-            <div class="top-links">
-                <a href="#b2b">B2B Portal</a>
-                <a href="#ik">Kariyer</a>
-                <a href="#iletisim">İletişim</a>
-            </div>
+<div class="container">
+    <h1>Oto Yedek Parça Markaları</h1>
+    <div class="brand-grid">
+
+        <!-- 1 - 10 -->
+        <div class="brand-card">
+            <span class="brand-number">#1</span>
+            <img src="bsg-ozas.png" alt="BSG Auto Parts">
+            <span class="brand-name">BSG Auto Parts</span>
         </div>
+        <div class="brand-card">
+            <span class="brand-number">#2</span>
+            <img src="bosch-ozas.png" alt="Bosch">
+            <span class="brand-name">Bosch</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#3</span>
+            <img src="brembo-ozas.png" alt="Brembo">
+            <span class="brand-name">Brembo</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#4</span>
+            <img src="caglayan-ozas.png" alt="Çağlayan">
+            <span class="brand-name">Çağlayan</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#5</span>
+            <img src="champion-ozas.png" alt="Champion">
+            <span class="brand-name">Champion</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#6</span>
+            <img src="cobi-ozas.jpg" alt="Cobi">
+            <span class="brand-name">Cobi</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#7</span>
+            <img src="contitech-ozas.png" alt="Continental ContiTech">
+            <span class="brand-name">Continental ContiTech</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#8</span>
+            <img src="corteco-ozas.png" alt="Corteco">
+            <span class="brand-name">Corteco</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#9</span>
+            <img src="dayco-ozas.png" alt="Dayco">
+            <span class="brand-name">Dayco</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#10</span>
+            <img src="dita-ozas.jpg" alt="Ditaş">
+            <span class="brand-name">Ditaş</span>
+        </div>
+
+        <!-- 11 - 20 -->
+        <div class="brand-card">
+            <span class="brand-number">#11</span>
+            <img src="doga-ozas.jpg" alt="Doğa">
+            <span class="brand-name">Doğa</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#12</span>
+            <img src="denckermann-ozas.png" alt="Denckermann">
+            <span class="brand-name">Denckermann</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#13</span>
+            <img src="elring-ozas.png" alt="Elring">
+            <span class="brand-name">Elring</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#14</span>
+            <img src="febi-ozas.jpg" alt="Febi Bilstein">
+            <span class="brand-name">Febi Bilstein</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#15</span>
+            <img src="ferodo-ozas.png" alt="Ferodo">
+            <span class="brand-name">Ferodo</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#16</span>
+            <img src="filtron-ozas.png" alt="Filtron">
+            <span class="brand-name">Filtron</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#17</span>
+            <img src="gates-ozas.png" alt="Gates">
+            <span class="brand-name">Gates</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#18</span>
+            <img src="goetze-ozas.png" alt="Goetze">
+            <span class="brand-name">Goetze</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#19</span>
+            <img src="hella-ozas.png" alt="Hella">
+            <span class="brand-name">Hella</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#20</span>
+            <img src="kale-ozas.png" alt="Kale Oto Radyatör">
+            <span class="brand-name">Kale Oto Radyatör</span>
+        </div>
+
+        <!-- 21 - 30 -->
+        <div class="brand-card">
+            <span class="brand-number">#21</span>
+            <img src="kapimsan-ozas.jpg" alt="Kapimsan">
+            <span class="brand-name">Kapimsan</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#22</span>
+            <img src="kolbenschmidt-ozas.jpg" alt="Kolbenschmidt">
+            <span class="brand-name">Kolbenschmidt</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#23</span>
+            <img src="kyb-ozas.png" alt="KYB">
+            <span class="brand-name">KYB</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#24</span>
+            <img src="lemforder-ozas.png" alt="Lemförder">
+            <span class="brand-name">Lemförder</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#25</span>
+            <img src="magneti-marelli-ozas.png" alt="Magneti Marelli">
+            <span class="brand-name">Magneti Marelli</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#26</span>
+            <img src="mahle-ozas.jpg" alt="Mahle">
+            <span class="brand-name">Mahle</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#27</span>
+            <img src="mando-plus-ozas.jpg" alt="Mando+">
+            <span class="brand-name">Mando+</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#28</span>
+            <img src="mann-filter-ozas.png" alt="Mann-Filter">
+            <span class="brand-name">Mann-Filter</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#29</span>
+            <img src="mapa-ozas.jpg" alt="MAPA">
+            <span class="brand-name">MAPA</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#30</span>
+            <img src="maysan-mando-ozas.jpg" alt="Maysan Mando">
+            <span class="brand-name">Maysan Mando</span>
+        </div>
+
+        <!-- 31 - 40 -->
+        <div class="brand-card">
+            <span class="brand-number">#31</span>
+            <img src="skf-ozas.png" alt="SKF">
+            <span class="brand-name">SKF</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#32</span>
+            <img src="monroe-ozas.png" alt="Monroe">
+            <span class="brand-name">Monroe</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#33</span>
+            <img src="ngk-ozas.png" alt="NGK">
+            <span class="brand-name">NGK</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#34</span>
+            <img src="nura-ozas.jpg" alt="Nüral">
+            <span class="brand-name">Nüral Piston</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#35</span>
+            <img src="pierburg-ozas.jpg" alt="Pierburg">
+            <span class="brand-name">Pierburg</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#36</span>
+            <img src="purflux-filter-ozas.png" alt="Purflux">
+            <span class="brand-name">Purflux</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#37</span>
+            <img src="rapro-ozas.jpg" alt="Rapro">
+            <span class="brand-name">Rapro</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#38</span>
+            <img src="sachs-ozas.png" alt="Sachs">
+            <span class="brand-name">Sachs</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#39</span>
+            <img src="schaeffler-ozas.jpg" alt="Schaeffler Group">
+            <span class="brand-name">Schaeffler Group</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#40</span>
+            <img src="sismak-ozas.png" alt="Sismak">
+            <span class="brand-name">Sismak</span>
+        </div>
+
+        <!-- 41 - 50 -->
+        <div class="brand-card">
+            <span class="brand-number">#41</span>
+            <img src="zskt-ozas.jpg" alt="SKT">
+            <span class="brand-name">SKT</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#42</span>
+            <img src="supsan-ozas.png" alt="Supsan">
+            <span class="brand-name">Supsan</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#43</span>
+            <img src="topran-ozas.png" alt="Topran">
+            <span class="brand-name">Topran</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#44</span>
+            <img src="trw-ozas.png" alt="TRW">
+            <span class="brand-name">TRW</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#45</span>
+            <img src="ufi-filters-ozas.png" alt="UFI Filters">
+            <span class="brand-name">UFI Filters</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#46</span>
+            <img src="ulo-ozas.png" alt="ULO">
+            <span class="brand-name">ULO</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#47</span>
+            <img src="zvdo-ozas.png" alt="VDO">
+            <span class="brand-name">VDO</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#48</span>
+            <img src="victor-reinz-ozas.png" alt="Victor Reinz">
+            <span class="brand-name">Victor Reinz</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#49</span>
+            <img src="viewmax-ozas.jpg" alt="View Max">
+            <span class="brand-name">View Max</span>
+        </div>
+        <div class="brand-card">
+            <span class="brand-number">#50</span>
+            <img src="wahler-ozas.png" alt="Wahler">
+            <span class="brand-name">Wahler</span>
+        </div>
+
     </div>
-
-    <!-- MAIN HEADER -->
-    <header>
-        <div class="header-container">
-            <a href="#" class="logo">JPN <span>OTOMOTİV</span></a>
-            <a href="#b2b" class="b2b-btn">B2B Bayi Girişi</a>
-        </div>
-    </header>
-
-    <!-- SABİT MENÜ -->
-    <nav>
-        <ul class="nav-container">
-            <li><a href="#" class="active">Ana Sayfa</a></li>
-            <li><a href="#kurumsal">Kurumsal</a></li>
-            <li><a href="#tedarikciler">Tedarikçilerimiz</a></li>
-            <li><a href="#temsilcilikler">Temsilcilikler</a></li>
-            <li><a href="#medya">JPN Medya</a></li>
-            <li><a href="#iletisim">İletişim</a></li>
-        </ul>
-    </nav>
-
-    <!-- HERO BANNER -->
-    <section class="hero-banner">
-        <div class="hero-container">
-            <h1>Otomotiv Yedek Parçada<br>Güvenilir Dağıtım Ağı</h1>
-            <p>100.000'i aşkın referans ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdeyiz.</p>
-            <a href="#kurumsal" class="b2b-btn">Kurumsal Yapımız</a>
-        </div>
-    </section>
-
-    <!-- KIRILMAYAN VEKTÖREL TEDARİKÇİ LOGOLARI -->
-    <section class="brands-section" id="tedarikciler">
-        <h2 class="brands-title">Tedarikçilerimiz</h2>
-        <div class="brands-grid">
-            
-            <!-- BOSCH -->
-            <div class="brand-card">
-                <svg viewBox="0 0 200 50">
-                    <path fill="#EA1B29" d="M10,10 h30 v30 h-30 z"/>
-                    <circle cx="25" cy="25" r="10" fill="#FFF"/>
-                    <text x="50" y="35" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="#002C6C">BOSCH</text>
-                </svg>
-            </div>
-
-            <!-- VALEO -->
-            <div class="brand-card">
-                <svg viewBox="0 0 200 50">
-                    <text x="10" y="36" font-family="Arial, sans-serif" font-style="italic" font-weight="900" font-size="34" fill="#6BB232">Valeo</text>
-                </svg>
-            </div>
-
-            <!-- ZF -->
-            <div class="brand-card">
-                <svg viewBox="0 0 200 50">
-                    <circle cx="30" cy="25" r="20" fill="none" stroke="#005A9C" stroke-width="4"/>
-                    <text x="18" y="34" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#005A9C">ZF</text>
-                    <text x="60" y="35" font-family="Arial, sans-serif" font-weight="bold" font-size="26" fill="#005A9C">FRIEDRICHSHAFEN</text>
-                </svg>
-            </div>
-
-            <!-- TRW -->
-            <div class="brand-card">
-                <svg viewBox="0 0 200 50">
-                    <text x="20" y="38" font-family="Arial, sans-serif" font-weight="900" font-size="36" fill="#CC0000">TRW</text>
-                </svg>
-            </div>
-
-            <!-- BREMBO -->
-            <div class="brand-card">
-                <svg viewBox="0 0 200 50">
-                    <text x="15" y="35" font-family="Arial, sans-serif" font-weight="bold" font-size="30" fill="#D32F2F">brembo</text>
-                </svg>
-            </div>
-
-            <!-- CONTINENTAL -->
-            <div class="brand-card">
-                <svg viewBox="0 0 200 50">
-                    <rect x="10" y="8" width="180" height="34" fill="#FFA500" rx="3"/>
-                    <text x="18" y="33" font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#000">Continental</text>
-                </svg>
-            </div>
-
-            <!-- FEBI BILSTEIN -->
-            <div class="brand-card">
-                <svg viewBox="0 0 200 50">
-                    <text x="10" y="35" font-family="Arial, sans-serif" font-weight="900" font-size="28" fill="#E30613">febi</text>
-                    <text x="70" y="35" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#000">bilstein</text>
-                </svg>
-            </div>
-
-            <!-- MANN FILTER -->
-            <div class="brand-card">
-                <svg viewBox="0 0 200 50">
-                    <rect x="5" y="5" width="190" height="40" fill="#005826" rx="2"/>
-                    <text x="12" y="32" font-family="Arial, sans-serif" font-weight="900" font-size="20" fill="#FFED00">MANN-FILTER</text>
-                </svg>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="iletisim">
-        <div class="footer-container">
-            <div class="footer-col">
-                <h4>JPN Otomotiv</h4>
-                <p>Otomotiv yedek parça sektöründe koşulsuz müşteri memnuniyeti ve kalite odaklı hizmet ilkesi.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Hızlı Menü</h4>
-                <ul>
-                    <li><a href="#kurumsal">Kurumsal</a></li>
-                    <li><a href="#tedarikciler">Tedarikçilerimiz</a></li>
-                    <li><a href="#temsilcilikler">Temsilcilikler</a></li>
-                    <li><a href="#medya">JPN Medya</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Yazılım & Destek</h4>
-                <ul>
-                    <li><a href="#b2b">B2B Sipariş Sistemi</a></li>
-                    <li><a href="#">Müşteri Hizmetleri</a></li>
-                    <li><a href="#">Uzak Yardım</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>İletişim</h4>
-                <p>Adres: İkitelli OSB Eski Turgut Özal Cad. No:3/2 Başakşehir / İstanbul</p>
-                <p>Tel: +90 (212) 549 22 00</p>
-                <p>E-Posta: info@jpnotomotiv.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            Copyright © 2026 JPN Otomotiv. Tüm Hakları Saklıdır.
-        </div>
-    </footer>
+</div>
 
 </body>
 </html>
