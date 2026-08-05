@@ -2,589 +2,340 @@
 <html lang="tr">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<title>JPN OTOMOTİV | Opel Chevrolet Peugeot Citroen Yedek Parça</title>
-
-
-<meta name="description" content="JPN OTOMOTİV Opel, Chevrolet, Peugeot ve Citroen yedek parça satışında kaliteli ve güvenilir çözümler sunar. Motor, şanzıman, mekanik ve elektronik parçalar.">
-
-
-<meta name="keywords" content="JPN Otomotiv, Opel yedek parça, Chevrolet yedek parça, Peugeot yedek parça, Citroen yedek parça, otomotiv">
-
-
-<meta name="author" content="JPN OTOMOTİV">
-
-
-<style>
-
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Arial',sans-serif;
-}
-
-
-body{
-
-background:#f4f4f4;
-color:#333;
-
-}
-
-
-
-header{
-
-background:#111;
-padding:25px;
-color:white;
-text-align:center;
-
-}
-
-
-
-.logo{
-
-font-size:40px;
-font-weight:bold;
-letter-spacing:2px;
-
-}
-
-
-
-.logo span{
-
-color:#e30613;
-
-}
-
-
-
-header p{
-
-margin-top:10px;
-font-size:18px;
-
-}
-
-
-
-
-nav{
-
-background:#e30613;
-display:flex;
-justify-content:center;
-padding:15px;
-gap:30px;
-
-}
-
-
-
-nav a{
-
-color:white;
-text-decoration:none;
-font-weight:bold;
-font-size:17px;
-
-}
-
-
-
-nav a:hover{
-
-opacity:0.7;
-
-}
-
-
-
-
-
-.hero{
-
-
-height:450px;
-background:
-
-linear-gradient(
-rgba(0,0,0,.65),
-rgba(0,0,0,.65)
-),
-
-url("https://images.unsplash.com/photo-1487754180451-c456f719a1fc");
-
-
-background-size:cover;
-background-position:center;
-
-
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-
-
-}
-
-
-
-.hero h1{
-
-font-size:45px;
-margin-bottom:20px;
-
-}
-
-
-
-.hero p{
-
-font-size:22px;
-
-}
-
-
-
-.btn{
-
-display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:#e30613;
-color:white;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
-
-}
-
-
-
-.container{
-
-width:90%;
-max-width:1200px;
-margin:auto;
-
-}
-
-
-
-.section-title{
-
-text-align:center;
-font-size:32px;
-margin:50px 0 30px;
-
-}
-
-
-
-.about{
-
-background:white;
-padding:40px;
-border-radius:10px;
-line-height:1.8;
-
-}
-
-
-
-
-footer{
-
-background:#111;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:50px;
-
-}
-
-
-
-
-@media(max-width:700px){
-
-
-.logo{
-
-font-size:28px;
-
-}
-
-
-.hero h1{
-
-font-size:30px;
-
-}
-
-
-nav{
-
-flex-direction:column;
-text-align:center;
-
-}
-
-
-}
-
-
-</style>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JPN OTOMOTİV | Opel Chevrolet Peugeot Citroen Yedek Parça</title>
+
+    <meta name="description" content="JPN OTOMOTİV Opel, Chevrolet, Peugeot ve Citroen yedek parça satışında kaliteli ve güvenilir çözümler sunar. Motor, şanzıman, mekanik ve elektronik parçalar.">
+    <meta name="keywords" content="JPN Otomotiv, Opel yedek parça, Chevrolet yedek parça, Peugeot yedek parça, Citroen yedek parça, otomotiv">
+    <meta name="author" content="JPN OTOMOTİV">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        /* HEADER & NAV */
+        header {
+            background: #111;
+            padding: 25px;
+            color: white;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #e30613;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        nav {
+            background: #e30613;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            gap: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 450px;
+            background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+                        url("https://images.unsplash.com/photo-1487754180451-c456f719a1fc");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 22px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 35px;
+            background: #e30613;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #b5040f;
+        }
+
+        /* LAYOUT & CARDS */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin: 60px 0 30px;
+            color: #111;
+        }
+
+        .about {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            line-height: 1.8;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card-box {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            line-height: 1.6;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-box h3, .card-box h2 {
+            color: #e30613;
+            margin-bottom: 12px;
+        }
+
+        .product-card {
+            width: 260px;
+        }
+
+        .brand-card {
+            width: 220px;
+        }
+
+        /* İLETİŞİM ALANI */
+        .contact-box {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        /* MOBİL UYUMLULUK */
+        @media(max-width: 700px) {
+            .logo {
+                font-size: 28px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            nav {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .product-card, .brand-card {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-
-
 
 <body>
 
-
-
-<header>
-
-
-<div class="logo">
-
-JPN <span>OTOMOTİV</span>
-
-</div>
-
-
-<p>
-
-Opel • Chevrolet • Peugeot • Citroen Yedek Parça Uzmanı
-
-</p>
-
-
-</header>
-
-
-
-
-<nav>
-
-
-<a href="#">Ana Sayfa</a>
-
-<a href="#urunler">Ürünler</a>
-
-<a href="#markalar">Markalar</a>
-
-<a href="#iletisim">İletişim</a>
-
-
-</nav>
-
-
-
-
-<section class="hero">
-
-
-<div>
-
-
-<h1>
-
-Profesyonel Yedek Parça Çözümleri
-
-</h1>
-
-
-<p>
-
-Kaliteli ürün • Güvenilir hizmet • Uygun fiyat
-
-</p>
-
-
-<a class="btn" href="#iletisim">
-
-Bize Ulaşın
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<div class="container">
-
-
-
-<h2 class="section-title">
-
-JPN OTOMOTİV Hakkında
-
-</h2>
-
-
-
-<div class="about">
-
-
-<p>
-
-JPN OTOMOTİV; Opel, Chevrolet, Peugeot ve Citroen araç grupları için
-yedek parça çözümleri sunan profesyonel bir otomotiv firmasıdır.
-
-
-</p>
-
-
-<p>
-
-Motor parçaları, şanzıman, mekanik parçalar ve araç ekipmanlarında
-kaliteli ürün seçenekleri ile müşterilerine hizmet vermektedir.
-
-</p>
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-<footer>
-
-
-© 2026 JPN OTOMOTİV | Tüm Hakları Saklıdır
-
-
-</footer>
-
-<!-- ÜRÜN KATEGORİLERİ -->
-
-<section id="urunler">
-
-<h2 class="section-title">
-Ürün Kategorilerimiz
-</h2>
-
-
-<div class="container">
-
-
-<div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
-
-
-
-<div class="about" style="width:260px;text-align:center;">
-
-<h3 style="color:#e30613;">
-Motor Parçaları
-</h3>
-
-<p>
-Motor ekipmanları, conta setleri, piston, segman ve mekanik parçalar.
-</p>
-
-</div>
-
-
-
-<div class="about" style="width:260px;text-align:center;">
-
-<h3 style="color:#e30613;">
-Şanzıman
-</h3>
-
-<p>
-Manuel ve otomatik şanzıman parçaları, baskı balata ve ekipmanları.
-</p>
-
-</div>
-
-
-
-
-<div class="about" style="width:260px;text-align:center;">
-
-<h3 style="color:#e30613;">
-Fren Sistemi
-</h3>
-
-<p>
-Disk, balata, kaliper ve fren ekipmanları.
-</p>
-
-</div>
-
-
-
-
-<div class="about" style="width:260px;text-align:center;">
-
-<h3 style="color:#e30613;">
-Elektrik Parçaları
-</h3>
-
-<p>
-Sensör, elektronik parçalar ve araç elektrik sistemleri.
-</p>
-
-</div>
-
-
-
-<div class="about" style="width:260px;text-align:center;">
-
-<h3 style="color:#e30613;">
-Süspansiyon
-</h3>
-
-<p>
-Amortisör, salıncak, rot ve yürüyen aksam parçaları.
-</p>
-
-</div>
-
-
-
-
-<div class="about" style="width:260px;text-align:center;">
-
-<h3 style="color:#e30613;">
-Filtre Grubu
-</h3>
-
-<p>
-Yağ, hava, polen ve yakıt filtreleri.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- MARKALAR -->
-
-
-<section id="markalar">
-
-
-<h2 class="section-title">
-Çalıştığımız Markalar
-</h2>
-
-
-
-<div class="container">
-
-
-<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:25px;">
-
-
-
-<div class="about" style="width:220px;text-align:center;">
-
-<h2 style="color:#e30613;">
-OPEL
-</h2>
-
-<p>
-Orijinal ve muadil Opel yedek parçaları
-</p>
-
-</div>
-
-
-
-
-<div class="about" style="width:220px;text-align:center;">
-
-<h2 style="color:#e30613;">
-CHEVROLET
-</h2>
-
-<p>
-Chevrolet araç grubu parçaları
-</p>
-
-</div>
-
-
-
-
-
-<div class="about" style="width:220px;text-align:center;">
-
-<h2 style="color:#e30613;">
-PEUGEOT
-</h2>
-
-<p>
-Peugeot mekanik ve motor parçaları
-</p>
-
-</div>
-
-
-
-
-
-<div class="about" style="width:220px;text-align:center;">
-
-<h2 style="color:#e30613;">
-CITROEN
-</h2>
-
-<p>
-Citroen yedek parça çözümleri
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            JPN <span>OTOMOTİV</span>
+        </div>
+        <p>Opel • Chevrolet • Peugeot • Citroen Yedek Parça Uzmanı</p>
+    </header>
+
+    <!-- NAVİGASYON -->
+    <nav>
+        <a href="#">Ana Sayfa</a>
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#urunler">Ürünler</a>
+        <a href="#markalar">Markalar</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div>
+            <h1>Profesyonel Yedek Parça Çözümleri</h1>
+            <p>Kaliteli ürün • Güvenilir hizmet • Uygun fiyat</p>
+            <a class="btn" href="#iletisim">Bize Ulaşın</a>
+        </div>
+    </section>
+
+    <!-- ANA İÇERİK CONTAINER -->
+    <div class="container">
+
+        <!-- HAKKIMIZDA -->
+        <section id="hakkimizda">
+            <h2 class="section-title">JPN OTOMOTİV Hakkında</h2>
+            <div class="about">
+                <p>
+                    JPN OTOMOTİV; Opel, Chevrolet, Peugeot ve Citroen araç grupları için
+                    yedek parça çözümleri sunan profesyonel bir otomotiv firmasıdır.
+                </p>
+                <br>
+                <p>
+                    Motor parçaları, şanzıman, mekanik parçalar ve araç ekipmanlarında
+                    kaliteli ürün seçenekleri ile müşterilerine hizmet vermektedir.
+                </p>
+            </div>
+        </section>
+
+        <!-- ÜRÜN KATEGORİLERİ -->
+        <section id="urunler">
+            <h2 class="section-title">Ürün Kategorilerimiz</h2>
+            <div class="grid-container">
+                <div class="card-box product-card">
+                    <h3>Motor Parçaları</h3>
+                    <p>Motor ekipmanları, conta setleri, piston, segman ve mekanik parçalar.</p>
+                </div>
+
+                <div class="card-box product-card">
+                    <h3>Şanzıman</h3>
+                    <p>Manuel ve otomatik şanzıman parçaları, baskı balata ve ekipmanları.</p>
+                </div>
+
+                <div class="card-box product-card">
+                    <h3>Fren Sistemi</h3>
+                    <p>Disk, balata, kaliper ve fren ekipmanları.</p>
+                </div>
+
+                <div class="card-box product-card">
+                    <h3>Elektrik Parçaları</h3>
+                    <p>Sensör, elektronik parçalar ve araç elektrik sistemleri.</p>
+                </div>
+
+                <div class="card-box product-card">
+                    <h3>Süspansiyon</h3>
+                    <p>Amortisör, salıncak, rot ve yürüyen aksam parçaları.</p>
+                </div>
+
+                <div class="card-box product-card">
+                    <h3>Filtre Grubu</h3>
+                    <p>Yağ, hava, polen ve yakıt filtreleri.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARKALAR -->
+        <section id="markalar">
+            <h2 class="section-title">Çalıştığımız Markalar</h2>
+            <div class="grid-container">
+                <div class="card-box brand-card">
+                    <h2>OPEL</h2>
+                    <p>Orijinal ve muadil Opel yedek parçaları</p>
+                </div>
+
+                <div class="card-box brand-card">
+                    <h2>CHEVROLET</h2>
+                    <p>Chevrolet araç grubu parçaları</p>
+                </div>
+
+                <div class="card-box brand-card">
+                    <h2>PEUGEOT</h2>
+                    <p>Peugeot mekanik ve motor parçaları</p>
+                </div>
+
+                <div class="card-box brand-card">
+                    <h2>CITROEN</h2>
+                    <p>Citroen yedek parça çözümleri</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- İLETİŞİM -->
+        <section id="iletisim">
+            <h2 class="section-title">İletişim</h2>
+            <div class="contact-box">
+                <p style="font-size: 18px; margin-bottom: 10px;">Yedek parça siparişleri ve bilgi almak için bizimle iletişime geçebilirsiniz.</p>
+                <a class="btn" href="tel:+900000000000">Hemen Ara</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 JPN OTOMOTİV | Tüm Hakları Saklıdır
+    </footer>
 
 </body>
-
 
 </html>
