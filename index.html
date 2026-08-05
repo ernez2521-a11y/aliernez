@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>JPN Otomotiv | Premium Otomotiv Yedek Parça Distribütörü</title>
+    <title>Jpn Otomotiv Ltd Şti | Güvenilir Yedek Parça Dağıtım Merkezi</title>
 
     <!-- SEO & METATAGS -->
-    <meta name="description" content="JPN Otomotiv, Opel, Chevrolet, Peugeot ve Citroën yedek parçalarında yüksek stok kapasitesi ve hızlı lojistik ağı sunar.">
+    <meta name="description" content="Jpn Otomotiv Ltd Şti, Opel, Chevrolet, Peugeot ve Citroën yedek parçalarında yüksek stok kapasitesi ve hızlı lojistik ağı sunar.">
     <meta name="robots" content="index, follow">
     <meta name="geo.region" content="TR-21">
     <meta name="geo.placename" content="Diyarbakır">
     <meta name="business:contact_data:phone_number" content="+905319182817">
-    <meta property="og:title" content="JPN Otomotiv - Kaliteli Yedek Parça Distribütörü">
+    <meta property="og:title" content="Jpn Otomotiv Ltd Şti - Yedek Parça Distribütörü">
     <meta property="og:description" content="Opel, Chevrolet, Peugeot ve Citroën yedek parçalarında güvenilir çözüm ortağınız.">
 
     <!-- GOOGLE FONTS -->
@@ -22,22 +22,23 @@
 
     <style>
         :root {
-            /* DAHA FERAH VE AYDINLIK KURUMSAL RENK PALETİ */
-            --bg-body: #111827;             /* Dengeli Koyu Gri / Lacivert Tonu */
-            --bg-card: #1F2937;             /* Kartlar İçin Daha Açık Gri */
-            --bg-card-hover: #374151;       
-            --primary-accent: #3B82F6;      /* Canlı Mavi */
-            --amber-accent: #F59E0B;        
+            /* ÖZAŞ OTOMOTİV ESİNLENMELİ FERAH VE AYDINLIK KURUMSAL RENK PALETİ */
+            --bg-body: #F4F7FB;             /* Çok Açık Kurumsal Gri / Mavi Arka Plan */
+            --bg-card: #FFFFFF;             /* Saf Beyaz Kartlar */
+            --bg-card-hover: #F8FAFC;       
+            --primary-accent: #0056B3;      /* Güçlü Kurumsal Mavi (Özaş Tarzı) */
+            --primary-dark: #003F82;        
+            --amber-accent: #FF9900;        
             
-            --text-heading: #FFFFFF;        /* Saf Beyaz Başlıklar */
-            --text-body: #D1D5DB;           /* Çok Daha Okunaklı Açık Gri Metin */
-            --text-muted: #9CA3AF;          /* Net Gri İkincil Metin */
+            --text-heading: #1E293B;        /* Koyu Lacivert/Gri Başlıklar */
+            --text-body: #475569;           /* Okunaklı Gri Metin */
+            --text-muted: #64748B;          /* İkincil Gri Metin */
 
-            --border-light: rgba(255, 255, 255, 0.15);
-            --border-accent: rgba(59, 130, 246, 0.4);
+            --border-light: #E2E8F0;        /* Aydınlık Çerçeve Rengi */
+            --border-accent: rgba(0, 86, 179, 0.3);
             
-            --shadow-subtle: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
-            --shadow-glow: 0 0 25px rgba(59, 130, 246, 0.2);
+            --shadow-subtle: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            --shadow-glow: 0 0 20px rgba(0, 86, 179, 0.15);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -48,11 +49,11 @@
 
         /* TOP INFO BAR */
         .top-bar { 
-            background: #0D131F; 
-            color: var(--text-muted); 
+            background: #0F172A; 
+            color: #94A3B8; 
             font-size: 13px; 
-            padding: 12px 0; 
-            border-bottom: 1px solid var(--border-light); 
+            padding: 10px 0; 
+            border-bottom: 1px solid rgba(255,255,255,0.1); 
         }
         .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
         .top-info { display: flex; gap: 24px; }
@@ -60,233 +61,270 @@
 
         /* HEADER & BRANDING */
         header { 
-            background: rgba(31, 41, 55, 0.9); 
-            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(12px);
             position: sticky; top: 0; z-index: 1000; 
             border-bottom: 1px solid var(--border-light); 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
         }
-        .header-flex { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+        .header-flex { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
         
         /* EXECUTIVE LOGO DESIGN */
-        .brand-logo { text-decoration: none; display: flex; align-items: center; gap: 14px; }
+        .brand-logo { text-decoration: none; display: flex; align-items: center; gap: 12px; }
         .logo-icon { 
-            width: 44px; height: 44px; 
-            background: linear-gradient(135deg, var(--primary-accent), #1D4ED8); 
-            border-radius: 10px; 
+            width: 42px; height: 42px; 
+            background: linear-gradient(135deg, var(--primary-accent), var(--primary-dark)); 
+            border-radius: 8px; 
             display: flex; align-items: center; justify-content: center; 
             color: #FFF; font-family: 'Space Grotesk', sans-serif; 
-            font-size: 20px; font-weight: 700; 
-            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4); 
+            font-size: 18px; font-weight: 700; 
+            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3); 
         }
         .logo-text-group { display: flex; flex-direction: column; }
-        .logo-title { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: var(--text-heading); letter-spacing: 2px; line-height: 1; }
-        .logo-subtitle { font-size: 10px; font-weight: 700; color: var(--primary-accent); letter-spacing: 4px; text-transform: uppercase; margin-top: 4px; }
+        .logo-title { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: var(--text-heading); letter-spacing: 0.5px; line-height: 1.1; }
+        .logo-subtitle { font-size: 11px; font-weight: 700; color: var(--primary-accent); letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
 
         /* NAVIGATION */
-        .nav-links { display: flex; list-style: none; gap: 32px; }
-        .nav-links li a { display: block; color: var(--text-body); font-weight: 500; text-decoration: none; font-size: 14px; transition: all 0.2s; }
-        .nav-links li a:hover, .nav-links li a.active { color: var(--text-heading); }
+        .nav-links { display: flex; list-style: none; gap: 28px; }
+        .nav-links li a { display: block; color: var(--text-body); font-weight: 600; text-decoration: none; font-size: 14px; transition: all 0.2s; }
+        .nav-links li a:hover, .nav-links li a.active { color: var(--primary-accent); }
 
         .btn-b2b { 
-            background: linear-gradient(135deg, var(--primary-accent), #2563EB); 
+            background: linear-gradient(135deg, var(--primary-accent), var(--primary-dark)); 
             color: #FFFFFF; 
-            padding: 12px 28px; 
+            padding: 10px 24px; 
             text-decoration: none; 
             font-weight: 700; 
             font-size: 13px; 
-            border-radius: 8px; 
+            border-radius: 6px; 
             letter-spacing: 0.5px;
             text-transform: uppercase;
             transition: all 0.3s ease; 
             box-shadow: var(--shadow-glow);
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        .btn-b2b:hover { transform: translateY(-2px); }
+        .btn-b2b:hover { transform: translateY(-2px); opacity: 0.95; }
 
         /* HERO SECTION */
         .hero-banner { 
-            padding: 110px 0 90px; 
+            padding: 90px 0 70px; 
             text-align: center;
-            background: linear-gradient(to bottom, rgba(31,41,55,0.4), transparent);
+            background: linear-gradient(to bottom, #FFFFFF, var(--bg-body));
         }
         .badge-tag {
             display: inline-flex; align-items: center; gap: 8px;
-            background: rgba(59, 130, 246, 0.15); border: 1px solid var(--border-accent);
+            background: rgba(0, 86, 179, 0.08); border: 1px solid rgba(0, 86, 179, 0.2);
             color: var(--primary-accent); font-size: 12px; font-weight: 700;
             padding: 6px 16px; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
         .hero-banner h1 { 
-            font-size: 48px; font-weight: 800; color: var(--text-heading); 
-            margin-bottom: 20px; letter-spacing: -1px; line-height: 1.2;
+            font-size: 42px; font-weight: 800; color: var(--text-heading); 
+            margin-bottom: 18px; letter-spacing: -0.5px; line-height: 1.2;
             max-width: 900px; margin-left: auto; margin-right: auto;
         }
         .hero-banner h1 span { color: var(--primary-accent); }
-        .hero-banner p { font-size: 17px; color: var(--text-body); max-width: 720px; margin: 0 auto 36px; }
+        .hero-banner p { font-size: 16px; color: var(--text-body); max-width: 700px; margin: 0 auto 30px; }
 
         /* SECTIONS GENERAL */
-        .section { padding: 80px 0; border-bottom: 1px solid var(--border-light); }
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .section-title { font-size: 32px; font-weight: 800; color: var(--text-heading); }
-        .section-subtitle { color: var(--text-muted); font-size: 15px; margin-top: 8px; }
+        .section { padding: 70px 0; border-bottom: 1px solid var(--border-light); }
+        .section-header { text-align: center; margin-bottom: 45px; }
+        .section-title { font-size: 30px; font-weight: 800; color: var(--text-heading); }
+        .section-subtitle { color: var(--text-muted); font-size: 14px; margin-top: 6px; }
 
         /* GRIDS & CARDS */
-        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 
         .card { 
             background: var(--bg-card); 
             border: 1px solid var(--border-light); 
-            border-radius: 14px; 
-            padding: 28px; 
+            border-radius: 12px; 
+            padding: 24px; 
             transition: all 0.3s ease; 
+            box-shadow: var(--shadow-subtle);
         }
         .card:hover { 
-            border-color: var(--border-accent); 
+            border-color: var(--primary-accent); 
             background: var(--bg-card-hover);
-            transform: translateY(-4px); 
-            box-shadow: var(--shadow-subtle); 
+            transform: translateY(-3px); 
         }
         
-        /* GÖRSEL PARÇA KUTULARI İÇİN ÖZEL STİL */
+        /* GERÇEKÇİ OTO YEDEK PARÇA GÖRSEL KUTULARI */
         .part-visual-card {
             background: var(--bg-card);
             border: 1px solid var(--border-light);
-            border-radius: 14px;
+            border-radius: 12px;
             overflow: hidden;
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-        }
-        .part-visual-card:hover {
-            border-color: var(--border-accent);
-            transform: translateY(-4px);
             box-shadow: var(--shadow-subtle);
         }
-        .part-img-container {
-            height: 140px;
-            background: #111827;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 42px;
-            border-bottom: 1px solid var(--border-light);
+        .part-visual-card:hover {
+            border-color: var(--primary-accent);
+            transform: translateY(-3px);
+        }
+        .part-img-wrap {
+            height: 160px;
+            width: 100%;
+            overflow: hidden;
+            background: #F1F5F9;
+            position: relative;
+        }
+        .part-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .part-visual-card:hover .part-img-wrap img {
+            transform: scale(1.05);
         }
         .part-content {
             padding: 20px;
         }
-        .part-content h3 { color: var(--text-heading); font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+        .part-content h3 { color: var(--text-heading); font-size: 16px; font-weight: 700; margin-bottom: 6px; }
         .part-content p { color: var(--text-body); font-size: 13px; line-height: 1.5; }
 
         /* BRAND PILLS */
         .brand-pill { 
             background: var(--bg-card); 
             border: 1px solid var(--border-light); 
-            border-radius: 12px; 
-            padding: 22px; 
+            border-radius: 10px; 
+            padding: 20px; 
             text-align: center; 
             font-weight: 800; 
             color: var(--text-heading); 
-            font-size: 18px; 
-            letter-spacing: 1.5px;
+            font-size: 17px; 
+            letter-spacing: 1px;
+            box-shadow: var(--shadow-subtle);
             transition: all 0.3s ease; 
         }
         .brand-pill:hover { 
             border-color: var(--primary-accent); 
             color: var(--primary-accent); 
-            box-shadow: var(--shadow-glow);
+        }
+
+        /* TEDARİKÇİ LİSTESİ (50 ADET İÇİN KOMPAKT GRID) */
+        .supplier-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+        }
+        .supplier-badge {
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 14px 10px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-heading);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: all 0.2s ease;
+        }
+        .supplier-badge:hover {
+            border-color: var(--primary-accent);
+            color: var(--primary-accent);
+            transform: translateY(-2px);
         }
 
         /* TEMSİLCİ KARTLARI */
         .rep-card { 
             background: var(--bg-card); 
             border: 1px solid var(--border-light); 
-            border-radius: 16px; 
-            padding: 36px; 
+            border-radius: 14px; 
+            padding: 32px; 
             text-align: center; 
             position: relative; 
             overflow: hidden; 
+            box-shadow: var(--shadow-subtle);
             transition: all 0.3s ease; 
         }
         .rep-card::before { 
             content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; 
             background: linear-gradient(90deg, var(--primary-accent), var(--amber-accent)); 
         }
-        .rep-card:hover { border-color: var(--border-accent); transform: translateY(-4px); }
+        .rep-card:hover { border-color: var(--primary-accent); transform: translateY(-3px); }
         .rep-avatar {
-            width: 60px; height: 60px; background: rgba(59, 130, 246, 0.1);
-            border: 1px solid var(--border-accent); border-radius: 50%; margin: 0 auto 16px;
+            width: 54px; height: 54px; background: rgba(0, 86, 179, 0.1);
+            border: 1px solid rgba(0, 86, 179, 0.2); border-radius: 50%; margin: 0 auto 14px;
             display: flex; align-items: center; justify-content: center;
-            font-weight: 700; color: var(--primary-accent); font-size: 18px;
+            font-weight: 700; color: var(--primary-accent); font-size: 16px;
         }
-        .rep-name { font-size: 20px; font-weight: 800; color: var(--text-heading); margin-bottom: 4px; }
-        .rep-title { font-size: 12px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+        .rep-name { font-size: 18px; font-weight: 800; color: var(--text-heading); margin-bottom: 2px; }
+        .rep-title { font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; }
         .rep-phone { 
-            display: inline-flex; align-items: center; justify-content: center; gap: 10px; 
-            background: rgba(59, 130, 246, 0.1); 
-            border: 1px solid var(--border-accent); 
-            padding: 12px 24px; 
-            border-radius: 10px; 
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px; 
+            background: rgba(0, 86, 179, 0.05); 
+            border: 1px solid rgba(0, 86, 179, 0.2); 
+            padding: 10px 20px; 
+            border-radius: 8px; 
             color: var(--primary-accent); 
             font-weight: 700; 
             text-decoration: none; 
-            font-size: 15px; 
+            font-size: 14px; 
             transition: all 0.3s ease; 
             width: 100%;
         }
         .rep-phone:hover { background: var(--primary-accent); color: #FFFFFF; }
+        
+        .whatsapp-icon-inline {
+            display: inline-flex; align-items: center; gap: 6px; color: #16A34A; font-weight: 700;
+            text-decoration: none; background: rgba(22, 163, 74, 0.08); padding: 10px 16px;
+            border-radius: 8px; border: 1px solid rgba(22, 163, 74, 0.25); justify-content: center; width: 100%; margin-top: 8px;
+            font-size: 14px; transition: all 0.3s;
+        }
+        .whatsapp-icon-inline:hover { background: #16A34A; color: #FFFFFF; }
 
         /* CONTACT BLOCK */
         .contact-box {
             background: var(--bg-card);
             border: 1px solid var(--border-light);
-            border-radius: 20px;
-            padding: 44px;
+            border-radius: 16px;
+            padding: 40px;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+            box-shadow: var(--shadow-subtle);
         }
 
         /* FOOTER */
-        footer { background: #0B0F17; color: var(--text-muted); padding: 60px 0 24px; font-size: 14px; border-top: 1px solid var(--border-light); }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
-        .footer-col h4 { color: var(--text-heading); font-size: 15px; font-weight: 700; margin-bottom: 18px; }
+        footer { background: #0F172A; color: #94A3B8; padding: 50px 0 20px; font-size: 14px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 35px; }
+        .footer-col h4 { color: #FFFFFF; font-size: 15px; font-weight: 700; margin-bottom: 16px; }
         .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 10px; }
-        .footer-col ul li a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
-        .footer-col ul li a:hover { color: var(--primary-accent); }
-        .footer-bottom { border-top: 1px solid var(--border-light); padding-top: 24px; text-align: center; font-size: 13px; }
+        .footer-col ul li { margin-bottom: 8px; }
+        .footer-col ul li a { color: #94A3B8; text-decoration: none; transition: color 0.2s; }
+        .footer-col ul li a:hover { color: #FFFFFF; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 13px; }
 
-        @media (max-width: 992px) {
+        @media (max-width: 1024px) {
+            .supplier-grid { grid-template-columns: repeat(3, 1fr); }
             .grid-4 { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .supplier-grid { grid-template-columns: repeat(2, 1fr); }
+            .grid-4, .grid-3 { grid-template-columns: 1fr; }
             .grid-2 { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
-            .header-flex { flex-direction: column; gap: 16px; text-align: center; }
-            .nav-links { gap: 16px; flex-wrap: wrap; justify-content: center; }
+            .header-flex { flex-direction: column; gap: 14px; text-align: center; }
+            .nav-links { gap: 14px; flex-wrap: wrap; justify-content: center; }
             .top-bar .container { flex-direction: column; gap: 6px; text-align: center; }
-            .hero-banner h1 { font-size: 34px; }
-        }
-        @media (max-width: 576px) {
-            .grid-4 { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
+            .hero-banner h1 { font-size: 30px; }
         }
     
         /* WHATSAPP FLOAT BUTTON */
         .whatsapp-float {
             position: fixed; bottom: 24px; right: 24px;
             background-color: #25D366; color: #FFF;
-            width: 56px; height: 56px; border-radius: 50px;
+            width: 52px; height: 52px; border-radius: 50px;
             display: flex; align-items: center; justify-content: center;
-            text-decoration: none; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            text-decoration: none; box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
             z-index: 100; transition: transform 0.3s;
         }
         .whatsapp-float:hover { transform: scale(1.1); }
-        .whatsapp-icon-inline {
-            display: inline-flex; align-items: center; gap: 6px; color: #25D366; font-weight: 700;
-            text-decoration: none; background: rgba(37, 211, 102, 0.1); padding: 8px 16px;
-            border-radius: 8px; border: 1px solid rgba(37, 211, 102, 0.3); justify-content: center; width: 100%; margin-top: 8px;
-        }
-        .whatsapp-icon-inline:hover { background: #25D366; color: #FFFFFF; }
     </style>
 </head>
 <body>
@@ -310,8 +348,8 @@
             <a href="#" class="brand-logo">
                 <div class="logo-icon">JPN</div>
                 <div class="logo-text-group">
-                    <span class="logo-title">OTOMOTİV</span>
-                    <span class="logo-subtitle">DISTRIBUTION</span>
+                    <span class="logo-title">Jpn Otomotiv</span>
+                    <span class="logo-subtitle">Ltd Şti</span>
                 </div>
             </a>
             
@@ -333,13 +371,13 @@
     <!-- HERO BANNER -->
     <section class="hero-banner">
         <div class="container">
-            <div class="badge-tag">Gelişmiş Tedarik & Lojistik Ağı</div>
+            <div class="badge-tag">Gelişmiş Yedek Parça Dağıtım Ağı</div>
             <h1>Yedek Parçada <span>Güven</span> ve <span>Hızlı</span> Tedarik Zinciri</h1>
-            <p>Opel, Chevrolet, Peugeot ve Citroën binek ve hafif ticari araç gruplarında yüksek stok kapasitesi ve kurumsal dağıtım ağıyla hizmetinizdeyiz.</p>
+            <p>Opel, Chevrolet, Peugeot ve Citroën binek ve hafif ticari araç gruplarında geniş stok kapasitesi ve kurumsal dağıtım ağıyla hizmetinizdeyiz.</p>
         </div>
     </section>
 
-    <!-- ÜRÜN GRUPLARI (Görsel Parça Alanları Eklendi) -->
+    <!-- ÜRÜN GRUPLARI (Gerçekçi Oto Yedek Parça Görselleri) -->
     <section class="section" id="urunler">
         <div class="container">
             <div class="section-header">
@@ -349,7 +387,9 @@
             <div class="grid-4">
                 <!-- Motor Parçaları -->
                 <div class="part-visual-card">
-                    <div class="part-img-container">🧱</div>
+                    <div class="part-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80" alt="Motor Parçaları">
+                    </div>
                     <div class="part-content">
                         <h3>Motor Parçaları</h3>
                         <p>Piston, segman, silindir kapak contası ve hassas motor bileşenleri.</p>
@@ -357,7 +397,9 @@
                 </div>
                 <!-- Elektrik ve Elektronik -->
                 <div class="part-visual-card">
-                    <div class="part-img-container">⚡</div>
+                    <div class="part-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=600&q=80" alt="Elektrik ve Elektronik">
+                    </div>
                     <div class="part-content">
                         <h3>Elektrik & Elektronik</h3>
                         <p>Alternatör, marş motoru, sensörler ve ateşleme bobin grupları.</p>
@@ -365,7 +407,9 @@
                 </div>
                 <!-- Filtre Sistemleri -->
                 <div class="part-visual-card">
-                    <div class="part-img-container">🌀</div>
+                    <div class="part-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80" alt="Filtre Sistemleri">
+                    </div>
                     <div class="part-content">
                         <h3>Filtre Sistemleri</h3>
                         <p>Orijinal nitelikte yağ, hava, yakıt ve polen filtrasyon ürünleri.</p>
@@ -373,7 +417,9 @@
                 </div>
                 <!-- Fren ve Yürüyen Aksam -->
                 <div class="part-visual-card">
-                    <div class="part-img-container">🛡️</div>
+                    <div class="part-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="Fren ve Yürüyen Aksam">
+                    </div>
                     <div class="part-content">
                         <h3>Fren & Yürüyen Aksam</h3>
                         <p>Fren disk/balataları, amortisörler, salıncak ve süspansiyon parçaları.</p>
@@ -399,46 +445,64 @@
         </div>
     </section>
 
-    <!-- TEDARİKÇİLERİMİZ -->
+    <!-- TEDARİKÇİLERİMİZ (Yaklaşık 50 Tedarikçi) -->
     <section class="section" id="tedarikciler">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Anlaşmalı Tedarikçilerimiz</h2>
-                <p class="section-subtitle">Birlikte çalıştığımız dünya lideri OEM ve eşdeğer parça üreticileri</p>
+                <p class="section-subtitle">Birlikte çalıştığımız dünya lideri OEM, Orijinal ve Eşdeğer parça üreticileri</p>
             </div>
-            <div class="grid-4">
-                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
-                    <div style="font-size: 26px; font-weight: 800; color: #FF4400; letter-spacing: 1px; margin-bottom: 6px;">BOSCH</div>
-                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Orijinal Ekipman</div>
-                </div>
-                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
-                    <div style="font-size: 26px; font-weight: 800; color: #004B87; letter-spacing: 1px; margin-bottom: 6px;">MAHLE</div>
-                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Motor Sistemleri</div>
-                </div>
-                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
-                    <div style="font-size: 22px; font-weight: 800; color: #00A651; letter-spacing: 1px; margin-bottom: 6px;">MANN+HUMMEL</div>
-                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Filtrasyon Teknolojisi</div>
-                </div>
-                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
-                    <div style="font-size: 26px; font-weight: 800; color: #CC0000; letter-spacing: 1px; margin-bottom: 6px;">SKF</div>
-                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Rulman & Aktarma</div>
-                </div>
-                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
-                    <div style="font-size: 26px; font-weight: 800; color: #003366; letter-spacing: 1px; margin-bottom: 6px;">SACHS</div>
-                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Debriyaj Sistemleri</div>
-                </div>
-                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
-                    <div style="font-size: 22px; font-weight: 800; color: #FFCC00; letter-spacing: 1px; margin-bottom: 6px; text-shadow: 0 1px 2px rgba(0,0,0,0.5);">FEBI</div>
-                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Yürüyen Aksam</div>
-                </div>
-                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
-                    <div style="font-size: 26px; font-weight: 800; color: #0066CC; letter-spacing: 1px; margin-bottom: 6px;">GATES</div>
-                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Kayış & Hortum</div>
-                </div>
-                <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px;">
-                    <div style="font-size: 24px; font-weight: 800; color: #00A3E0; letter-spacing: 1px; margin-bottom: 6px;">DELPHI</div>
-                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Elektronik & Yakıt</div>
-                </div>
+            <div class="supplier-grid">
+                <div class="supplier-badge">BOSCH</div>
+                <div class="supplier-badge">MAHLE</div>
+                <div class="supplier-badge">MANN+HUMMEL</div>
+                <div class="supplier-badge">SKF</div>
+                <div class="supplier-badge">SACHS</div>
+                <div class="supplier-badge">FEBI BILSTEIN</div>
+                <div class="supplier-badge">GATES</div>
+                <div class="supplier-badge">DELPHI</div>
+                <div class="supplier-badge">VALEO</div>
+                <div class="supplier-badge">LUK</div>
+                <div class="supplier-badge">INA</div>
+                <div class="supplier-badge">DAYCO</div>
+                <div class="supplier-badge">BREMBO</div>
+                <div class="supplier-badge">TEXTAR</div>
+                <div class="supplier-badge">PAGID</div>
+                <div class="supplier-badge">MONROE</div>
+                <div class="supplier-badge">KAYABA (KYB)</div>
+                <div class="supplier-badge">NGK SPARK PLUG</div>
+                <div class="supplier-badge">DENSO</div>
+                <div class="supplier-badge">CORTECO</div>
+                <div class="supplier-badge">ELRING</div>
+                <div class="supplier-badge">GOETZE</div>
+                <div class="supplier-badge">PAYEN</div>
+                <div class="supplier-badge">BOGE</div>
+                <div class="supplier-badge">LEMFÖRDER</div>
+                <div class="supplier-badge">MOOG</div>
+                <div class="supplier-badge">TRW</div>
+                <div class="supplier-badge">SIDEM</div>
+                <div class="supplier-badge">PURFLUX</div>
+                <div class="supplier-badge">HENGST</div>
+                <div class="supplier-badge">KNECHT</div>
+                <div class="supplier-badge">BEHR</div>
+                <div class="supplier-badge">NISSENS</div>
+                <div class="supplier-badge">NRF</div>
+                <div class="supplier-badge">PIERBURG</div>
+                <div class="supplier-badge">MEAT&DORIA</div>
+                <div class="supplier-badge">FACET</div>
+                <div class="supplier-badge">ERA SPA</div>
+                <div class="supplier-badge">LPR</div>
+                <div class="supplier-badge">METELLI</div>
+                <div class="supplier-badge">CIFAM</div>
+                <div class="supplier-badge">RUVILLE</div>
+                <div class="supplier-badge">SNR</div>
+                <div class="supplier-badge">OPTIMAL</div>
+                <div class="supplier-badge">STARK</div>
+                <div class="supplier-badge">SWAG</div>
+                <div class="supplier-badge">TOPRAN</div>
+                <div class="supplier-badge">VEMO</div>
+                <div class="supplier-badge">ASAM</div>
+                <div class="supplier-badge">STATIM</div>
             </div>
         </div>
     </section>
@@ -449,27 +513,27 @@
             <div class="section-header">
                 <h2 class="section-title">Kurumsal Yapımız</h2>
             </div>
-            <div class="card" style="margin-bottom: 32px;">
-                <h3 style="font-size: 18px; color: var(--primary-accent); margin-bottom: 8px;">Hakkımızda</h3>
+            <div class="card" style="margin-bottom: 28px;">
+                <h3 style="font-size: 17px; color: var(--primary-accent); margin-bottom: 8px;">Hakkımızda</h3>
                 <p style="font-size: 14px; line-height: 1.7;">
-                    JPN Otomotiv, otomotiv yedek parça sektöründe binek ve hafif ticari araç grupları için zengin ürün çeşitliliği, güçlü stok kapasitesi ve kurumsal hizmet anlayışıyla faaliyet göstermektedir. Orijinal ve eşdeğer kalitedeki ürünleri Türkiye genelindeki bayilerimize hızlı ve güvenilir koşullarla ulaştırıyoruz.
+                    Jpn Otomotiv Ltd Şti, otomotiv yedek parça sektöründe binek ve hafif ticari araç grupları için zengin ürün çeşitliliği, güçlü stok kapasitesi ve kurumsal hizmet anlayışıyla faaliyet göstermektedir. Orijinal ve eşdeğer kalitedeki ürünleri Türkiye genelindeki bayilerimize hızlı ve güvenilir koşullarla ulaştırıyoruz.
                 </p>
             </div>
             <div class="grid-4">
                 <div class="card">
-                    <h3 style="font-size: 16px; margin-bottom: 8px; color: var(--text-heading);">Misyonumuz</h3>
+                    <h3 style="font-size: 15px; margin-bottom: 6px; color: var(--text-heading);">Misyonumuz</h3>
                     <p style="font-size: 13px;">Kaliteli yedek parçayı en doğru fiyat ve kusursuz lojistik hızıyla sektöre kazandırmak.</p>
                 </div>
                 <div class="card">
-                    <h3 style="font-size: 16px; margin-bottom: 8px; color: var(--text-heading);">Vizyonumuz</h3>
+                    <h3 style="font-size: 15px; margin-bottom: 6px; color: var(--text-heading);">Vizyonumuz</h3>
                     <p style="font-size: 13px;">Yedek parça dağıtımında teknolojik altyapımızla ulusal düzeyde referans marka olmak.</p>
                 </div>
                 <div class="card">
-                    <h3 style="font-size: 16px; margin-bottom: 8px; color: var(--text-heading);">Kalite Güvencesi</h3>
+                    <h3 style="font-size: 15px; margin-bottom: 6px; color: var(--text-heading);">Kalite Güvencesi</h3>
                     <p style="font-size: 13px;">Uluslararası sertifikalı, test edilmiş ve OEM standartlarında güvenli tedarik zinciri.</p>
                 </div>
                 <div class="card">
-                    <h3 style="font-size: 16px; margin-bottom: 8px; color: var(--text-heading);">Lojistik Operasyon</h3>
+                    <h3 style="font-size: 15px; margin-bottom: 6px; color: var(--text-heading);">Lojistik Operasyon</h3>
                     <p style="font-size: 13px;">Siparişlerin eksiksiz ve tam zamanında sevkiyatını sağlayan gelişmiş depo yönetimi.</p>
                 </div>
             </div>
@@ -488,7 +552,7 @@
                     <div class="rep-avatar">KE</div>
                     <div class="rep-name">Kenan ELBEY</div>
                     <div class="rep-title">Müşteri Temsilcisi</div>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
                         <a href="tel:+905319182817" class="rep-phone"><span>📞</span> +90 531 918 28 17</a>
                         <a href="https://wa.me/905319182817" target="_blank" class="whatsapp-icon-inline"><span>💚</span> WhatsApp İletişim</a>
                     </div>
@@ -497,7 +561,7 @@
                     <div class="rep-avatar">EB</div>
                     <div class="rep-name">Emre BİLDİK</div>
                     <div class="rep-title">Müşteri Temsilcisi</div>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
                         <a href="tel:+905351090249" class="rep-phone"><span>📞</span> +90 535 109 02 49</a>
                         <a href="https://wa.me/905351090249" target="_blank" class="whatsapp-icon-inline"><span>💚</span> WhatsApp İletişim</a>
                     </div>
@@ -510,10 +574,10 @@
     <section class="section" id="iletisim" style="border-bottom: none;">
         <div class="container">
             <div class="contact-box">
-                <h3 style="font-size: 24px; font-weight: 800; color: var(--text-heading); margin-bottom: 8px;">JPN OTOMOTİV</h3>
-                <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 14px;">Yedek Parça Tedarik ve Dağıtım Merkezi</p>
+                <h3 style="font-size: 22px; font-weight: 800; color: var(--text-heading); margin-bottom: 6px;">JPN OTOMOTİV LTD ŞTİ</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 14px;">Yedek Parça Tedarik ve Dağıtım Merkezi</p>
                 
-                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px;">
                     <p style="color: var(--text-body);"><strong>📍 Adres:</strong> 3. Sanayi Sitesi 2. Sk. No:T3 Blok No/9 Kayapınar / Diyarbakır</p>
                     <p style="color: var(--text-body);"><strong>📞 Telefon:</strong> +90 531 918 28 17</p>
                     <p style="color: var(--text-body);"><strong>✉️ E-Posta:</strong> otomotivjpn@gmail.com</p>
@@ -526,10 +590,10 @@
     <footer>
         <div class="container footer-grid">
             <div>
-                <a href="#" class="brand-logo" style="margin-bottom: 14px;">
-                    <div class="logo-icon" style="width:34px; height:34px; font-size:15px;">JPN</div>
+                <a href="#" class="brand-logo" style="margin-bottom: 12px;">
+                    <div class="logo-icon" style="width:32px; height:32px; font-size:14px;">JPN</div>
                     <div class="logo-text-group">
-                        <span class="logo-title" style="font-size:18px;">OTOMOTİV</span>
+                        <span class="logo-title" style="font-size:16px; color:#FFF;">Jpn Otomotiv Ltd Şti</span>
                     </div>
                 </a>
                 <p style="font-size: 13px;">Opel, Chevrolet, Peugeot ve Citroën yedek parçalarında güvenilir çözüm ortağınız.</p>
@@ -554,19 +618,19 @@
             <div class="footer-col">
                 <h4>Merkez İletişim</h4>
                 <p style="font-size: 13px;">Kayapınar / Diyarbakır</p>
-                <p style="margin-top: 4px; color: var(--text-heading); font-size: 13px;">+90 531 918 28 17</p>
+                <p style="margin-top: 4px; color: #FFF; font-size: 13px;">+90 531 918 28 17</p>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                © 2026 JPN OTOMOTİV. Tüm Hakları Saklıdır.
+                © 2026 Jpn Otomotiv Ltd Şti. Tüm Hakları Saklıdır.
             </div>
         </div>
     </footer>
 
     <!-- WHATSAPP FLOATING BUTTON -->
     <a href="https://wa.me/905319182817" class="whatsapp-float" target="_blank" title="WhatsApp ile İletişime Geçin">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2zM12.04 20.14c-1.42 0-2.81-.38-4.02-1.1l-.29-.17-3.03.8.81-2.95-.19-.31c-.81-1.31-1.23-2.83-1.23-4.38 0-4.56 3.71-8.27 8.27-8.27 2.21 0 4.29.86 5.85 2.42 1.56 1.56 2.42 3.64 2.42 5.85 0 4.56-3.71 8.27-8.27 8.27zm4.53-6.18c-.25-.13-1.47-.73-1.7-.82-.23-.09-.39-.13-.56.13-.17.25-.64.82-.79.99-.15.17-.3.19-.55.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.15-.25-.02-.39.11-.52.11-.11.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.45.06-.69.32-.24.25-.91.89-.91 2.17 0 1.28.93 2.52 1.06 2.7.13.17 1.83 2.79 4.43 3.91.62.27 1.1.43 1.48.55.62.2 1.18.17 1.62.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/></svg>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2zM12.04 20.14c-1.42 0-2.81-.38-4.02-1.1l-.29-.17-3.03.8.81-2.95-.19-.31c-.81-1.31-1.23-2.83-1.23-4.38 0-4.56 3.71-8.27 8.27-8.27 2.21 0 4.29.86 5.85 2.42 1.56 1.56 2.42 3.64 2.42 5.85 0 4.56-3.71 8.27-8.27 8.27zm4.53-6.18c-.25-.13-1.47-.73-1.7-.82-.23-.09-.39-.13-.56.13-.17.25-.64.82-.79.99-.15.17-.3.19-.55.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.15-.25-.02-.39.11-.52.11-.11.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.45.06-.69.32-.24.25-.91.89-.91 2.17 0 1.28.93 2.52 1.06 2.7.13.17 1.83 2.79 4.43 3.91.62.27 1.1.43 1.48.55.62.2 1.18.17 1.62.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/></svg>
     </a>
 
 </body>
