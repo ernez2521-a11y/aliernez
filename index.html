@@ -13,11 +13,12 @@
             --ozas-dark-blue: #0f2a4a;
             --ozas-gray: #f8f9fa;
             --ozas-border: #e9ecef;
+            --whatsapp-green: #25d366;
         }
 
         /* TOP BAR */
         .top-header { background: var(--ozas-dark-blue); color: #fff; font-size: 12px; padding: 6px 0; border-bottom: 2px solid var(--ozas-red); }
-        .top-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 15px; }
+        .top-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 15px; flex-wrap: wrap; gap: 10px; }
         .top-info span { margin-right: 20px; }
         .top-links a { color: #fff; text-decoration: none; margin-left: 15px; }
 
@@ -26,7 +27,8 @@
         .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
         .logo { font-size: 32px; font-weight: 900; color: var(--ozas-dark-blue); text-decoration: none; letter-spacing: -1px; }
         .logo span { color: var(--ozas-red); }
-        .b2b-btn { background: var(--ozas-red); color: #fff; padding: 10px 22px; text-decoration: none; font-weight: bold; border-radius: 3px; text-transform: uppercase; font-size: 13px; }
+        .b2b-btn { background: var(--ozas-red); color: #fff; padding: 10px 22px; text-decoration: none; font-weight: bold; border-radius: 3px; text-transform: uppercase; font-size: 13px; transition: background 0.2s; }
+        .b2b-btn:hover { background: #b71c1c; }
 
         /* SABİT MENÜ */
         nav { 
@@ -38,7 +40,7 @@
             z-index: 9999;
             box-shadow: 0 4px 10px rgba(0,0,0,0.06);
         }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; list-style: none; padding: 0 15px; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; list-style: none; padding: 0 15px; flex-wrap: wrap; }
         .nav-container li a { display: block; padding: 15px 20px; color: var(--ozas-dark-blue); font-weight: 700; text-decoration: none; font-size: 14px; text-transform: uppercase; transition: all 0.2s ease; cursor: pointer; }
         .nav-container li a:hover, .nav-container li a.active { border-bottom: 3px solid var(--ozas-red); color: var(--ozas-red); }
 
@@ -81,7 +83,6 @@
             cursor: pointer;
         }
         
-        /* FARE İLE ÜSTÜNE GELİNCE BERİ GELME / ÖNE ÇIKMA EFEKTİ */
         .brand-card:hover { 
             border-color: var(--ozas-red); 
             transform: translateY(-8px) scale(1.04); 
@@ -96,6 +97,27 @@
         }
 
         .content-container { max-width: 1200px; margin: 0 auto; padding: 60px 15px; }
+        .content-container h2 { color: var(--ozas-dark-blue); margin-bottom: 20px; font-size: 28px; }
+        .content-container p { margin-bottom: 15px; color: #555; }
+
+        /* TEMSİLCİLERİMİZ KARTLARI */
+        .reps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
+        .rep-card { background: var(--ozas-gray); border: 1px solid var(--ozas-border); border-radius: 8px; padding: 30px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .rep-card h3 { color: var(--ozas-dark-blue); margin-bottom: 15px; font-size: 20px; }
+        .whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--whatsapp-green); color: #fff; padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 15px; transition: opacity 0.2s; }
+        .whatsapp-btn:hover { opacity: 0.9; }
+        .whatsapp-btn img { width: 20px; height: 20px; }
+
+        /* İLETİŞİM SAYFASI */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
+        .contact-info-box { background: var(--ozas-gray); padding: 30px; border-radius: 8px; border: 1px solid var(--ozas-border); }
+        .contact-info-box p { margin-bottom: 12px; font-size: 15px; }
+        .map-box { width: 100%; height: 350px; border-radius: 8px; overflow: hidden; border: 1px solid var(--ozas-border); }
+        .map-box iframe { width: 100%; height: 100%; border: 0; }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
 
         /* FOOTER */
         footer { background: var(--ozas-dark-blue); color: #fff; padding: 50px 0 20px; font-size: 13px; }
@@ -106,8 +128,14 @@
         .footer-col ul li a { color: #ccc; text-decoration: none; cursor: pointer; }
         .footer-bottom { text-align: center; padding-top: 20px; color: #888; font-size: 12px; }
 
-        @media (max-width: 992px) { .brands-grid { grid-template-columns: repeat(4, 1fr); } }
-        @media (max-width: 576px) { .brands-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 992px) { 
+            .brands-grid { grid-template-columns: repeat(4, 1fr); } 
+            .footer-container { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 576px) { 
+            .brands-grid { grid-template-columns: repeat(2, 1fr); } 
+            .footer-container { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -116,13 +144,13 @@
     <div class="top-header">
         <div class="top-container">
             <div class="top-info">
-                <span>📍 İkitelli OSB Eski Turgut Özal Cad. No:3/2 Başakşehir / İstanbul</span>
+                <span>📍 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</span>
                 <span>📞 +90 (212) 549 22 00</span>
             </div>
             <div class="top-links">
                 <a href="#b2b">B2B Portal</a>
                 <a href="#ik">Kariyer</a>
-                <a href="#iletisim">İletişim</a>
+                <a onclick="switchTab('iletisim')">İletişim</a>
             </div>
         </div>
     </div>
@@ -141,8 +169,7 @@
             <li><a id="nav-home" class="active" onclick="switchTab('home')">Ana Sayfa</a></li>
             <li><a id="nav-kurumsal" onclick="switchTab('kurumsal')">Kurumsal</a></li>
             <li><a id="nav-tedarikciler" onclick="switchTab('tedarikciler')">Tedarikçilerimiz</a></li>
-            <li><a id="nav-temsilcilikler" onclick="switchTab('temsilcilikler')">Temsilcilikler</a></li>
-            <li><a id="nav-medya" onclick="switchTab('medya')">JPN Medya</a></li>
+            <li><a id="nav-temsilcilerimiz" onclick="switchTab('temsilcilerimiz')">Temsilcilerimiz</a></li>
             <li><a id="nav-iletisim" onclick="switchTab('iletisim')">İletişim</a></li>
         </ul>
     </nav>
@@ -152,7 +179,7 @@
         <section class="hero-banner">
             <div class="hero-container">
                 <h1>Otomotiv Yedek Parçada<br>Güvenilir Dağıtım Ağı</h1>
-                <p>100.000'i aşkın referans ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdeyiz.</p>
+                <p>Zengin ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdeyiz.</p>
                 <a href="javascript:void(0)" onclick="switchTab('kurumsal')" class="b2b-btn">Kurumsal Yapımız</a>
             </div>
         </section>
@@ -238,16 +265,52 @@
 
     <!-- DİĞER SEKMELER -->
     <div id="page-kurumsal" class="page-section">
-        <div class="content-container"><h2>Kurumsal</h2><p>Kurumsal bilgiler yer alacak.</p></div>
+        <div class="content-container">
+            <h2>Kurumsal</h2>
+            <p>JPN Otomotiv olarak, kurulduğumuz günden bu yana otomotiv yedek parça sektöründe kalite, güven ve dürüstlük ilkesiyle hizmet vermekteyiz. Geniş ürün yelpazemiz ve güçlü tedarik zincirimizle iş ortaklarımıza kesintisiz çözümler sunuyoruz.</p>
+            <p>Müşteri memnuniyetini her zaman ön planda tutarak, en güncel teknolojik altyapımızla ve alanında uzman kadromuzla sektörün öncü bağımsız yedek parça distribütörleri arasında yer almaktan gurur duyuyoruz.</p>
+        </div>
     </div>
-    <div id="page-temsilcilikler" class="page-section">
-        <div class="content-container"><h2>Temsilcilikler</h2><p>Temsilcilik bilgileri yer alacak.</p></div>
+
+    <div id="page-temsilcilerimiz" class="page-section">
+        <div class="content-container">
+            <h2>Temsilcilerimiz</h2>
+            <p>Bölgesel operasyonlarımız ve bayilerimizle birebir iletişim kuran temsilcilerimize aşağıdan ulaşabilirsiniz:</p>
+            <div class="reps-grid">
+                <div class="rep-card">
+                    <h3>Kenan ELBEY</h3>
+                    <p>Satış ve Bölge Temsilcisi</p>
+                    <a href="https://wa.me/905319182817" target="_blank" class="whatsapp-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp ile İletişim
+                    </a>
+                </div>
+                <div class="rep-card">
+                    <h3>Emre BİLDİK</h3>
+                    <p>Satış ve Bölge Temsilcisi</p>
+                    <a href="https://wa.me/905351090249" target="_blank" class="whatsapp-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp ile İletişim
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="page-medya" class="page-section">
-        <div class="content-container"><h2>JPN Medya</h2><p>Haberler ve basın bültenleri yer alacak.</p></div>
-    </div>
+
     <div id="page-iletisim" class="page-section">
-        <div class="content-container"><h2>İletişim</h2><p>Adres ve iletişim formları yer alacak.</p></div>
+        <div class="content-container">
+            <h2>İletişim</h2>
+            <p>Bize aşağıdaki iletişim kanallarından ulaşabilir veya ofisimizi ziyaret edebilirsiniz.</p>
+            <div class="contact-grid">
+                <div class="contact-info-box">
+                    <h3>İletişim Bilgilerimiz</h3><br>
+                    <p><strong>Adres:</strong> 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</p>
+                    <p><strong>Telefon:</strong> +90 (212) 549 22 00</p>
+                    <p><strong>E-Posta:</strong> info@jpnotomotiv.com</p>
+                </div>
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135.5907447268875!2d40.1585!3d37.9155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDU0JzU1LjgiTiA0MCU5nDEwJzMwLjYiRQ!5e0!3m2!1str!2str!4v1620000000000!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- FOOTER -->
@@ -262,8 +325,8 @@
                 <ul>
                     <li><a onclick="switchTab('kurumsal')">Kurumsal</a></li>
                     <li><a onclick="switchTab('tedarikciler')">Tedarikçilerimiz</a></li>
-                    <li><a onclick="switchTab('temsilcilikler')">Temsilcilikler</a></li>
-                    <li><a onclick="switchTab('medya')">JPN Medya</a></li>
+                    <li><a onclick="switchTab('temsilcilerimiz')">Temsilcilerimiz</a></li>
+                    <li><a onclick="switchTab('iletisim')">İletişim</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -276,7 +339,7 @@
             </div>
             <div class="footer-col">
                 <h4>İletişim</h4>
-                <p>Adres: İkitelli OSB Eski Turgut Özal Cad. No:3/2 Başakşehir / İstanbul</p>
+                <p>Adres: 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</p>
                 <p>Tel: +90 (212) 549 22 00</p>
                 <p>E-Posta: info@jpnotomotiv.com</p>
             </div>
