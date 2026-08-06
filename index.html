@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JPN Otomotiv - Bağımsız Yedek Parça Distribütörü</title>
+    <title>JPN Otomotiv - Orijinal ve Eşdeğer Yedek Parça Toptan Satışı</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', Arial, sans-serif; }
         body { background-color: #ffffff; color: #333; line-height: 1.6; }
@@ -29,18 +29,55 @@
         .lang-btn:hover, .lang-btn.active { background: var(--ozas-red); border-color: var(--ozas-red); }
 
         /* MAIN HEADER & LOGO */
-        header { background: #fff; padding: 5px 0; }
-        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
-        .logo { display: flex; align-items: center; text-decoration: none; }
+        header { background: #fff; padding: 10px 0; border-bottom: 1px solid var(--ozas-border); }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; gap: 20px; }
+        .logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
         .logo img { height: 110px; width: auto; object-fit: contain; }
-        .b2b-btn { background: var(--ozas-red); color: #fff; padding: 10px 22px; text-decoration: none; font-weight: bold; border-radius: 3px; text-transform: uppercase; font-size: 13px; transition: background 0.2s; }
+
+        /* HEADER ORTA ALAN - SLOGAN VE MARKALAR */
+        .header-center-info {
+            flex-grow: 1;
+            text-align: center;
+            background: var(--ozas-gray);
+            border: 1px solid var(--ozas-border);
+            border-radius: 6px;
+            padding: 10px 15px;
+        }
+        .header-brands {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--ozas-red);
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+        }
+        .header-slogan {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--ozas-dark-blue);
+            margin-bottom: 6px;
+        }
+        .header-features {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #555;
+        }
+        .header-features span {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .b2b-btn { background: var(--ozas-red); color: #fff; padding: 12px 22px; text-decoration: none; font-weight: bold; border-radius: 3px; text-transform: uppercase; font-size: 13px; transition: background 0.2s; white-space: nowrap; flex-shrink: 0; }
         .b2b-btn:hover { background: #b71c1c; }
 
         /* SABİT MENÜ */
         nav { 
             background: #fff; 
             border-bottom: 2px solid var(--ozas-red); 
-            border-top: 1px solid #eee; 
             position: sticky;
             top: 0;
             z-index: 9999;
@@ -69,42 +106,10 @@
         .suppliers-header h1 { font-size: 32px; font-weight: 800; text-transform: uppercase; }
         
         .brands-section { background: var(--ozas-gray); padding: 60px 0; border-top: 1px solid var(--ozas-border); }
-        
-        .brands-grid { 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            display: grid; 
-            grid-template-columns: repeat(6, 1fr); 
-            gap: 20px; 
-            padding: 0 15px; 
-        }
-        
-        .brand-card { 
-            background: #ffffff; 
-            border: 1px solid var(--ozas-border); 
-            border-radius: 6px; 
-            height: 110px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            padding: 15px; 
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.04);
-            cursor: pointer;
-        }
-        
-        .brand-card:hover { 
-            border-color: var(--ozas-red); 
-            transform: translateY(-8px) scale(1.04); 
-            box-shadow: 0 12px 20px rgba(0,0,0,0.12); 
-            z-index: 2;
-        }
-        
-        .brand-card img { 
-            max-width: 90%; 
-            max-height: 65px; 
-            object-fit: contain; 
-        }
+        .brands-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; padding: 0 15px; }
+        .brand-card { background: #ffffff; border: 1px solid var(--ozas-border); border-radius: 6px; height: 110px; display: flex; align-items: center; justify-content: center; padding: 15px; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.04); cursor: pointer; }
+        .brand-card:hover { border-color: var(--ozas-red); transform: translateY(-8px) scale(1.04); box-shadow: 0 12px 20px rgba(0,0,0,0.12); z-index: 2; }
+        .brand-card img { max-width: 90%; max-height: 65px; object-fit: contain; }
 
         .content-container { max-width: 1200px; margin: 0 auto; padding: 60px 15px; }
         .content-container h2 { color: var(--ozas-dark-blue); margin-bottom: 20px; font-size: 28px; }
@@ -125,8 +130,10 @@
         .map-box { width: 100%; height: 350px; border-radius: 8px; overflow: hidden; border: 1px solid var(--ozas-border); }
         .map-box iframe { width: 100%; height: 100%; border: 0; }
 
-        @media (max-width: 768px) {
-            .contact-grid { grid-template-columns: 1fr; }
+        @media (max-width: 992px) {
+            .header-container { flex-direction: column; text-align: center; }
+            .header-center-info { width: 100%; }
+            .brands-grid { grid-template-columns: repeat(4, 1fr); } 
         }
 
         /* FOOTER */
@@ -137,15 +144,6 @@
         .footer-col ul li { margin-bottom: 10px; }
         .footer-col ul li a { color: #ccc; text-decoration: none; cursor: pointer; }
         .footer-bottom { text-align: center; padding-top: 20px; color: #888; font-size: 12px; }
-
-        @media (max-width: 992px) { 
-            .brands-grid { grid-template-columns: repeat(4, 1fr); } 
-            .footer-container { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 576px) { 
-            .brands-grid { grid-template-columns: repeat(2, 1fr); } 
-            .footer-container { grid-template-columns: 1fr; }
-        }
     </style>
 </head>
 <body>
@@ -154,12 +152,12 @@
     <div class="top-header">
         <div class="top-container">
             <div class="top-info">
-                <span id="t-address-top">📍 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</span>
+                <span>📍 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</span>
             </div>
             <div class="top-links">
-                <a href="#b2b" data-key="b2b">B2B Portal</a>
-                <a href="#ik" data-key="career">Kariyer</a>
-                <a onclick="switchTab('iletisim')" data-key="contact">İletişim</a>
+                <a href="#b2b">B2B Portal</a>
+                <a href="#ik">Kariyer</a>
+                <a onclick="switchTab('iletisim')">İletişim</a>
                 <div class="lang-selector">
                     <button class="lang-btn active" onclick="changeLang('tr')">TR</button>
                     <button class="lang-btn" onclick="changeLang('en')">EN</button>
@@ -175,18 +173,32 @@
             <a href="javascript:void(0)" onclick="switchTab('home')" class="logo">
                 <img src="logo-jpn.png" alt="JPN Otomotiv Logo">
             </a>
-            <a href="#b2b" class="b2b-btn" data-key="b2b_login">B2B Bayi Girişi</a>
+            
+            <!-- ORTA ALAN: Slogan, Markalar ve Avantajlar -->
+            <div class="header-center-info">
+                <div class="header-brands">Opel &bull; Chevrolet &bull; Peugeot &bull; Citroën</div>
+                <div class="header-slogan">Orijinal ve Eşdeğer Yedek Parça Toptan Satışı</div>
+                <div class="header-features">
+                    <span>✓ Hızlı Teslimat</span>
+                    <span>•</span>
+                    <span>✓ Geniş Stok</span>
+                    <span>•</span>
+                    <span>✓ Uygun Fiyat</span>
+                </div>
+            </div>
+
+            <a href="#b2b" class="b2b-btn">B2B Bayi Girişi</a>
         </div>
     </header>
 
     <!-- SABİT MENÜ -->
     <nav>
         <ul class="nav-container">
-            <li><a id="nav-home" class="active" onclick="switchTab('home')" data-key="menu_home">Ana Sayfa</a></li>
-            <li><a id="nav-kurumsal" onclick="switchTab('kurumsal')" data-key="menu_corporate">Kurumsal</a></li>
-            <li><a id="nav-tedarikciler" onclick="switchTab('tedarikciler')" data-key="menu_suppliers">Tedarikçilerimiz</a></li>
-            <li><a id="nav-temsilcilerimiz" onclick="switchTab('temsilcilerimiz')" data-key="menu_reps">Temsilcilerimiz</a></li>
-            <li><a id="nav-iletisim" onclick="switchTab('iletisim')" data-key="menu_contact">İletişim</a></li>
+            <li><a id="nav-home" class="active" onclick="switchTab('home')">Ana Sayfa</a></li>
+            <li><a id="nav-kurumsal" onclick="switchTab('kurumsal')">Kurumsal</a></li>
+            <li><a id="nav-tedarikciler" onclick="switchTab('tedarikciler')">Tedarikçilerimiz</a></li>
+            <li><a id="nav-temsilcilerimiz" onclick="switchTab('temsilcilerimiz')">Temsilcilerimiz</a></li>
+            <li><a id="nav-iletisim" onclick="switchTab('iletisim')">İletişim</a></li>
         </ul>
     </nav>
 
@@ -194,81 +206,66 @@
     <div id="page-home" class="page-section active">
         <section class="hero-banner">
             <div class="hero-container">
-                <h1 data-key="hero_title">Otomotiv Yedek Parçada<br>Güvenilir Dağıtım Ağı</h1>
-                <p data-key="hero_desc">Zengin ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdeyiz.</p>
-                <a href="javascript:void(0)" onclick="switchTab('kurumsal')" class="b2b-btn" data-key="hero_btn">Kurumsal Yapımız</a>
+                <h1>Otomotiv Yedek Parçada<br>Güvenilir Dağıtım Ağı</h1>
+                <p>Zengin ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdeyiz.</p>
+                <a href="javascript:void(0)" onclick="switchTab('kurumsal')" class="b2b-btn">Kurumsal Yapımız</a>
             </div>
         </section>
         <div class="content-container">
-            <h2 data-key="welcome_title">Hoş Geldiniz</h2>
-            <p data-key="welcome_desc">JPN Otomotiv, binek ve hafif ticari araç gruplarında dünya markalarının orijinal yedek parçalarını bayi ağına sunmaktadır.</p>
+            <h2>Hoş Geldiniz</h2>
+            <p>JPN Otomotiv, binek ve hafif ticari araç gruplarında dünya markalarının orijinal yedek parçalarını bayi ağına sunmaktadır.</p>
         </div>
     </div>
 
     <!-- SAYFA 2: TEDARİKÇİLERİMİZ -->
     <div id="page-tedarikciler" class="page-section">
         <div class="suppliers-header">
-            <h1 data-key="suppliers_heading">Anlaşmalı Tedarikçilerimiz</h1>
+            <h1>Anlaşmalı Tedarikçilerimiz</h1>
         </div>
         <section class="brands-section">
             <div class="brands-grid">
-                <!-- 1. Satır -->
                 <div class="brand-card"><img src="behr.png" loading="lazy"></div>
                 <div class="brand-card"><img src="beru.png" loading="lazy"></div>
                 <div class="brand-card"><img src="bosch.png" loading="lazy"></div>
                 <div class="brand-card"><img src="champion.png" loading="lazy"></div>
                 <div class="brand-card"><img src="contitech.png" loading="lazy"></div>
                 <div class="brand-card"><img src="corteco.png" loading="lazy"></div>
-                
-                <!-- 2. Satır -->
                 <div class="brand-card"><img src="delphi.png" loading="lazy"></div>
                 <div class="brand-card"><img src="denso.png" loading="lazy"></div>
                 <div class="brand-card"><img src="difam.png" loading="lazy"></div>
                 <div class="brand-card"><img src="ferodo.png" loading="lazy"></div>
                 <div class="brand-card"><img src="fte-automotive.png" loading="lazy"></div>
                 <div class="brand-card"><img src="garrett.png" loading="lazy"></div>
-                
-                <!-- 3. Satır -->
                 <div class="brand-card"><img src="gates.png" loading="lazy"></div>
                 <div class="brand-card"><img src="glyco.png" loading="lazy"></div>
                 <div class="brand-card"><img src="goetze.png" loading="lazy"></div>
                 <div class="brand-card"><img src="graf.png" loading="lazy"></div>
                 <div class="brand-card"><img src="gunes.png" loading="lazy"></div>
                 <div class="brand-card"><img src="hella.png" loading="lazy"></div>
-                
-                <!-- 4. Satır -->
                 <div class="brand-card"><img src="ibras.png" loading="lazy"></div>
                 <div class="brand-card"><img src="kale-radyator.png" loading="lazy"></div>
                 <div class="brand-card"><img src="kapimsan.png" loading="lazy"></div>
                 <div class="brand-card"><img src="kolbenschmidt.png" loading="lazy"></div>
                 <div class="brand-card"><img src="kyb.png" loading="lazy"></div>
                 <div class="brand-card"><img src="lemforder.png" loading="lazy"></div>
-                
-                <!-- 5. Satır -->
                 <div class="brand-card"><img src="magnet-marelli.png" loading="lazy"></div>
                 <div class="brand-card"><img src="mahle.png" loading="lazy"></div>
                 <div class="brand-card"><img src="mando.png" loading="lazy"></div>
                 <div class="brand-card"><img src="mann.png" loading="lazy"></div>
                 <div class="brand-card"><img src="mapa.png" loading="lazy"></div>
                 <div class="brand-card"><img src="maysan-mando.png" loading="lazy"></div>
-                
-                <!-- 6. Satır -->
                 <div class="brand-card"><img src="monroe.png" loading="lazy"></div>
                 <div class="brand-card"><img src="ngk.png" loading="lazy"></div>
                 <div class="brand-card"><img src="nural.png" loading="lazy"></div>
                 <div class="brand-card"><img src="pierburg.png" loading="lazy"></div>
                 <div class="brand-card"><img src="purflux-filter.png" loading="lazy"></div>
                 <div class="brand-card"><img src="rapro.png" loading="lazy"></div>
-                
-                <!-- 7. Satır -->
                 <div class="brand-card"><img src="sachs.png" loading="lazy"></div>
                 <div class="brand-card"><img src="schaeffler.png" loading="lazy"></div>
                 <div class="brand-card"><img src="sismak.png" loading="lazy"></div>
                 <div class="brand-card"><img src="skf.png" loading="lazy"></div>
                 <div class="brand-card"><img src="supsan.png" loading="lazy"></div>
                 <div class="brand-card"><img src="topran.png" loading="lazy"></div>
-                
-                <!-- 8. Satır -->
                 <div class="brand-card"><img src="trw.png" loading="lazy"></div>
                 <div class="brand-card"><img src="ufi-filters.png" loading="lazy"></div>
                 <div class="brand-card"><img src="ulo.png" loading="lazy"></div>
@@ -282,29 +279,29 @@
     <!-- DİĞER SEKMELER -->
     <div id="page-kurumsal" class="page-section">
         <div class="content-container">
-            <h2 data-key="menu_corporate">Kurumsal</h2>
-            <p data-key="corp_p1">JPN Otomotiv olarak, kurulduğumuz günden bu yana otomotiv yedek parça sektöründe kalite, güven ve dürüstlük ilkesiyle hizmet vermekteyiz. Geniş ürün yelpazemiz ve güçlü tedarik zincirimizle iş ortaklarımıza kesintisiz çözümler sunuyoruz.</p>
-            <p data-key="corp_p2">Müşteri memnuniyetini her zaman ön planda tutarak, en güncel teknolojik altyapımızla ve alanında uzman kadromuzla sektörün öncü bağımsız yedek parça distribütörleri arasında yer almaktan gurur duyuyoruz.</p>
+            <h2>Kurumsal</h2>
+            <p>JPN Otomotiv olarak, kurulduğumuz günden bu yana otomotiv yedek parça sektöründe kalite, güven ve dürüstlük ilkesiyle hizmet vermekteyiz. Geniş ürün yelpazemiz ve güçlü tedarik zincirimizle iş ortaklarımıza kesintisiz çözümler sunuyoruz.</p>
+            <p>Müşteri memnuniyetini her zaman ön planda tutarak, en güncel teknolojik altyapımızla ve alanında uzman kadromuzla sektörün öncü bağımsız yedek parça distribütörleri arasında yer almaktan gurur duyuyoruz.</p>
         </div>
     </div>
 
     <div id="page-temsilcilerimiz" class="page-section">
         <div class="content-container">
-            <h2 data-key="menu_reps">Temsilcilerimiz</h2>
-            <p data-key="reps_desc">Bölgesel operasyonlarımız ve bayilerimizle birebir iletişim kuran temsilcilerimize aşağıdan ulaşabilirsiniz:</p>
+            <h2>Temsilcilerimiz</h2>
+            <p>Bölgesel operasyonlarımız ve bayilerimizle birebir iletişim kuran temsilcilerimize aşağıdan ulaşabilirsiniz:</p>
             <div class="reps-grid">
                 <div class="rep-card">
                     <h3>Kenan ELBEY</h3>
-                    <p data-key="rep_title">Satış ve Bölge Temsilcisi</p>
+                    <p>Satış ve Bölge Temsilcisi</p>
                     <a href="https://wa.me/905319182817" target="_blank" class="whatsapp-btn">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> <span data-key="wa_text">WhatsApp ile İletişim</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp ile İletişim
                     </a>
                 </div>
                 <div class="rep-card">
                     <h3>Emre BİLDİK</h3>
-                    <p data-key="rep_title">Satış ve Bölge Temsilcisi</p>
+                    <p>Satış ve Bölge Temsilcisi</p>
                     <a href="https://wa.me/905351090249" target="_blank" class="whatsapp-btn">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> <span data-key="wa_text">WhatsApp ile İletişim</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp ile İletişim
                     </a>
                 </div>
             </div>
@@ -313,12 +310,12 @@
 
     <div id="page-iletisim" class="page-section">
         <div class="content-container">
-            <h2 data-key="menu_contact">İletişim</h2>
-            <p data-key="contact_desc">Bize aşağıdaki iletişim kanallarından ulaşabilir veya ofisimizi ziyaret edebilirsiniz.</p>
+            <h2>İletişim</h2>
+            <p>Bize aşağıdaki iletişim kanallarından ulaşabilir veya ofisimizi ziyaret edebilirsiniz.</p>
             <div class="contact-grid">
                 <div class="contact-info-box">
-                    <h3 data-key="contact_info_title">İletişim Bilgilerimiz</h3><br>
-                    <p><strong><span data-key="address_label">Adres</span>:</strong> <span data-key="address_text">3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</span></p>
+                    <h3>İletişim Bilgilerimiz</h3><br>
+                    <p><strong>Adres:</strong> 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</p>
                     <p><strong>E-Posta:</strong> otomotivjpn@gmail.com</p>
                 </div>
                 <div class="map-box">
@@ -333,139 +330,37 @@
         <div class="footer-container">
             <div class="footer-col">
                 <h4>JPN Otomotiv</h4>
-                <p data-key="footer_desc">Otomotiv yedek parça sektöründe koşulsuz müşteri memnuniyeti ve kalite odaklı hizmet ilkesi.</p>
+                <p>Otomotiv yedek parça sektöründe koşulsuz müşteri memnuniyeti ve kalite odaklı hizmet ilkesi.</p>
             </div>
             <div class="footer-col">
-                <h4 data-key="quick_menu">Hızlı Menü</h4>
+                <h4>Hızlı Menü</h4>
                 <ul>
-                    <li><a onclick="switchTab('kurumsal')" data-key="menu_corporate">Kurumsal</a></li>
-                    <li><a onclick="switchTab('tedarikciler')" data-key="menu_suppliers">Tedarikçilerimiz</a></li>
-                    <li><a onclick="switchTab('temsilcilerimiz')" data-key="menu_reps">Temsilcilerimiz</a></li>
-                    <li><a onclick="switchTab('iletisim')" data-key="menu_contact">İletişim</a></li>
+                    <li><a onclick="switchTab('kurumsal')">Kurumsal</a></li>
+                    <li><a onclick="switchTab('tedarikciler')">Tedarikçilerimiz</a></li>
+                    <li><a onclick="switchTab('temsilcilerimiz')">Temsilcilerimiz</a></li>
+                    <li><a onclick="switchTab('iletisim')">İletişim</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 data-key="support_title">Yazılım & Destek</h4>
+                <h4>Yazılım & Destek</h4>
                 <ul>
-                    <li><a href="#b2b" data-key="b2b_order">B2B Sipariş Sistemi</a></li>
-                    <li><a href="#" data-key="customer_service">Müşteri Hizmetleri</a></li>
-                    <li><a href="#" data-key="remote_help">Uzak Yardım</a></li>
+                    <li><a href="#b2b">B2B Sipariş Sistemi</a></li>
+                    <li><a href="#">Müşteri Hizmetleri</a></li>
+                    <li><a href="#">Uzak Yardım</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 data-key="menu_contact">İletişim</h4>
-                <p><strong><span data-key="address_label">Adres</span>:</strong> <span data-key="address_text">3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</span></p>
+                <h4>İletişim</h4>
+                <p><strong>Adres:</strong> 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</p>
                 <p>E-Posta: otomotivjpn@gmail.com</p>
             </div>
         </div>
-        <div class="footer-bottom" data-key="copyright">
+        <div class="footer-bottom">
             Copyright © 2026 JPN Otomotiv. Tüm Hakları Saklıdır.
         </div>
     </footer>
 
     <script>
-        const translations = {
-            tr: {
-                b2b: "B2B Portal",
-                career: "Kariyer",
-                contact: "İletişim",
-                b2b_login: "B2B Bayi Girişi",
-                menu_home: "Ana Sayfa",
-                menu_corporate: "Kurumsal",
-                menu_suppliers: "Tedarikçilerimiz",
-                menu_reps: "Temsilcilerimiz",
-                menu_contact: "İletişim",
-                hero_title: "Otomotiv Yedek Parçada<br>Güvenilir Dağıtım Ağı",
-                hero_desc: "Zengin ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdeyiz.",
-                hero_btn: "Kurumsal Yapımız",
-                welcome_title: "Hoş Geldiniz",
-                welcome_desc: "JPN Otomotiv, binek ve hafif ticari araç gruplarında dünya markalarının orijinal yedek parçalarını bayi ağına sunmaktadır.",
-                suppliers_heading: "Anlaşmalı Tedarikçilerimiz",
-                corp_p1: "JPN Otomotiv olarak, kurulduğumuz günden bu yana otomotiv yedek parça sektöründe kalite, güven ve dürüstlük ilkesiyle hizmet vermekteyiz. Geniş ürün yelpazemiz ve güçlü tedarik zincirimizle iş ortaklarımıza kesintisiz çözümler sunuyoruz.",
-                corp_p2: "Müşteri memnuniyetini her zaman ön planda tutarak, en güncel teknolojik altyapımızla ve alanında uzman kadromuzla sektörün öncü bağımsız yedek parça distribütörleri arasında yer almaktan gurur duyuyoruz.",
-                reps_desc: "Bölgesel operasyonlarımız ve bayilerimizle birebir iletişim kuran temsilcilerimize aşağıdan ulaşabilirsiniz:",
-                rep_title: "Satış ve Bölge Temsilcisi",
-                wa_text: "WhatsApp ile İletişim",
-                contact_desc: "Bize aşağıdaki iletişim kanallarından ulaşabilir veya ofisimizi ziyaret edebilirsiniz.",
-                contact_info_title: "İletişim Bilgilerimiz",
-                address_label: "Adres",
-                address_text: "3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR",
-                footer_desc: "Otomotiv yedek parça sektöründe koşulsuz müşteri memnuniyeti ve kalite odaklı hizmet ilkesi.",
-                quick_menu: "Hızlı Menü",
-                support_title: "Yazılım & Destek",
-                b2b_order: "B2B Sipariş Sistemi",
-                customer_service: "Müşteri Hizmetleri",
-                remote_help: "Uzak Yardım",
-                copyright: "Copyright © 2026 JPN Otomotiv. Tüm Hakları Saklıdır."
-            },
-            en: {
-                b2b: "B2B Portal",
-                career: "Career",
-                contact: "Contact",
-                b2b_login: "B2B Dealer Login",
-                menu_home: "Home",
-                menu_corporate: "Corporate",
-                menu_suppliers: "Suppliers",
-                menu_reps: "Our Representatives",
-                menu_contact: "Contact",
-                hero_title: "Reliable Distribution Network<br>in Automotive Spare Parts",
-                hero_desc: "We are at your service across Turkey with a rich product range, strong stock structure, and wide distribution network.",
-                hero_btn: "Our Corporate Structure",
-                welcome_title: "Welcome",
-                welcome_desc: "JPN Otomotiv offers original spare parts of world brands in passenger and light commercial vehicle groups to its dealer network.",
-                suppliers_heading: "Our Contracted Suppliers",
-                corp_p1: "As JPN Otomotiv, since our inception, we have been serving in the automotive spare parts sector with the principle of quality, trust, and integrity. We offer uninterrupted solutions to our business partners with our wide product range and strong supply chain.",
-                corp_p2: "By always keeping customer satisfaction at the forefront, we are proud to be among the leading independent spare parts distributors in the sector with our up-to-date technological infrastructure and expert staff.",
-                reps_desc: "You can reach our representatives who communicate one-on-one with our regional operations and dealers below:",
-                rep_title: "Sales and Regional Representative",
-                wa_text: "Contact via WhatsApp",
-                contact_desc: "You can reach us through the communication channels below or visit our office.",
-                contact_info_title: "Contact Information",
-                address_label: "Address",
-                address_text: "3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR",
-                footer_desc: "Unconditional customer satisfaction and quality-oriented service principle in the automotive spare parts sector.",
-                quick_menu: "Quick Menu",
-                support_title: "Software & Support",
-                b2b_order: "B2B Ordering System",
-                customer_service: "Customer Service",
-                remote_help: "Remote Assistance",
-                copyright: "Copyright © 2026 JPN Otomotiv. All Rights Reserved."
-            },
-            fr: {
-                b2b: "Portail B2B",
-                career: "Carrière",
-                contact: "Contact",
-                b2b_login: "Connexion Concessionnaire B2B",
-                menu_home: "Accueil",
-                menu_corporate: "Institutionnel",
-                menu_suppliers: "Nos Fournisseurs",
-                menu_reps: "Nos Représentants",
-                menu_contact: "Contact",
-                hero_title: "Réseau de Distribution Fiable<br>en Pièces Détachées Automobiles",
-                hero_desc: "Nous sommes à votre service dans toute la Turquie avec une large gamme de produits, une structure de stock solide et un vaste réseau de distribution.",
-                hero_btn: "Notre Structure",
-                welcome_title: "Bienvenue",
-                welcome_desc: "JPN Otomotiv propose à son réseau de concessionnaires des pièces détachées d'origine de marques mondiales pour véhicules particuliers et utilitaires légers.",
-                suppliers_heading: "Nos Fournisseurs Partenaires",
-                corp_p1: "En tant que JPN Otomotiv, depuis notre création, nous servons dans le secteur des pièces détachées automobiles avec le principe de qualité, de confiance et d'intégrité. Nous offrons des solutions continues à nos partenaires commerciaux.",
-                corp_p2: "En plaçant toujours la satisfaction du client au premier plan, nous sommes fiers de figurer parmi les principaux distributeurs indépendants de pièces détachées du secteur.",
-                reps_desc: "Vous pouvez contacter nos représentants ci-dessous pour toutes vos opérations régionales :",
-                rep_title: "Représentant des Ventes et Régional",
-                wa_text: "Contact via WhatsApp",
-                contact_desc: "Vous pouvez nous joindre via les canaux de communication ci-dessous ou visiter notre bureau.",
-                contact_info_title: "Nos Coordonnées",
-                address_label: "Adresse",
-                address_text: "3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR",
-                footer_desc: "Satisfaction client inconditionnelle et service axé sur la qualité dans le secteur des pièces détachées automobiles.",
-                quick_menu: "Menu Rapide",
-                support_title: "Logiciel et Support",
-                b2b_order: "Système de Commande B2B",
-                customer_service: "Service Client",
-                remote_help: "Assistance à distance",
-                copyright: "Copyright © 2026 JPN Otomotiv. Tous droits réservés."
-            }
-        };
-
         function switchTab(tabId) {
             document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
             document.querySelectorAll('.nav-container li a').forEach(a => a.classList.remove('active'));
@@ -482,15 +377,6 @@
         function changeLang(lang) {
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-
-            const elements = document.querySelectorAll('[data-key]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-key');
-                if (translations[lang] && translations[lang][key]) {
-                    el.innerHTML = translations[lang][key];
-                }
-            });
-            
             document.documentElement.setAttribute('lang', lang);
         }
 
