@@ -257,23 +257,23 @@
             </div>
         </section>
 
-        <!-- 2. İstatistik Kutuları -->
+        <!-- 2. İstatistik Kutuları (Sayaç Efektli) -->
         <section class="stats-section">
             <div class="stats-grid">
                 <div class="stat-card">
-                    <h3>20+</h3>
+                    <h3 class="counter" data-target="20" data-suffix="+">0+</h3>
                     <p>Yıllık Deneyim</p>
                 </div>
                 <div class="stat-card">
-                    <h3>5000+</h3>
+                    <h3 class="counter" data-target="5000" data-suffix="+">0+</h3>
                     <p>Ürün Çeşidi</p>
                 </div>
                 <div class="stat-card">
-                    <h3>50+</h3>
+                    <h3 class="counter" data-target="50" data-suffix="+">0+</h3>
                     <p>Dünya Markası</p>
                 </div>
                 <div class="stat-card">
-                    <h3>81</h3>
+                    <h3 class="counter" data-target="81" data-suffix="">0</h3>
                     <p>İle Sevkiyat</p>
                 </div>
             </div>
@@ -630,6 +630,27 @@
     </footer>
 
     <script>
+        function runCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const suffix = counter.getAttribute('data-suffix') || '';
+                let current = 1;
+                const speed = target / 40; // Hız ayarı
+
+                const updateCount = () => {
+                    current += speed;
+                    if (current < target) {
+                        counter.innerText = Math.floor(current) + suffix;
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target + suffix;
+                    }
+                };
+                updateCount();
+            });
+        }
+
         function switchTab(tabId) {
             document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
             document.querySelectorAll('.nav-container li a').forEach(a => a.classList.remove('active'));
@@ -641,6 +662,11 @@
             if(targetNav) targetNav.classList.add('active');
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Ana sayfaya her tıklandığında sayaçları yeniden başlat
+            if(tabId === 'home') {
+                runCounters();
+            }
         }
 
         function changeLang(lang) {
@@ -649,7 +675,10 @@
             document.documentElement.setAttribute('lang', lang);
         }
 
+        // Sayfa ilk açıldığında sayaçları çalıştır
         document.addEventListener("DOMContentLoaded", function () {
+            runCounters();
+
             const images = document.querySelectorAll('.brand-card img');
             images.forEach(img => {
                 img.onerror = function () {
