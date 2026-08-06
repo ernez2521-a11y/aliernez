@@ -150,12 +150,12 @@
     <div class="top-header">
         <div class="top-container">
             <div class="top-info">
-                <span>📍 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</span>
+                <span id="t-address-top">📍 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</span>
             </div>
             <div class="top-links">
-                <a href="#b2b">B2B Portal</a>
-                <a href="#ik">Kariyer</a>
-                <a onclick="switchTab('iletisim')">İletişim</a>
+                <a href="#b2b" data-key="b2b">B2B Portal</a>
+                <a href="#ik" data-key="career">Kariyer</a>
+                <a onclick="switchTab('iletisim')" data-key="contact">İletişim</a>
                 <div class="lang-selector">
                     <button class="lang-btn active" onclick="changeLang('tr')">TR</button>
                     <button class="lang-btn" onclick="changeLang('en')">EN</button>
@@ -169,18 +169,18 @@
     <header>
         <div class="header-container">
             <a href="javascript:void(0)" onclick="switchTab('home')" class="logo">JPN <span>OTOMOTİV</span></a>
-            <a href="#b2b" class="b2b-btn">B2B Bayi Girişi</a>
+            <a href="#b2b" class="b2b-btn" data-key="b2b_login">B2B Bayi Girişi</a>
         </div>
     </header>
 
     <!-- SABİT MENÜ -->
     <nav>
         <ul class="nav-container">
-            <li><a id="nav-home" class="active" onclick="switchTab('home')">Ana Sayfa</a></li>
-            <li><a id="nav-kurumsal" onclick="switchTab('kurumsal')">Kurumsal</a></li>
-            <li><a id="nav-tedarikciler" onclick="switchTab('tedarikciler')">Tedarikçilerimiz</a></li>
-            <li><a id="nav-temsilcilerimiz" onclick="switchTab('temsilcilerimiz')">Temsilcilerimiz</a></li>
-            <li><a id="nav-iletisim" onclick="switchTab('iletisim')">İletişim</a></li>
+            <li><a id="nav-home" class="active" onclick="switchTab('home')" data-key="menu_home">Ana Sayfa</a></li>
+            <li><a id="nav-kurumsal" onclick="switchTab('kurumsal')" data-key="menu_corporate">Kurumsal</a></li>
+            <li><a id="nav-tedarikciler" onclick="switchTab('tedarikciler')" data-key="menu_suppliers">Tedarikçilerimiz</a></li>
+            <li><a id="nav-temsilcilerimiz" onclick="switchTab('temsilcilerimiz')" data-key="menu_reps">Temsilcilerimiz</a></li>
+            <li><a id="nav-iletisim" onclick="switchTab('iletisim')" data-key="menu_contact">İletişim</a></li>
         </ul>
     </nav>
 
@@ -188,21 +188,21 @@
     <div id="page-home" class="page-section active">
         <section class="hero-banner">
             <div class="hero-container">
-                <h1>Otomotiv Yedek Parçada<br>Güvenilir Dağıtım Ağı</h1>
-                <p>Zengin ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdeyiz.</p>
-                <a href="javascript:void(0)" onclick="switchTab('kurumsal')" class="b2b-btn">Kurumsal Yapımız</a>
+                <h1 data-key="hero_title">Otomotiv Yedek Parçada<br>Güvenilir Dağıtım Ağı</h1>
+                <p data-key="hero_desc">Zengin ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdeyiz.</p>
+                <a href="javascript:void(0)" onclick="switchTab('kurumsal')" class="b2b-btn" data-key="hero_btn">Kurumsal Yapımız</a>
             </div>
         </section>
         <div class="content-container">
-            <h2>Hoş Geldiniz</h2>
-            <p>JPN Otomotiv, binek ve hafif ticari araç gruplarında dünya markalarının orijinal yedek parçalarını bayi ağına sunmaktadır.</p>
+            <h2 data-key="welcome_title">Hoş Geldiniz</h2>
+            <p data-key="welcome_desc">JPN Otomotiv, binek ve hafif ticari araç gruplarında dünya markalarının orijinal yedek parçalarını bayi ağına sunmaktadır.</p>
         </div>
     </div>
 
     <!-- SAYFA 2: TEDARİKÇİLERİMİZ -->
     <div id="page-tedarikciler" class="page-section">
         <div class="suppliers-header">
-            <h1>Anlaşmalı Tedarikçilerimiz</h1>
+            <h1 data-key="suppliers_heading">Anlaşmalı Tedarikçilerimiz</h1>
         </div>
         <section class="brands-section">
             <div class="brands-grid">
@@ -276,29 +276,29 @@
     <!-- DİĞER SEKMELER -->
     <div id="page-kurumsal" class="page-section">
         <div class="content-container">
-            <h2>Kurumsal</h2>
-            <p>JPN Otomotiv olarak, kurulduğumuz günden bu yana otomotiv yedek parça sektöründe kalite, güven ve dürüstlük ilkesiyle hizmet vermekteyiz. Geniş ürün yelpazemiz ve güçlü tedarik zincirimizle iş ortaklarımıza kesintisiz çözümler sunuyoruz.</p>
-            <p>Müşteri memnuniyetini her zaman ön planda tutarak, en güncel teknolojik altyapımızla ve alanında uzman kadromuzla sektörün öncü bağımsız yedek parça distribütörleri arasında yer almaktan gurur duyuyoruz.</p>
+            <h2 data-key="menu_corporate">Kurumsal</h2>
+            <p data-key="corp_p1">JPN Otomotiv olarak, kurulduğumuz günden bu yana otomotiv yedek parça sektöründe kalite, güven ve dürüstlük ilkesiyle hizmet vermekteyiz. Geniş ürün yelpazemiz ve güçlü tedarik zincirimizle iş ortaklarımıza kesintisiz çözümler sunuyoruz.</p>
+            <p data-key="corp_p2">Müşteri memnuniyetini her zaman ön planda tutarak, en güncel teknolojik altyapımızla ve alanında uzman kadromuzla sektörün öncü bağımsız yedek parça distribütörleri arasında yer almaktan gurur duyuyoruz.</p>
         </div>
     </div>
 
     <div id="page-temsilcilerimiz" class="page-section">
         <div class="content-container">
-            <h2>Temsilcilerimiz</h2>
-            <p>Bölgesel operasyonlarımız ve bayilerimizle birebir iletişim kuran temsilcilerimize aşağıdan ulaşabilirsiniz:</p>
+            <h2 data-key="menu_reps">Temsilcilerimiz</h2>
+            <p data-key="reps_desc">Bölgesel operasyonlarımız ve bayilerimizle birebir iletişim kuran temsilcilerimize aşağıdan ulaşabilirsiniz:</p>
             <div class="reps-grid">
                 <div class="rep-card">
                     <h3>Kenan ELBEY</h3>
-                    <p>Satış ve Bölge Temsilcisi</p>
+                    <p data-key="rep_title">Satış ve Bölge Temsilcisi</p>
                     <a href="https://wa.me/905319182817" target="_blank" class="whatsapp-btn">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp ile İletişim
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> <span data-key="wa_text">WhatsApp ile İletişim</span>
                     </a>
                 </div>
                 <div class="rep-card">
                     <h3>Emre BİLDİK</h3>
-                    <p>Satış ve Bölge Temsilcisi</p>
+                    <p data-key="rep_title">Satış ve Bölge Temsilcisi</p>
                     <a href="https://wa.me/905351090249" target="_blank" class="whatsapp-btn">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp ile İletişim
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> <span data-key="wa_text">WhatsApp ile İletişim</span>
                     </a>
                 </div>
             </div>
@@ -307,12 +307,12 @@
 
     <div id="page-iletisim" class="page-section">
         <div class="content-container">
-            <h2>İletişim</h2>
-            <p>Bize aşağıdaki iletişim kanallarından ulaşabilir veya ofisimizi ziyaret edebilirsiniz.</p>
+            <h2 data-key="menu_contact">İletişim</h2>
+            <p data-key="contact_desc">Bize aşağıdaki iletişim kanallarından ulaşabilir veya ofisimizi ziyaret edebilirsiniz.</p>
             <div class="contact-grid">
                 <div class="contact-info-box">
-                    <h3>İletişim Bilgilerimiz</h3><br>
-                    <p><strong>Adres:</strong> 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</p>
+                    <h3 data-key="contact_info_title">İletişim Bilgilerimiz</h3><br>
+                    <p><strong><span data-key="address_label">Adres</span>:</strong> <span data-key="address_text">3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</span></p>
                     <p><strong>E-Posta:</strong> otomotivjpn@gmail.com</p>
                 </div>
                 <div class="map-box">
@@ -327,37 +327,139 @@
         <div class="footer-container">
             <div class="footer-col">
                 <h4>JPN Otomotiv</h4>
-                <p>Otomotiv yedek parça sektöründe koşulsuz müşteri memnuniyeti ve kalite odaklı hizmet ilkesi.</p>
+                <p data-key="footer_desc">Otomotiv yedek parça sektöründe koşulsuz müşteri memnuniyeti ve kalite odaklı hizmet ilkesi.</p>
             </div>
             <div class="footer-col">
-                <h4>Hızlı Menü</h4>
+                <h4 data-key="quick_menu">Hızlı Menü</h4>
                 <ul>
-                    <li><a onclick="switchTab('kurumsal')">Kurumsal</a></li>
-                    <li><a onclick="switchTab('tedarikciler')">Tedarikçilerimiz</a></li>
-                    <li><a onclick="switchTab('temsilcilerimiz')">Temsilcilerimiz</a></li>
-                    <li><a onclick="switchTab('iletisim')">İletişim</a></li>
+                    <li><a onclick="switchTab('kurumsal')" data-key="menu_corporate">Kurumsal</a></li>
+                    <li><a onclick="switchTab('tedarikciler')" data-key="menu_suppliers">Tedarikçilerimiz</a></li>
+                    <li><a onclick="switchTab('temsilcilerimiz')" data-key="menu_reps">Temsilcilerimiz</a></li>
+                    <li><a onclick="switchTab('iletisim')" data-key="menu_contact">İletişim</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Yazılım & Destek</h4>
+                <h4 data-key="support_title">Yazılım & Destek</h4>
                 <ul>
-                    <li><a href="#b2b">B2B Sipariş Sistemi</a></li>
-                    <li><a href="#">Müşteri Hizmetleri</a></li>
-                    <li><a href="#">Uzak Yardım</a></li>
+                    <li><a href="#b2b" data-key="b2b_order">B2B Sipariş Sistemi</a></li>
+                    <li><a href="#" data-key="customer_service">Müşteri Hizmetleri</a></li>
+                    <li><a href="#" data-key="remote_help">Uzak Yardım</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>İletişim</h4>
-                <p>Adres: 3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</p>
+                <h4 data-key="menu_contact">İletişim</h4>
+                <p><strong><span data-key="address_label">Adres</span>:</strong> <span data-key="address_text">3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR</span></p>
                 <p>E-Posta: otomotivjpn@gmail.com</p>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-bottom" data-key="copyright">
             Copyright © 2026 JPN Otomotiv. Tüm Hakları Saklıdır.
         </div>
     </footer>
 
     <script>
+        const translations = {
+            tr: {
+                b2b: "B2B Portal",
+                career: "Kariyer",
+                contact: "İletişim",
+                b2b_login: "B2B Bayi Girişi",
+                menu_home: "Ana Sayfa",
+                menu_corporate: "Kurumsal",
+                menu_suppliers: "Tedarikçilerimiz",
+                menu_reps: "Temsilcilerimiz",
+                menu_contact: "İletişim",
+                hero_title: "Otomotiv Yedek Parçada<br>Güvenilir Dağıtım Ağı",
+                hero_desc: "Zengin ürün çeşidi, güçlü stok yapısı ve geniş dağıtım ağı ile Türkiye genelinde hizmetinizdeyiz.",
+                hero_btn: "Kurumsal Yapımız",
+                welcome_title: "Hoş Geldiniz",
+                welcome_desc: "JPN Otomotiv, binek ve hafif ticari araç gruplarında dünya markalarının orijinal yedek parçalarını bayi ağına sunmaktadır.",
+                suppliers_heading: "Anlaşmalı Tedarikçilerimiz",
+                corp_p1: "JPN Otomotiv olarak, kurulduğumuz günden bu yana otomotiv yedek parça sektöründe kalite, güven ve dürüstlük ilkesiyle hizmet vermekteyiz. Geniş ürün yelpazemiz ve güçlü tedarik zincirimizle iş ortaklarımıza kesintisiz çözümler sunuyoruz.",
+                corp_p2: "Müşteri memnuniyetini her zaman ön planda tutarak, en güncel teknolojik altyapımızla ve alanında uzman kadromuzla sektörün öncü bağımsız yedek parça distribütörleri arasında yer almaktan gurur duyuyoruz.",
+                reps_desc: "Bölgesel operasyonlarımız ve bayilerimizle birebir iletişim kuran temsilcilerimize aşağıdan ulaşabilirsiniz:",
+                rep_title: "Satış ve Bölge Temsilcisi",
+                wa_text: "WhatsApp ile İletişim",
+                contact_desc: "Bize aşağıdaki iletişim kanallarından ulaşabilir veya ofisimizi ziyaret edebilirsiniz.",
+                contact_info_title: "İletişim Bilgilerimiz",
+                address_label: "Adres",
+                address_text: "3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR",
+                footer_desc: "Otomotiv yedek parça sektöründe koşulsuz müşteri memnuniyeti ve kalite odaklı hizmet ilkesi.",
+                quick_menu: "Hızlı Menü",
+                support_title: "Yazılım & Destek",
+                b2b_order: "B2B Sipariş Sistemi",
+                customer_service: "Müşteri Hizmetleri",
+                remote_help: "Uzak Yardım",
+                copyright: "Copyright © 2026 JPN Otomotiv. Tüm Hakları Saklıdır."
+            },
+            en: {
+                b2b: "B2B Portal",
+                career: "Career",
+                contact: "Contact",
+                b2b_login: "B2B Dealer Login",
+                menu_home: "Home",
+                menu_corporate: "Corporate",
+                menu_suppliers: "Suppliers",
+                menu_reps: "Our Representatives",
+                menu_contact: "Contact",
+                hero_title: "Reliable Distribution Network<br>in Automotive Spare Parts",
+                hero_desc: "We are at your service across Turkey with a rich product range, strong stock structure, and wide distribution network.",
+                hero_btn: "Our Corporate Structure",
+                welcome_title: "Welcome",
+                welcome_desc: "JPN Otomotiv offers original spare parts of world brands in passenger and light commercial vehicle groups to its dealer network.",
+                suppliers_heading: "Our Contracted Suppliers",
+                corp_p1: "As JPN Otomotiv, since our inception, we have been serving in the automotive spare parts sector with the principle of quality, trust, and integrity. We offer uninterrupted solutions to our business partners with our wide product range and strong supply chain.",
+                corp_p2: "By always keeping customer satisfaction at the forefront, we are proud to be among the leading independent spare parts distributors in the sector with our up-to-date technological infrastructure and expert staff.",
+                reps_desc: "You can reach our representatives who communicate one-on-one with our regional operations and dealers below:",
+                rep_title: "Sales and Regional Representative",
+                wa_text: "Contact via WhatsApp",
+                contact_desc: "You can reach us through the communication channels below or visit our office.",
+                contact_info_title: "Contact Information",
+                address_label: "Address",
+                address_text: "3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR",
+                footer_desc: "Unconditional customer satisfaction and quality-oriented service principle in the automotive spare parts sector.",
+                quick_menu: "Quick Menu",
+                support_title: "Software & Support",
+                b2b_order: "B2B Ordering System",
+                customer_service: "Customer Service",
+                remote_help: "Remote Assistance",
+                copyright: "Copyright © 2026 JPN Otomotiv. All Rights Reserved."
+            },
+            fr: {
+                b2b: "Portail B2B",
+                career: "Carrière",
+                contact: "Contact",
+                b2b_login: "Connexion Concessionnaire B2B",
+                menu_home: "Accueil",
+                menu_corporate: "Institutionnel",
+                menu_suppliers: "Nos Fournisseurs",
+                menu_reps: "Nos Représentants",
+                menu_contact: "Contact",
+                hero_title: "Réseau de Distribution Fiable<br>en Pièces Détachées Automobiles",
+                hero_desc: "Nous sommes à votre service dans toute la Turquie avec une large gamme de produits, une structure de stock solide et un vaste réseau de distribution.",
+                hero_btn: "Notre Structure",
+                welcome_title: "Bienvenue",
+                welcome_desc: "JPN Otomotiv propose à son réseau de concessionnaires des pièces détachées d'origine de marques mondiales pour véhicules particuliers et utilitaires légers.",
+                suppliers_heading: "Nos Fournisseurs Partenaires",
+                corp_p1: "En tant que JPN Otomotiv, depuis notre création, nous servons dans le secteur des pièces détachées automobiles avec le principe de qualité, de confiance et d'intégrité. Nous offrons des solutions continues à nos partenaires commerciaux.",
+                corp_p2: "En plaçant toujours la satisfaction du client au premier plan, nous sommes fiers de figurer parmi les principaux distributeurs indépendants de pièces détachées du secteur.",
+                reps_desc: "Vous pouvez contacter nos représentants ci-dessous pour toutes vos opérations régionales :",
+                rep_title: "Représentant des Ventes et Régional",
+                wa_text: "Contact via WhatsApp",
+                contact_desc: "Vous pouvez nous joindre via les canaux de communication ci-dessous ou visiter notre bureau.",
+                contact_info_title: "Nos Coordonnées",
+                address_label: "Adresse",
+                address_text: "3. SANAYİ SİTESİ 2. SK. No:T3 BLOK NO/9 21070 KAYAPINAR / DİYARBAKIR",
+                footer_desc: "Satisfaction client inconditionnelle et service axé sur la qualité dans le secteur des pièces détachées automobiles.",
+                quick_menu: "Menu Rapide",
+                support_title: "Logiciel et Support",
+                b2b_order: "Système de Commande B2B",
+                customer_service: "Service Client",
+                remote_help: "Assistance à distance",
+                copyright: "Copyright © 2026 JPN Otomotiv. Tous droits réservés."
+            }
+        };
+
         function switchTab(tabId) {
             document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
             document.querySelectorAll('.nav-container li a').forEach(a => a.classList.remove('active'));
@@ -374,7 +476,16 @@
         function changeLang(lang) {
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-            // Dil değişimi için gerekli özel entegrasyonlar buraya eklenebilir.
+
+            const elements = document.querySelectorAll('[data-key]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            
+            document.documentElement.setAttribute('lang', lang);
         }
 
         // Yüklenen dosya .png değil de .jpg/.jpeg ise otomatik bulur
