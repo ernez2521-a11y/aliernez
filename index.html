@@ -18,9 +18,15 @@
 
         /* TOP BAR */
         .top-header { background: var(--ozas-dark-blue); color: #fff; font-size: 12px; padding: 6px 0; border-bottom: 2px solid var(--ozas-red); }
-        .top-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 15px; flex-wrap: wrap; gap: 10px; }
+        .top-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; flex-wrap: wrap; gap: 10px; }
         .top-info span { margin-right: 20px; }
-        .top-links a { color: #fff; text-decoration: none; margin-left: 15px; }
+        .top-links { display: flex; align-items: center; gap: 15px; }
+        .top-links a { color: #fff; text-decoration: none; }
+        
+        /* DİL SEÇENEKLERİ STİLİ */
+        .lang-selector { display: flex; gap: 5px; align-items: center; margin-left: 10px; }
+        .lang-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 2px 6px; font-size: 11px; font-weight: bold; cursor: pointer; border-radius: 3px; transition: all 0.2s; text-decoration: none; }
+        .lang-btn:hover, .lang-btn.active { background: var(--ozas-red); border-color: var(--ozas-red); }
 
         /* MAIN HEADER */
         header { background: #fff; padding: 20px 0; }
@@ -150,6 +156,11 @@
                 <a href="#b2b">B2B Portal</a>
                 <a href="#ik">Kariyer</a>
                 <a onclick="switchTab('iletisim')">İletişim</a>
+                <div class="lang-selector">
+                    <button class="lang-btn active" onclick="changeLang('tr')">TR</button>
+                    <button class="lang-btn" onclick="changeLang('en')">EN</button>
+                    <button class="lang-btn" onclick="changeLang('fr')">FR</button>
+                </div>
             </div>
         </div>
     </div>
@@ -358,6 +369,12 @@
             if(targetNav) targetNav.classList.add('active');
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function changeLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            // Dil değişimi için gerekli özel entegrasyonlar buraya eklenebilir.
         }
 
         // Yüklenen dosya .png değil de .jpg/.jpeg ise otomatik bulur
