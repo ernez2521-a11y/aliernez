@@ -28,11 +28,11 @@
         .lang-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 2px 6px; font-size: 11px; font-weight: bold; cursor: pointer; border-radius: 3px; transition: all 0.2s; text-decoration: none; }
         .lang-btn:hover, .lang-btn.active { background: var(--ozas-red); border-color: var(--ozas-red); }
 
-        /* MAIN HEADER */
-        header { background: #fff; padding: 20px 0; }
+        /* MAIN HEADER & LOGO */
+        header { background: #fff; padding: 15px 0; }
         .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
-        .logo { font-size: 32px; font-weight: 900; color: var(--ozas-dark-blue); text-decoration: none; letter-spacing: -1px; }
-        .logo span { color: var(--ozas-red); }
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo img { height: 50px; width: auto; object-fit: contain; }
         .b2b-btn { background: var(--ozas-red); color: #fff; padding: 10px 22px; text-decoration: none; font-weight: bold; border-radius: 3px; text-transform: uppercase; font-size: 13px; transition: background 0.2s; }
         .b2b-btn:hover { background: #b71c1c; }
 
@@ -168,7 +168,9 @@
     <!-- MAIN HEADER -->
     <header>
         <div class="header-container">
-            <a href="javascript:void(0)" onclick="switchTab('home')" class="logo">JPN <span>OTOMOTİV</span></a>
+            <a href="javascript:void(0)" onclick="switchTab('home')" class="logo">
+                <img src="logo jpn.png" alt="JPN Otomotiv Logo">
+            </a>
             <a href="#b2b" class="b2b-btn" data-key="b2b_login">B2B Bayi Girişi</a>
         </div>
     </header>
@@ -488,7 +490,6 @@
             document.documentElement.setAttribute('lang', lang);
         }
 
-        // Yüklenen dosya .png değil de .jpg/.jpeg ise otomatik bulur
         document.addEventListener("DOMContentLoaded", function () {
             const images = document.querySelectorAll('.brand-card img');
             images.forEach(img => {
