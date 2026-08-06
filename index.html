@@ -29,10 +29,10 @@
         .lang-btn:hover, .lang-btn.active { background: var(--ozas-red); border-color: var(--ozas-red); }
 
         /* MAIN HEADER & LOGO */
-        header { background: #fff; padding: 8px 0; }
+        header { background: #fff; padding: 5px 0; }
         .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
         .logo { display: flex; align-items: center; text-decoration: none; }
-        .logo img { height: 90px; width: auto; object-fit: contain; }
+        .logo img { height: 110px; width: auto; object-fit: contain; }
         .b2b-btn { background: var(--ozas-red); color: #fff; padding: 10px 22px; text-decoration: none; font-weight: bold; border-radius: 3px; text-transform: uppercase; font-size: 13px; transition: background 0.2s; }
         .b2b-btn:hover { background: #b71c1c; }
 
@@ -54,11 +54,15 @@
         .page-section { display: none; }
         .page-section.active { display: block; }
 
-        /* HERO BANNER */
-        .hero-banner { background: linear-gradient(90deg, rgba(15, 42, 74, 0.9), rgba(15, 42, 74, 0.6)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1600&q=80') center/cover; color: #fff; padding: 120px 0; }
+        /* HERO BANNER - ÖZEL ARKA PLAN GÖRSELİ */
+        .hero-banner { 
+            background: linear-gradient(90deg, rgba(15, 42, 74, 0.92), rgba(15, 42, 74, 0.75)), url('anasayfa.png') center/cover no-repeat; 
+            color: #fff; 
+            padding: 120px 0; 
+        }
         .hero-container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
-        .hero-container h1 { font-size: 42px; font-weight: 800; margin-bottom: 10px; }
-        .hero-container p { font-size: 18px; max-width: 600px; margin-bottom: 25px; }
+        .hero-container h1 { font-size: 42px; font-weight: 800; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        .hero-container p { font-size: 18px; max-width: 600px; margin-bottom: 25px; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
 
         /* TEDARİKÇİLERİMİZ SEKSİYONU */
         .suppliers-header { background: var(--ozas-dark-blue); color: #fff; padding: 40px 0; text-align: center; }
